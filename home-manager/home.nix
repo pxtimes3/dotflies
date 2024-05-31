@@ -137,6 +137,9 @@
     fishPlugins.hydro
     fishPlugins.grc
     grc
+
+    # nosqlite?
+    sqlite
   ];
 
 
