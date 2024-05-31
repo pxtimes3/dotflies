@@ -177,6 +177,8 @@
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.x11 = true;
 
+  programs.hyprland.enable = true;
+
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
