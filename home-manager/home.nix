@@ -129,6 +129,14 @@
     lutris
     wine
     steam
+
+    # fish
+    fishPlugins.done
+    fishPlugins.fzf-fish
+    fishPlugins.forgit
+    fishPlugins.hydro
+    fishPlugins.grc
+    grc
   ];
 
 

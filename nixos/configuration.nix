@@ -148,13 +148,6 @@
     git
     alejandra
     sublime4
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fzf
-    fishPlugins.grc
-    grc
   ];
 
 
