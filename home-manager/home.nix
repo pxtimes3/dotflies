@@ -74,7 +74,6 @@
     ipcalc  # it is a calculator for the IPv4/v6 addresses
 
     # misc
-    cowsay
     file
     which
     tree
@@ -118,7 +117,6 @@
     nnn
     neofetch
     fish
-    kitty
 
     # procrastination
     discord
@@ -129,7 +127,6 @@
     steam
   ];
 
-  # changes?
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
@@ -154,7 +151,7 @@
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
   programs.alacritty = {
-    enable = true;
+    enable = false;
     # custom settings
     settings = {
       env.TERM = "xterm-256color";
