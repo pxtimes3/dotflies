@@ -118,6 +118,10 @@
     neofetch
     fish
 
+    # hyprland
+    kitty
+    wofi
+
     # procrastination
     discord
     telegram-desktop
