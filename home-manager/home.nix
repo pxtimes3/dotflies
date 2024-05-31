@@ -118,6 +118,7 @@
     nnn
     neofetch
     fish
+    kitty
 
     # procrastination
     discord
@@ -132,7 +133,7 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  
+
   programs.git = {
     enable = true;
     userName = "Magnus Sandell";

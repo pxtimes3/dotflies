@@ -35,7 +35,9 @@
       # FIXME replace with your username@hostname
       "px@pxnix" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {
+          inherit inputs outputs;
+        };
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
       };
