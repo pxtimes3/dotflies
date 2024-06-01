@@ -50,6 +50,7 @@
           nix-index-database.hmModules.nix-index
         ];
       };
+      #homeManagerModules.default = ./modules;
     };
   };
 }
