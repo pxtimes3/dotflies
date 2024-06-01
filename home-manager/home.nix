@@ -14,6 +14,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    (import /home/px/.config/nixos/modules/fish.nix)
   ];
 
   nixpkgs = {
@@ -189,7 +190,27 @@
 
   programs.fish = {
     enable = true;
+    plugins = [
+
+    ];
+    shellAliases = {
+      "..." = "cd ../..";
+      "ls" = "eza -lahm";
+    };
   };
+  programs.fish.functions = {
+    __fish_command_not_found_handler = {
+      body = "__fish_default_command_not_found_handler $argv[1]";
+      onEvent = "fish_command_not_found";
+    };
+    gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+    monkey = "echo monkey";
+  };
+
+
+  programs.direnv.enable = true;
+  programs.zsh.enable = true;
+  programs.bash.enable = true;
 
   programs.nix-index.enable = true;
 
