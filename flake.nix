@@ -46,6 +46,7 @@
         # > Our main home-manager configuration file <
         modules = [
           ./home-manager/home.nix
+          ./modules
           nix-index-database.hmModules.nix-index
         ];
       };
