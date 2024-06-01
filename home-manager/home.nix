@@ -14,7 +14,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    ./modules/fish.nix
+    # ./modules/fish.nix
   ];
 
   nixpkgs = {
