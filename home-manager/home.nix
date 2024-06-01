@@ -191,6 +191,8 @@
     enable = true;
   };
 
+  programs.nix-index.enable = true;
+
   programs.firefox.enable = true;
 
   # Nicely reload system units when changing configs

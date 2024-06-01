@@ -170,8 +170,6 @@
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.x11 = true;
 
-  programs.hyprland.enable = true;
-
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
@@ -186,7 +184,7 @@
   };
 
   # ffs
-  programs.command-not-found.dbPath = "/home/px/.nix-profile/bin/sqlite3";
+  # programs.command-not-found.dbPath = "/home/px/.nix-profile/bin/sqlite3";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

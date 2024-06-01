@@ -8,12 +8,17 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # https://github.com/nix-community/nix-index-database
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nix-index-database,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -39,7 +44,10 @@
           inherit inputs outputs;
         };
         # > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
+        modules = [
+          ./home-manager/home.nix
+          nix-index-database.hmModules.nix-index
+        ];
       };
     };
   };
