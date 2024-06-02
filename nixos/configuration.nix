@@ -71,7 +71,8 @@
   hardware.opengl.driSupport32Bit = true; # For 32 bit applications
 
    # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Enable networking
@@ -97,9 +98,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "se";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Configure console keymap
@@ -165,10 +166,10 @@
   ];
 
 
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "px" ];
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "px" ];
+  #virtualisation.virtualbox.guest.enable = true;
+  #virtualisation.virtualbox.guest.x11 = true;
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [

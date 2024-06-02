@@ -146,6 +146,7 @@
     godot_4
   ];
 
+  # virtualisation.virtualbox.host.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
@@ -222,6 +223,8 @@
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
+  # disable warning when on unstable
+  home.enableNixpkgsReleaseCheck = false;
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
 }
