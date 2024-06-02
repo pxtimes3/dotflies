@@ -134,6 +134,7 @@
     lutris
     wine
     steam
+    plexamp
 
     # fish
     fishPlugins.done
