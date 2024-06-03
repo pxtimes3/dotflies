@@ -70,7 +70,7 @@
   services.xserver.enable = true;
   hardware.opengl.driSupport32Bit = true; # For 32 bit applications
 
-   # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
   services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
@@ -166,15 +166,31 @@
   ];
 
 
-  #virtualisation.virtualbox.host.enable = true;
-  #users.extraGroups.vboxusers.members = [ "px" ];
-  #virtualisation.virtualbox.guest.enable = true;
-  #virtualisation.virtualbox.guest.x11 = true;
+  # not in nixos-unstable
+  # virtualisation.virtualbox.host.enable = true;
+  # users.extraGroups.vboxusers.members = [ "px" ];
+  # virtualisation.virtualbox.guest.enable = true;
+  # virtualisation.virtualbox.guest.x11 = true;
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
   ];
+
+  # ndls 
+  services.keyd = { # https://github.com/rvaiya/keyd
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            capslock = "overload(control, esc)";
+          };
+        };
+      };
+    };
+  };
 
   services.openssh = {
     enable = true;
@@ -184,8 +200,6 @@
     };
   };
 
-  # ffs
-  # programs.command-not-found.dbPath = "/home/px/.nix-profile/bin/sqlite3";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
