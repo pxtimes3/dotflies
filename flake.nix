@@ -1,7 +1,7 @@
 {
   description = "My nix config!";
 
-  #poo
+  #poop
 
   inputs = {
     # Nixpkgs
