@@ -151,6 +151,7 @@
 
     #godot
     godot_4
+    blender
 
     # reverse engineering
     objconv
