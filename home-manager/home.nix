@@ -99,6 +99,7 @@
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
+    wcalc # CLI-calculator
     sublime4
     sublime-merge
 
