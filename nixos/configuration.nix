@@ -149,7 +149,6 @@
     git
     alejandra
     xorg.xev
-    sublime4
   ];
 
 
@@ -172,11 +171,6 @@
   # users.extraGroups.vboxusers.members = [ "px" ];
   # virtualisation.virtualbox.guest.enable = true;
   # virtualisation.virtualbox.guest.x11 = true;
-
-  # allow openssl-1.1.1w due to sublime4
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1w"
-  ];
 
   # ndls 
   # services.keyd = { # https://github.com/rvaiya/keyd

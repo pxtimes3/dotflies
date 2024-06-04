@@ -1,6 +1,8 @@
 {
   description = "My nix config!";
 
+  #poo
+
   inputs = {
     # Nixpkgs
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
