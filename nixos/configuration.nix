@@ -133,7 +133,7 @@
     px = {
       isNormalUser = true;
       description = "Magnus";
-      initialPassword = "m0ther";
+      initialPassword = "johnsmith";
       packages = with pkgs; [
         # see home-manager/home.nix
       ];
@@ -148,6 +148,7 @@
     wget
     git
     alejandra
+    xorg.xev
     sublime4
   ];
 
@@ -178,19 +179,23 @@
   ];
 
   # ndls 
-  services.keyd = { # https://github.com/rvaiya/keyd
-    enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            capslock = "overload(control, esc)";
-          };
-        };
-      };
-    };
-  };
+  # services.keyd = { # https://github.com/rvaiya/keyd
+  #   enable = true;
+  #   keyboards = {
+  #     default = {
+  #       ids = [ "*" ];
+  #       settings = {
+  #         global = {
+  #           chord_timeout = 150;
+  #         };
+  #         main = { # main layer
+  #           "capslock" = "overload(control, esc)";
+  #           "insert" = "S-insert";
+  #         };
+  #       };
+  #     };
+  #   };
+  # };
 
   services.openssh = {
     enable = true;

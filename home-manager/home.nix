@@ -48,8 +48,6 @@
     "$HOME/.local/bin"
   ];
 
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
@@ -87,6 +85,7 @@
     gawk
     zstd
     gnupg
+    gnumake
 
     # nix related
     #
@@ -97,10 +96,11 @@
     # productivity
     hugo # static site generator
     glow # markdown previewer in terminal
-
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
+    sublime4
+    sublime-merge
 
     # system call monitoring
     strace # system call monitoring
@@ -113,7 +113,8 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-
+    keyd # key remapping
+    
     # compilers
     gcc
 
@@ -149,11 +150,20 @@
 
     #godot
     godot_4
+
+    # reverse engineering
+    objconv
+  ];
+
+  # allow openssl-1.1.1w due to sublime4
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w"
   ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
 
+  # git, for obvious reasons
   programs.git = {
     enable = true;
     userName = "Magnus Sandell";
@@ -189,6 +199,8 @@
       ];
     };
   };
+
+  #
 
   programs.neovim = {
     enable = true;
