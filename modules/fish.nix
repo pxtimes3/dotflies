@@ -86,8 +86,9 @@ in {
           fish_command_not_found
         '';
       };
-      gitignore = "curl -sL https://www.gitignore.io/api/$argv";
-      donkey = "echo monkey";
+      gitignore = ''
+        curl -sL https://www.gitignore.io/api/$argv
+      '';
     };
 
     plugins = [
