@@ -158,6 +158,19 @@ in
     objconv
   ];
 
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
+    nerdfonts
+  ];
+
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"

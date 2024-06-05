@@ -151,46 +151,6 @@
     xorg.xev
   ];
 
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
-    nerdfonts
-  ];
-
-
-  # not in nixos-unstable
-  # virtualisation.virtualbox.host.enable = true;
-  # users.extraGroups.vboxusers.members = [ "px" ];
-  # virtualisation.virtualbox.guest.enable = true;
-  # virtualisation.virtualbox.guest.x11 = true;
-
-  # ndls 
-  # services.keyd = { # https://github.com/rvaiya/keyd
-  #   enable = true;
-  #   keyboards = {
-  #     default = {
-  #       ids = [ "*" ];
-  #       settings = {
-  #         global = {
-  #           chord_timeout = 150;
-  #         };
-  #         main = { # main layer
-  #           "capslock" = "overload(control, esc)";
-  #           "insert" = "S-insert";
-  #         };
-  #       };
-  #     };
-  #   };
-  # };
-
   services.openssh = {
     enable = true;
     settings = {
