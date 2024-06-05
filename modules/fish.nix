@@ -31,9 +31,12 @@ in {
     shellAbbrs = {
       g = "git";
       dc = "docker compose";
-      tf = "terraform";
       n = "nvim";
-      k = "kubectl";
+    };
+
+    shellAliases = {
+      "..." = "cd ../..";
+      "ls" = "eza -lahm";
     };
 
     interactiveShellInit = fishConfig;
@@ -75,6 +78,16 @@ in {
         body = ''
         '';
       };
+      __fish_command_not_found_handler = {
+        body = ''
+          __fish_default_command_not_found_handler $argv[1]
+        '';
+        onEvent = ''
+          fish_command_not_found
+        '';
+      };
+      gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+      donkey = "echo monkey";
     };
 
     plugins = [
