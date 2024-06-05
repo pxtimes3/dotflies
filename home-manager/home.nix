@@ -100,8 +100,6 @@
     iotop # io monitoring
     iftop # network monitoring
     wcalc # CLI-calculator
-    sublime4
-    sublime-merge
 
     # system call monitoring
     strace # system call monitoring
@@ -149,9 +147,15 @@
     # nosqlite?
     sqlite
 
-    #godot
+    # code
+    sublime4
+    sublime-merge
+    vscode
+
+    # gamedev
     godot_4
     blender
+    unityhub
 
     # reverse engineering
     objconv
