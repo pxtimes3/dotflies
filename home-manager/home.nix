@@ -123,9 +123,9 @@
     neofetch
     fish
 
-    # hyprland
-    kitty
-    wofi
+    # -- hyprland
+    # kitty
+    # wofi
 
     # procrastination
     discord
