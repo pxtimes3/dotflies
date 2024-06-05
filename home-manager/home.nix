@@ -170,7 +170,7 @@ in
     nerdfonts
   ];
 
-  #fonts.fontconfig.enable = true;
+  
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
@@ -191,7 +191,7 @@ in
     enable = true;
     defaultEditor = true;
   };
-  
+
 
   programs.direnv.enable = true;
   programs.zsh.enable = true;
