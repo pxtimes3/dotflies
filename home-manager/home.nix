@@ -96,6 +96,7 @@ in
     iotop # io monitoring
     iftop # network monitoring
     wcalc # CLI-calculator
+    taskwarrior # task manager
 
     # system call monitoring
     strace # system call monitoring

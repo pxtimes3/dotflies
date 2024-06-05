@@ -89,9 +89,6 @@ in {
       gitignore = ''
         curl -sL https://www.gitignore.io/api/$argv
       '';
-      fonkey = ''
-        echo donkey
-      '';
     };
 
     plugins = [
