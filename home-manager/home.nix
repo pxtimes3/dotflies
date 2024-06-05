@@ -1,21 +1,17 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
   inputs,
   lib,
   config,
   pkgs,
   ...
-}: {
+}: 
+let
+  filesIn = dir: (map (fname: dir + "/${fname}"))
+                 (builtins.attrNames (builtins.readDir dir));
+in
+{
   # You can import other home-manager modules here
-  imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
-    ../modules/fish.nix
-  ];
+  imports = [] ++ (filesIn ../modules);
 
   nixpkgs = {
     # You can add overlays here
@@ -188,32 +184,11 @@
     };
   };
 
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-  programs.alacritty = {
-    enable = false;
-    # custom settings
-    settings = {
-      env.TERM = "xterm-256color";
-      font = {
-        size = 12;
-        draw_bold_text_with_bright_colors = true;
-      };
-      scrolling.multiplier = 5;
-      selection.save_to_clipboard = true;
-      import = [
-        "~/.config/alacritty/my.config.toml"
-      ];
-    };
-  };
-
-  #
-
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
 
-  
 
   programs.direnv.enable = true;
   programs.zsh.enable = true;
@@ -228,6 +203,7 @@
 
   # disable warning when on unstable
   home.enableNixpkgsReleaseCheck = false;
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
 }
