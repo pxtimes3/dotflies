@@ -13,7 +13,10 @@
       aws.disabled = true;
       gcloud.disabled = true;
       line_break.disabled = true;
-      character = "[❯](bold green)";
+      character = {
+        success_symbol = "[❯](bold green)";
+        error_symbol = "[!](bold red)";
+      };
     };
   };
 }
