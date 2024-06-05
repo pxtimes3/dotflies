@@ -191,7 +191,7 @@ in
     enable = true;
     defaultEditor = true;
   };
-
+ #
 
   programs.direnv.enable = true;
   programs.zsh.enable = true;
