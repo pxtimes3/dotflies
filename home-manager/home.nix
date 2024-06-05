@@ -156,9 +156,8 @@ in
 
     # reverse engineering
     objconv
-  ];
 
-  fonts.packages = with pkgs; [
+    # fonts
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -167,9 +166,11 @@ in
     fira-code-symbols
     mplus-outline-fonts.githubRelease
     dina-font
-    proggyfonts
+    #proggyfonts
     nerdfonts
   ];
+
+  #fonts.fontconfig.enable = true;
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
