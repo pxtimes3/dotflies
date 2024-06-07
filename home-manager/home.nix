@@ -98,6 +98,7 @@ in
     wcalc # CLI-calculator
     taskwarrior # task manager
     krita
+    inkscape
 
     # system call monitoring
     strace # system call monitoring
