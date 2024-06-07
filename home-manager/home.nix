@@ -97,6 +97,7 @@ in
     iftop # network monitoring
     wcalc # CLI-calculator
     taskwarrior # task manager
+    krita
 
     # system call monitoring
     strace # system call monitoring
@@ -110,6 +111,7 @@ in
     pciutils # lspci
     usbutils # lsusb
     keyd # key remapping
+    duplicity
     
     # compilers
     gcc
