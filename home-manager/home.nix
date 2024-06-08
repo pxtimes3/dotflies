@@ -99,6 +99,7 @@ in
     taskwarrior # task manager
     krita
     inkscape
+    tmux
 
     # system call monitoring
     strace # system call monitoring
