@@ -143,7 +143,7 @@
         # see home-manager/home.nix
       ];
       openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+      	"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoerzXnm+mdtHQaqG3dNThCRCzciv5ZEDQIN/rDj4Zu9lHgbW5PL1ZVQEZjNMLOFCBqwm3H0J6b2a7K8sC9Drypf1IlQ1hOpSIvFuYFUuYJIXxIqTTp6Rz9BVRx6HFKH1S4C7Aw9YLLfYp9AALEv8lp7R4a1boFmhOJsSZ4ZoHViBXQVnqNdSw+7OCIqg7h+L/LntOFl1RKcxOENJtDhVpyAb1TdFUYQg04tjeaBuJNI8ERf+vhXNQJ65d8/yUvtPK0uyVYBSKFj/rP+t7336SxGdbp6mYkZSV3aLsgyRhe/k/C20cAR/s+DB4Ri+FVhwiSMCpjV69oHQfGkYrUOkZn/OAcduUK7lIdY/SSHgeDccunjK5nR8qIl/L9FcRJcGN90t8y4vXpdZPSD9oSNfJN+LMbKABqzGAo2g9HIy3bvmUKokAGEg41uyYs8zXS4WXvVmqKAs/0oWGxOVqdGA5hLpMO1D4Pw5ydTfQzQUF81HxqjY8q453Hs1MJIiTl2Tp9+NJtYWFBCRBIT/r/Xsvl0QjMlvJ1cIWyv1Y30IZluVzETTX5ZqvMsMKpzUpfrME1fmQRJo71Kw/RhyUPKR8xajvSUxnBFQdEEbFMrvlruqYdtbwqDOrEt5aUrAiS7uW/T8l535fy9EqFViZRzxyMABhaH0nzWjwzH0Uy3u7QQ== m@mactop.lan"
       ];
       extraGroups = ["networkmanager" "wheel"];
     };
