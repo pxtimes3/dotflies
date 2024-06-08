@@ -158,6 +158,7 @@
 
   services.openssh = {
     enable = true;
+    #ffs
     settings = {
       PermitRootLogin = "no";
       PasswordAuthentication = true;
