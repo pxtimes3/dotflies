@@ -10,6 +10,8 @@
     	config.default = ''{
     		## https://gist.github.com/djmitche/dd7c9f257306e6b8957759c4d5265cc9
     		## 
+    		data.location=~/.config/task
+
 			color=on
 			color.header=rgb031
 			color.footnote=rgb031
