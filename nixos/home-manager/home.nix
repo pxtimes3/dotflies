@@ -228,4 +228,14 @@ in
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
+
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      # "*/5 * * * *      root    date >> /tmp/cron.log"
+      "0 3 * * *  px  push-taskdata"
+      "1 3 * * *  px  push-obsidian"
+      "2 3 * * *  px  push-dotflies"
+    ];
+  };
 }
