@@ -33,18 +33,20 @@ in
       allowUnfreePredicate = _: true;
 
       ### 
-      systemd.user.services.pushToGit = {
+      systemd.user.services."pushToGit" = {
         enable = true;
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
+        script = ''
+          bash /home/px/config/bin/my-systemd-script.sh
+        '';
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = "bash .config/bin/my-systemd-script.sh";
           User = "px";
           Group = "users";
         };
       };
-      systemd.user.timers.pushToGit = {
+      systemd.user.timers."pushToGit" = {
         description = "Trigger pushToGit";
         wantedBy = [ "timers.target" ];
         timerConfig = {
