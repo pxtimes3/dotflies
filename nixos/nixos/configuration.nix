@@ -183,6 +183,7 @@
         };
       };
       systemd.user.timers."pushToGit" = {
+        enable = true;
         description = "Trigger pushToGit";
         wantedBy = [ "timers.target" ];
         timerConfig = {
