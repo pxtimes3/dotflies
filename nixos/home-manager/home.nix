@@ -34,6 +34,7 @@ in
 
       ### 
       systemd.user.services.pushToGit = {
+        enable = true;
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         serviceConfig = {
