@@ -177,8 +177,8 @@
         '';
         serviceConfig = {
           Type = "oneshot";
-          User = "px";
-          Group = "users";
+          #User = "px";
+          #Group = "users";
         };
       };
       systemd.user.timers."pushToGit" = {
