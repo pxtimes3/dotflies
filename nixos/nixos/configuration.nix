@@ -168,6 +168,27 @@
     };
   };
 
+  systemd.user.services."pushToGit" = {
+        enable = true;
+        description = "Push configs to git";
+        wantedBy = ["multi-user.target"];
+        script = ''
+          bash /home/px/config/bin/my-systemd-script.sh
+        '';
+        serviceConfig = {
+          Type = "oneshot";
+          User = "px";
+          Group = "users";
+        };
+      };
+      systemd.user.timers."pushToGit" = {
+        description = "Trigger pushToGit";
+        wantedBy = [ "timers.target" ];
+        timerConfig = {
+          OnUnitActiveSec = "1m";
+          Unit = "pushToGit.service";                                                                                                                                  
+        };
+      };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

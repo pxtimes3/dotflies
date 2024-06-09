@@ -33,27 +33,7 @@ in
       allowUnfreePredicate = _: true;
 
       ### 
-      systemd.user.services."pushToGit" = {
-        enable = true;
-        description = "Push configs to git";
-        wantedBy = ["multi-user.target"];
-        script = ''
-          bash /home/px/config/bin/my-systemd-script.sh
-        '';
-        serviceConfig = {
-          Type = "oneshot";
-          User = "px";
-          Group = "users";
-        };
-      };
-      systemd.user.timers."pushToGit" = {
-        description = "Trigger pushToGit";
-        wantedBy = [ "timers.target" ];
-        timerConfig = {
-          OnUnitActiveSec = "1m";
-          Unit = "pushToGit.service";                                                                                                                                  
-        };
-      };
+      
     };
   };
 
@@ -253,33 +233,5 @@ in
   home.stateVersion = "23.11";
 
 
-  # systemd.user.services.pushToGit = {
-  #   wantedBy = ["multi-user.target"];
-  #   serviceConfig = {
-  #     Type = "oneshot";
-  #     ExecStart = "push-dotflies";
-  #     User = "px";
-  #     Group = "users";
-  #   };
-  # };
-
-  # systemd.user.timers."osu-screen-maker" = {
-  #   description = "Trigger rebuild of OSU! screen maker";
-  #   wantedBy = [ "timers.target" ];
-  #   timerConfig = {
-  #     OnUnitActiveSec = "1m";
-  #     Unit = "osu-screen-maker.service";                                                                                                                                  
-  #   };
-  # };
-
-
-  # services.cron = {
-  #   enable = true;
-  #   systemCronJobs = [
-  #     # "*/5 * * * *      root    date >> /tmp/cron.log"
-  #     "0 3 * * *  px  push-taskdata"
-  #     "1 3 * * *  px  push-obsidian"
-  #     "2 3 * * *  px  push-dotflies"
-  #   ];
-  # };
+  
 }
