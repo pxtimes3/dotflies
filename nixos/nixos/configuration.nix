@@ -173,7 +173,7 @@
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         script = ''
-          bash /home/px/config/bin/my-systemd-script.sh
+          /bin/bash /home/px/config/bin/my-systemd-script.sh
         '';
         serviceConfig = {
           Type = "oneshot";
