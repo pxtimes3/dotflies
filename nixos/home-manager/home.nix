@@ -31,13 +31,24 @@ in
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
+
+      ### 
       systemd.user.services.pushToGit = {
+        description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = "push-dotflies";
+          ExecStart = "bash .config/bin/my-systemd-script.sh";
           User = "px";
           Group = "users";
+        };
+      };
+      systemd.user.timers.pushToGit = {
+        description = "Trigger pushToGit";
+        wantedBy = [ "timers.target" ];
+        timerConfig = {
+          OnUnitActiveSec = "1m";
+          Unit = "pushToGit.service";                                                                                                                                  
         };
       };
     };
