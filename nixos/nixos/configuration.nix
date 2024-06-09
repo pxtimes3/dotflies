@@ -189,6 +189,7 @@
         timerConfig = {
           OnUnitActiveSec = "1m";
           OnCalendar = "*-*-* *:*:*:00";
+          Persistent = true;
           Unit = "pushToGit.service";                                                                                                                                  
         };
       };
