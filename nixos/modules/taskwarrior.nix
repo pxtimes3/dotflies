@@ -7,10 +7,10 @@
 {
 	programs.taskwarrior = {
     	enable = true;
-    	config.default = ''{
+    	config.default = ''
     		## https://gist.github.com/djmitche/dd7c9f257306e6b8957759c4d5265cc9
     		## 
-    		data.location=~/.config/task
+    		data.location=~/.config/taskdata
 
 			color=on
 			color.header=rgb031
@@ -115,6 +115,6 @@
 
 			# stop prompting for news
 			news.version=2.6.0
-		}'';
+		'';
 	};
 }
