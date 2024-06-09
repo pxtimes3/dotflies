@@ -1,0 +1,35 @@
+#! /bin/bash
+
+cd ~
+
+search_file=".task/task-pane-search"
+refresh_file=".task/task-pane-refresh"
+output_file=".task/task-pane-output"
+inputs=".task/*.data $search_file $refresh_file"
+task_pane=$(readlink -f ~/bin/task-pane)
+this_pane=$(tmux list-panes -F "#{pane_id} #{pane_start_command}" | grep "^%[0-9]* $task_pane$" | cut -d' ' -f 1)
+
+[ -f "$search_file" ] || touch "$search_file"
+[ -f "$refresh_file" ] || touch "$refresh_file"
+
+(
+    echo "refresh"
+    while true; do
+        inotifywait -q -q -e modify $inputs
+        echo "refresh"
+    done
+# pipe these two subshells together so that a line from the first leads to a loop of the second, and
+# those queue up such as when several inotifywait changes occur.
+) | (
+    while read _; do
+        # script does not copy the terminal column width, so set it manually
+        cols=`tput cols`
+        echo -n $'\033[H..'
+        script -q -c "stty cols $cols; task rc.gc=no rc.indent.report=4 rc.verbose= $(< $search_file)" $output_file >/dev/null </dev/null
+        clear
+        cat $output_file  | grep -v '^Script' | grep -v '^$'
+        lines=$(wc -l < $output_file)
+        tmux resize-pane -t $this_pane -y $(( lines - 2 ))
+        tmux set set-titles-string " $(task rc.gc=no rc.indent.report=4 rc.verbose= rc.report.next.columns=description.desc rc.report.next.labels= rc.defaultwidth=1000 next +ACTIVE 2>/dev/null </dev/null | sed -e 's/^ */«/' | sed 's/$/»/' | tr '\n' ' ')"
+    done
+)

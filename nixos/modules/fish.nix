@@ -22,6 +22,9 @@
     set -x GOPATH ~/go
     set -x GOCACHE $XDG_CACHE_HOME/go-build
 
+    set -x TASKRC=~/.config/task/taskrc
+    set -x TASKDATA=~/.config/taskdata
+
     fish_add_path -p ~/bin /usr/local/bin/ ~/.config/bin
   '';
 in {
