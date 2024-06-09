@@ -173,7 +173,7 @@
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         script = ''
-          /bin/bash echo date >> /home/px/.config/bin/wtf.log
+          /run/current-system/sw/bin/bash echo date >> /home/px/.config/bin/wtf.log
         '';
         serviceConfig = {
           Type = "oneshot";
