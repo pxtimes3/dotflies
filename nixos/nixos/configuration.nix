@@ -147,7 +147,7 @@
 	      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDDf+RSelkuoVyfqf3sagpdCFMDNkFV0ABzxrZNdRYQr px@pxnix" 
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJm9tjiaAURpQx3HR/Y+rKHAq4p2Gc0GHb7LWoI61g4c px@pxLinux" 
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxb69wvAM7+umL6ERXfhxtiTG3+W400q3sf+2K10MPdEQrbVU81OabjpErgAE8q2nVYnCddvlVGyrgA7PB83wypg+pnaDFhZP+lIN1T3jxgi6+aJIPbiV5OK1gnFWh9NBOfgVVWA787dxa8Bhb0YAf9rZEd1qpR/u3YWfwi/ftAwg6BtIdxwgFyoEaRt4cxUt5Xpw4UEgCY3J+zl2pHn2c41JAmX4J7KUMLK3Rs5fBcWZwpmwe3CHWReImUClUNIScSfOH8cvMV8tk2r1qRbOmfXXkVM1/p5aRRNS9+C57Ag2HN1QmdYNKKZnDTAW7yiIvDyzL+hid51KNW6yF29/1 px@Magnuss-iMac.lan"
-];
+      ];
       extraGroups = ["networkmanager" "wheel"];
     };
   };
