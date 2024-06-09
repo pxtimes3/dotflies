@@ -31,6 +31,15 @@ in
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
+      systemd.user.services.pushToGit = {
+        wantedBy = ["multi-user.target"];
+        serviceConfig = {
+          Type = "oneshot";
+          ExecStart = "push-dotflies";
+          User = "px";
+          Group = "users";
+        };
+      };
     };
   };
 
@@ -230,25 +239,24 @@ in
   home.stateVersion = "23.11";
 
 
-  systemd.services."osu-screen-maker" = {
-    description = "OSU! screen maker";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.python3}/bin/python /home/eog/Documents/osu-history/screen_maker.py";
-      User = "eog";
-      Group = "users";
-    };
-  };
+  # systemd.user.services.pushToGit = {
+  #   wantedBy = ["multi-user.target"];
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     ExecStart = "push-dotflies";
+  #     User = "px";
+  #     Group = "users";
+  #   };
+  # };
 
-  systemd.timers."osu-screen-maker" = {
-    description = "Trigger rebuild of OSU! screen maker";
-    wantedBy = [ "timers.target" ];
-    timerConfig = {
-      OnUnitActiveSec = "1m";
-      Unit = "osu-screen-maker.service";                                                                                                                                  
-    };
-  };
+  # systemd.user.timers."osu-screen-maker" = {
+  #   description = "Trigger rebuild of OSU! screen maker";
+  #   wantedBy = [ "timers.target" ];
+  #   timerConfig = {
+  #     OnUnitActiveSec = "1m";
+  #     Unit = "osu-screen-maker.service";                                                                                                                                  
+  #   };
+  # };
 
 
   # services.cron = {
