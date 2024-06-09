@@ -186,7 +186,8 @@
         description = "Trigger pushToGit";
         wantedBy = [ "timers.target" ];
         timerConfig = {
-          OnUnitActiveSec = "1m";
+          #OnUnitActiveSec = "1m";
+          OnCalendar = "*-*-* *:*:00";
           Unit = "pushToGit.service";                                                                                                                                  
         };
       };
