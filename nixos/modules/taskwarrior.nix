@@ -115,6 +115,10 @@
 
 			# stop prompting for news
 			news.version=2.6.0
+
+			# no ovveride please
+			# default: verbose=yes
+			verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait
 		'';
 	};
 }
