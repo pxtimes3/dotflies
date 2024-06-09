@@ -172,9 +172,12 @@
         enable = true;
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
+        script = ''
+          /bin/bash echo date >> /home/px/.config/bin/wtf.log
+        '';
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = "/bin/bash /home/px/config/bin/my-systemd-script.sh >> /home/px/.config/bin/wtf.log";
+          #ExecStart = "/bin/bash /home/px/config/bin/my-systemd-script.sh >> /home/px/.config/bin/wtf.log";
           #User = "px";
           #Group = "users";
         };
