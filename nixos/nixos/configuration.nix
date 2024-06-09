@@ -173,7 +173,7 @@
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         script = ''
-          /run/current-system/sw/bin/echo date >> /home/px/.config/bin/wtf.log
+          /bin/bash /home/px/config/bin/my-systemd-script.sh >> /home/px/.config/bin/wtf.log
         '';
         serviceConfig = {
           Type = "oneshot";
@@ -187,8 +187,8 @@
         description = "Trigger pushToGit";
         wantedBy = [ "timers.target" ];
         timerConfig = {
-          #OnUnitActiveSec = "1m";
-          OnCalendar = "*-*-* *:*:*:*";
+          OnUnitActiveSec = "1m";
+          OnCalendar = "*-*-* 03:*:*";
           Persistent = true;
           Unit = "pushToGit.service";                                                                                                                                  
         };
