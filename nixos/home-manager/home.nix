@@ -82,6 +82,7 @@ in
     zstd
     gnupg
     gnumake
+    nodejs
 
     # nix related
     #
