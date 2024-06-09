@@ -1,0 +1,3 @@
+[submodule "taskdata"]
+	path = taskdata
+	url = git@github.com:pxtimes3/taskdata.git
