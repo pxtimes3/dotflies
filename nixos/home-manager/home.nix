@@ -229,21 +229,27 @@ in
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
 
-  systemd.services.my-repeating-task= {
-    serviceConfig.Type = "oneshot";
-    path = with pkgs; [ bash ];
-    script = ''
-      bash ~/config/bin/my-systemd-script.sh
-    '';
-  };
-  systemd.timers.my-repeating-task = {
-    wantedBy = [ "timers.target" ];
-    partOf = [ "my-repeating-task.service" ];
-    timerConfig = {
-      OnCalendar = "*:0/1";
-      Unit = "my-repeating-task.service";
+
+  systemd.services."osu-screen-maker" = {
+    description = "OSU! screen maker";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.python3}/bin/python /home/eog/Documents/osu-history/screen_maker.py";
+      User = "eog";
+      Group = "users";
     };
   };
+
+  systemd.timers."osu-screen-maker" = {
+    description = "Trigger rebuild of OSU! screen maker";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnUnitActiveSec = "1m";
+      Unit = "osu-screen-maker.service";                                                                                                                                  
+    };
+  };
+
 
   # services.cron = {
   #   enable = true;
