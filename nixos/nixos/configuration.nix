@@ -169,22 +169,17 @@
     };
   };
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [(pkgs.OVMF.override {
-          secureBoot = true;
-          tpmSupport = true;
-        }).fd];
-      };
-    };
-  };
-
+  # hardware.opengl = {
+  #   enable = true;
+  #   driSupport = true;
+  #   #driSupport32Bit = true;
+  #   extraPackages = with pkgs; [
+  #     rocmPackages_5.clr.icd
+  #     rocmPackages_5.clr
+  #     rocmPackages_5.rocminfo
+  #     rocmPackages_5.rocm-runtime
+  #   ];
+  # };
 
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
