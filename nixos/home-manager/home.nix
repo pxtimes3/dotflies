@@ -144,8 +144,12 @@ in
 
     # gamedev
     godot_4
-    blender
     unityhub
+
+    # 3D
+    blender
+    #blender-hip
+    clinfo
 
     # reverse engineering
     objconv
