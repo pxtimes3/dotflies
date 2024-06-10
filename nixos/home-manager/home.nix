@@ -87,6 +87,8 @@ in
     krita
     inkscape
     tmux
+    zellij
+    obsidian
 
     # system call monitoring
     strace # system call monitoring
@@ -101,6 +103,7 @@ in
     usbutils # lsusb
     keyd # key remapping
     duplicity
+    virt-manager
     
     # compilers
     gcc
@@ -122,6 +125,7 @@ in
     wine
     steam
     plexamp
+    komga
 
     # fish
     fishPlugins.done

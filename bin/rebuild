@@ -76,7 +76,6 @@ gitDiff () {
     exit 0
   else
     DIFF=$(git diff -U0 '*.nix')
-    echo -e ${DIFF}
   fi
 }
 
@@ -106,7 +105,9 @@ done
 
 pushd $PATHTOFLAKE &> /dev/null 
 
-gitDiff
+if [[  $FORCE != true ]]; then
+  gitDiff
+fi
 
 if [[ $ALL == true ]]; then
   sys || error && usr || error
