@@ -173,13 +173,10 @@
         description = "Push configs to git";
         wantedBy = ["multi-user.target"];
         script = ''
-          /bin/bash /home/px/config/bin/my-systemd-script.sh >> /home/px/.config/bin/wtf.log
+          /home/px/config/bin/push-dotflies && /home/px/config/bin/push-obsidian && /home/px/config/bin/push-taskwarrior
         '';
         serviceConfig = {
           Type = "oneshot";
-          #ExecStart = "/bin/bash /home/px/config/bin/my-systemd-script.sh >> /home/px/.config/bin/wtf.log";
-          #User = "px";
-          #Group = "users";
         };
       };
       systemd.user.timers."pushToGit" = {
@@ -187,10 +184,9 @@
         description = "Trigger pushToGit";
         wantedBy = [ "timers.target" ];
         timerConfig = {
-          #OnUnitActiveSec = "1m";
-          OnCalendar = "*-*-* 03:*:*";
+          Unit = "pushToGit.service";
+          OnCalendar = "*-*-* 03:00:00";
           Persistent = true;
-          Unit = "pushToGit.service";                                                                                                                                  
         };
       };
 
