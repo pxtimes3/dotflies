@@ -52,7 +52,6 @@ sys () {
   elif [[ $FORCE == true ]]; then
     dosys
   else
-    echo -e $DIFF
     echo -e "Found no changes in configuration.nix"
   fi
 }
@@ -63,8 +62,7 @@ usr () {
     dousr
   elif [[ $FORCE == true ]]; then
     dousr
-  else 
-    echo -e $DIFF
+  else
     echo -e "Found no changes in home.nix"
   fi
 }
