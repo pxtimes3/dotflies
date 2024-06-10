@@ -63,7 +63,7 @@
 
   # https://nixos.wiki/wiki/AMD_GPU
   boot.initrd.kernelModules = ["amdgpu"];
-  services.xserver.videoDrivers = ["amdgpu" "amdgpu-pro"];
+  services.xserver.videoDrivers = ["amdgpu"];
   services.xserver.enable = true;
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
   hardware.opengl = {
