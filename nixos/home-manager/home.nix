@@ -103,8 +103,6 @@ in
     usbutils # lsusb
     keyd # key remapping
     duplicity
-    virt-manager
-    freerdp
     
     # compilers
     gcc
@@ -216,13 +214,6 @@ in
 
   # enable numlock
   xsession.numlock.enable = true;
-
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
-    };
-  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
