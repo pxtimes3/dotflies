@@ -66,6 +66,21 @@
   services.xserver.videoDrivers = ["amdgpu"];
   services.xserver.enable = true;
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    #driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+      rocmPackages.clr
+      rocmPackages.rocminfo
+      rocmPackages.rocm-runtime
+    ];
+  };
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+  
 
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
@@ -164,18 +179,6 @@
       PermitRootLogin = "no";
       PasswordAuthentication = true;
     };
-  };
-
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    #driSupport32Bit = true;
-    extraPackages = with pkgs; [
-      rocmPackages_5.clr.icd
-      rocmPackages_5.clr
-      rocmPackages_5.rocminfo
-      rocmPackages_5.rocm-runtime
-    ];
   };
 
   systemd.user.services."pushToGit" = {
