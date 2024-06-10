@@ -168,7 +168,6 @@
     };
   };
 
-  # silly service is silly
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
     wantedBy = ["multi-user.target"];

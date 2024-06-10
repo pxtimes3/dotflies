@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -25,10 +25,22 @@ usage () {
   exit 69
 }
 
+dosys () {
+  echo "Rebuilding! > nixos-rebuild switch --flake .#$(hostname)"
+  sudo nixos-rebuild switch --flake .#$(hostname) &> nixos-switch.log
+}
+
+dousr () {
+  echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
+  home-manager switch --flake .#$(whoami)@$(hostname) &> nixos-switch.log
+}
+
 checkflake () {
   if [[ $DIFF =~ 'flake' ]]; then
+    echo -e "Updating flake..."
     nix flake update
   elif [[ $FORCE == true ]]; then
+    echo -e "Updating flake..."
     nix flake update
   fi
 }
@@ -39,28 +51,23 @@ sys () {
     dosys
   elif [[ $FORCE == true ]]; then
     dosys
+  else
+    echo -e $DIFF
+    echo -e "Found no changes in configuration.nix"
   fi
-}
-
-dosys () {
-  echo "Rebuilding! > nixos-rebuild switch --flake .#$(hostname)"
-  sudo nixos-rebuild switch --flake .#$(hostname) &> nixos-switch.log
 }
 
 usr () {
   checkflake
-  if [[ $DIFF =~ 'home-manager/home.nix' ]]; then
+  if [[ $DIFF =~ 'home.nix' ]]; then
     dousr
   elif [[ $FORCE == true ]]; then
     dousr
+  else 
+    echo -e $DIFF
+    echo -e "Found no changes in home.nix"
   fi
 }
-
-dousr () {
-  echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
-  home-manager switch --flake .#$(whoami)@$(hostname) &> nixos-switch.log
-}
-
 
 gitDiff () {
   if git diff --quiet '*.nix'; then
@@ -69,6 +76,7 @@ gitDiff () {
     exit 0
   else
     DIFF=$(git diff -U0 '*.nix')
+    echo -e ${DIFF}
   fi
 }
 
@@ -96,7 +104,9 @@ while getopts "fsuha" o; do
     esac
 done
 
-pushd $PATHTOFLAKE
+pushd $PATHTOFLAKE &> /dev/null 
+
+gitDiff
 
 if [[ $ALL == true ]]; then
   sys || error && usr || error
@@ -108,7 +118,11 @@ else
   usage
 fi
 
-git commit -am "$COMMITMSG" # all went OK, add and commit
-popd # return to previous path
-echo "Rebuilding OK!" # send happy message to user
+if [[ ${#DIFF} -gt 0 ]]; then
+  git commit -am "$COMMITMSG" # all went OK, add and commit
+fi
+
+popd &> /dev/null # return to previous path
+
+#echo "Rebuilding OK!" # send happy message to user
 exit 0
