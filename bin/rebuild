@@ -27,12 +27,12 @@ usage () {
 
 dosys () {
   echo "Rebuilding! > nixos-rebuild switch --flake .#$(hostname)"
-  sudo nixos-rebuild switch --flake .#$(hostname) &> nixos-switch.log
+  sudo nixos-rebuild switch --flake .#$(hostname) &>> nixos-switch.log
 }
 
 dousr () {
   echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
-  home-manager switch --flake .#$(whoami)@$(hostname) &> nixos-switch.log
+  home-manager switch --flake .#$(whoami)@$(hostname) &>> nixos-switch.log
 }
 
 checkflake () {
