@@ -170,26 +170,25 @@
 
   # silly service is silly
   systemd.user.services."pushToGit" = {
-        enable = true;
-        description = "Push configs to git";
-        wantedBy = ["multi-user.target"];
-        script = ''
-          /home/px/config/bin/push-dotflies && /home/px/config/bin/push-obsidian && /home/px/config/bin/push-taskwarrior
-        '';
-        serviceConfig = {
-          Type = "oneshot";
-        };
-      };
-      systemd.user.timers."pushToGit" = {
-        enable = true;
-        description = "Trigger pushToGit";
-        wantedBy = [ "timers.target" ];
-        timerConfig = {
-          Unit = "pushToGit.service";
-          OnCalendar = "*-*-* 03:00:00";
-          Persistent = true;
-        };
-      };
+    description = "Push configs to git";
+    wantedBy = ["multi-user.target"];
+    path = [
+      pkgs.bash
+    ];
+    script = ''
+      /home/px/config/bin/push-dotflies >> push-dotflies.log && /home/px/config/bin/push-obsidian >> push-obsidian.log && /home/px/config/bin/push-taskwarrior >> push-taskwarrior.log
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+    };
+    startAt = "daily";
+  };
+  systemd.user.timers."pushToGit" = {
+    timerConfig = {
+      Persistent = true;
+      OnCalendar = "*-*-* 03:00:00";
+    };
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

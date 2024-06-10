@@ -195,7 +195,6 @@ in
     defaultEditor = true;
   };
 
-
   programs.direnv.enable = true;
   programs.zsh.enable = true;
   programs.bash.enable = true;
@@ -209,6 +208,9 @@ in
 
   # disable warning when on unstable
   home.enableNixpkgsReleaseCheck = false;
+
+  # enable numlock
+  xsession.numlock.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
