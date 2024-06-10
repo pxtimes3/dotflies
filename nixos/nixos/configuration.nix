@@ -185,7 +185,7 @@
   systemd.user.timers."pushToGit" = {
     timerConfig = {
       Persistent = true;
-      OnCalendar = "*-*-* 03:00:00";
+      OnCalendar = ["*-*-* 03:00:00"];
     };
   };
 
