@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+COMMITMSG="Created by cron @ $(date --iso-8601=seconds)"
+
+cd /home/px/.config/taskdata
+git add .
+git commit -am "$COMMITMSG"
+git push 
+exit 0

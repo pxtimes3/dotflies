@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+set -e
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+DIFF=""
+COMMITMSG="$(date --iso-8601=seconds)"
+PATHTOFLAKE=~/.config/nixos/
+
+FORCE=false
+SYS=false
+USR=false
+ALL=false
+
+usage () { 
+  echo -e "${bold}Usage:${normal}"
+  echo -e "-f  Force  Processes even if git finds no changes.";
+  echo -e "-s  System Only rebuild configuration.nix";
+  echo -e "-h  User   Only rebuilds home-manager.nix.";
+  echo -e "-a  All    Rebuilds flake, system & home-manager.\n";
+  echo -e "${bold}Ex:${normal} rebuild.sh -fu
+    Rebuilds home-manager even if git found no changes.
+    This is useful if you've added a new module or whatever,
+    just don't forget to add it afterwards!"
+  exit 69
+}
+
+checkflake () {
+  if [[ $DIFF =~ 'flake' ]]; then
+    nix flake update
+  elif [[ $FORCE == true ]]; then
+    nix flake update
+  fi
+}
+
+sys () {
+  checkflake
+  if [[ $DIFF =~ 'configuration.nix' ]]; then
+    dosys
+  elif [[ $FORCE == true ]]; then
+    dosys
+  fi
+}
+
+dosys () {
+  echo "Rebuilding! > nixos-rebuild switch --flake .#$(hostname)"
+  sudo nixos-rebuild switch --flake .#$(hostname) &> nixos-switch.log
+}
+
+usr () {
+  checkflake
+  if [[ $DIFF =~ 'home-manager/home.nix' ]]; then
+    dousr
+  elif [[ $FORCE == true ]]; then
+    dousr
+  fi
+}
+
+dousr () {
+  echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
+  home-manager switch --flake .#$(whoami)@$(hostname) &> nixos-switch.log
+}
+
+
+gitDiff () {
+  if git diff --quiet '*.nix'; then
+    echo "Found no changes, exiting."
+    popd
+    exit 0
+  else
+    DIFF=$(git diff -U0 '*.nix')
+  fi
+}
+
+error () {
+   cat nixos-switch.log | grep --color error && exit 1
+}
+
+while getopts "fsuha" o; do
+    case "${o}" in
+        f)
+            FORCE=true
+            ;;
+        s)
+            SYS=true
+            ;;
+        h)
+            USR=true
+            ;;
+        a)
+            ALL=true
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+pushd $PATHTOFLAKE
+
+if [[ $ALL == true ]]; then
+  sys || error && usr || error
+elif [[ $SYS == true ]]; then
+  sys || error
+elif [[ $USR == true ]]; then
+  usr || error
+else 
+  usage
+fi
+
+git commit -am "$COMMITMSG" # all went OK, add and commit
+popd # return to previous path
+echo "Rebuilding OK!" # send happy message to user
+exit 0
