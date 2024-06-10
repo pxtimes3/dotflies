@@ -10,34 +10,17 @@ let
                  (builtins.attrNames (builtins.readDir dir));
 in
 {
-  # You can import other home-manager modules here
   imports = [] ++ (filesIn ../modules);
 
   nixpkgs = {
-    # You can add overlays here
-    overlays = [
-      # If you want to use overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
-    ];
-    # nixpkgs config
+    overlays = [];
     config = {
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
-
-      ### 
-
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "px";
     homeDirectory = "/home/px/";
@@ -191,8 +174,6 @@ in
     # Support the Video Audio (Hardware) Acceleration API
     gst_all_1.gst-vaapi
   ];
-
-  
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [

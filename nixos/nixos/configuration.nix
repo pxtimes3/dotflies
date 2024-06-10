@@ -168,6 +168,7 @@
     };
   };
 
+  # silly service is silly
   systemd.user.services."pushToGit" = {
         enable = true;
         description = "Push configs to git";
