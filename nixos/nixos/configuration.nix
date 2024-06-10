@@ -65,7 +65,7 @@
   boot.initrd.kernelModules = ["amdgpu"];
   services.xserver.videoDrivers = ["amdgpu"];
   services.xserver.enable = true;
-  hardware.opengl.driSupport32Bit = true; # For 32 bit applications
+  # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
 
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
