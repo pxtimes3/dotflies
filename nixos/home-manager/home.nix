@@ -195,7 +195,7 @@ in
 
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
+    defaultEditor = false;
   };
 
   programs.direnv.enable = true;

@@ -19,12 +19,6 @@
     set -x XDG_DATA_HOME $HOME/.local/share
     set -x XDG_CACHE_HOME $HOME/.cache
 
-    set -x GOPATH ~/go
-    set -x GOCACHE $XDG_CACHE_HOME/go-build
-
-    set -x TASKRC ~/.config/task/taskrc
-    set -x TASKDATA ~/.config/taskdata
-
     fish_add_path -p ~/bin /usr/local/bin/ ~/.config/bin
   '';
 in {
@@ -39,7 +33,7 @@ in {
 
     shellAliases = {
       "..." = "cd ../..";
-      "ls" = "eza -lahm";
+      "ls" = "eza -lam";
     };
 
     interactiveShellInit = fishConfig;
@@ -93,8 +87,5 @@ in {
         curl -sL https://www.gitignore.io/api/$argv
       '';
     };
-
-    plugins = [
-    ];
   };
 }
