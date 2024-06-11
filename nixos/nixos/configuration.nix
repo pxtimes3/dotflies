@@ -82,7 +82,6 @@
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
   
-
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
   services.displayManager.sddm.enable = true;
@@ -181,6 +180,24 @@
       PasswordAuthentication = true;
     };
   };
+
+  ## network mounts
+  services.rpcbind.enable = true;
+  systemd.mounts = [{
+    type = "nfs";
+    mountConfig = {
+      Options = "noatime";
+    };
+    what = "192.168.1.57:/volume1/ds423";
+    where = "/mnt/ds423/volume1";
+  }];
+  systemd.automounts = [{
+    wantedBy = [ "multi-user.target" ];
+    automountConfig = {
+      TimeoutIdleSec = "600";
+    };
+    where = "/mnt/ds423/volume1";
+  }];
 
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
