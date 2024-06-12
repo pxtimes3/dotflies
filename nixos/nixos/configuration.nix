@@ -76,6 +76,7 @@
       rocmPackages.rocminfo
       rocmPackages.rocm-runtime
       amdvlk
+      ventoy-full
     ];
   };
   systemd.tmpfiles.rules = [
