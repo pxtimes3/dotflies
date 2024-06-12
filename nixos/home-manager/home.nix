@@ -103,7 +103,7 @@ in
     usbutils # lsusb
     keyd # key remapping
     duplicity
-    ventoy
+    ventoy-full
     
     # compilers
     gcc
