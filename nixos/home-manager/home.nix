@@ -69,6 +69,7 @@ in
     gnupg
     gnumake
     nodejs
+    tldr
 
     # nix related
     #
