@@ -104,7 +104,11 @@ done
 pushd $PATHTOFLAKE &> /dev/null 
 
 if [[  $FORCE != true ]]; then
+  # empty log
+  echo "" > nixos-switch.log
   gitDiff
+else
+  echo "" > nixos-switch.log
 fi
 
 if [[ $ALL == true ]]; then

@@ -10,7 +10,17 @@ let
                  (builtins.attrNames (builtins.readDir dir));
 in
 {
-  imports = [] ++ (filesIn ../modules);
+  imports = [
+    ../modules/alacritty.nix
+    ../modules/kitty.nix
+    ../modules/wezterm.nix
+
+    ../modules/fish.nix
+
+    ../modules/taskwarrior.nix
+
+    ../modules/sessionvariables.nix
+  ];
 
   nixpkgs = {
     overlays = [];
