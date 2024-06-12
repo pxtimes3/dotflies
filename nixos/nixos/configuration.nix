@@ -76,7 +76,6 @@
       rocmPackages.rocminfo
       rocmPackages.rocm-runtime
       amdvlk
-      ventoy-full
     ];
   };
   systemd.tmpfiles.rules = [
@@ -171,7 +170,13 @@
     alejandra
     xorg.xev
     docker
+    partition-manager
+    libsForQt5.kpmcore
+    ventoy-full
+    gparted
   ];
+
+  services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
 
   services.openssh = {
     enable = true;
@@ -183,22 +188,22 @@
   };
 
   ## network mounts
-  services.rpcbind.enable = true;
-  systemd.mounts = [{
-    type = "nfs";
-    mountConfig = {
-      Options = "noatime";
-    };
-    what = "192.168.1.57:/volume1/ds423";
-    where = "/mnt/ds423/volume1";
-  }];
-  systemd.automounts = [{
-    wantedBy = [ "multi-user.target" ];
-    automountConfig = {
-      TimeoutIdleSec = "600";
-    };
-    where = "/mnt/ds423/volume1";
-  }];
+ # services.rpcbind.enable = true;
+ # systemd.mounts = [{
+ #   type = "nfs";
+ #   mountConfig = {
+ #     Options = "noatime";
+ #   };
+ #   what = "192.168.1.57:/volume1/ds423";
+ #   where = "/mnt/ds423/volume1";
+ # }];
+ # systemd.automounts = [{
+ #   wantedBy = [ "multi-user.target" ];
+ #   automountConfig = {
+ #     TimeoutIdleSec = "600";
+ #   };
+ #   where = "/mnt/ds423/volume1";
+ # }];
 
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
