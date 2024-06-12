@@ -86,7 +86,6 @@ in
     taskwarrior # task manager
     krita
     inkscape
-    tmux
     zellij
     obsidian
 
@@ -108,13 +107,11 @@ in
     gcc
 
     # terminal
-    kate
     nnn
     neofetch
     fish
 
     # -- hyprland
-    # kitty
     # wofi
 
     # procrastination
