@@ -107,6 +107,9 @@ in
     gcc
 
     # terminal
+    kitty       #
+    alacritty   # BATTLE OF THE TERMINAL EMULATORS!!!
+    wezterm     #
     nnn
     neofetch
     fish
