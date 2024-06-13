@@ -205,7 +205,7 @@
     where = "/mnt/ds423/volume1";
   }];
 
-  systemd.services.test_systemd_timers = {
+  systemd.user.services.test_systemd_timers = {
       serviceConfig.Type = "oneshot";
       path = [ pkgs.bash ];
       script = ''
@@ -213,7 +213,7 @@
       '';
     };
 
-    systemd.timers.test_systemd_timers = {
+    systemd.user.timers.test_systemd_timers = {
       wantedBy = [ "timers.target" ];
       partOf = [ "test_systemd_timers.service" ];
       timerConfig.OnCalendar = [ "*-*-* */1:00:00" ];
