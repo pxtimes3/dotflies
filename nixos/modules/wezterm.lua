@@ -12,7 +12,7 @@ return {
   	-- 	&& curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo \
   	-- 	&& tic -x -o ~/.terminfo $tempfile \
   	-- 	&& rm $tempfile
-	term = "wezterm",
+	term = "xterm-256color",
 
 	-- disable tabs + tabkey 
 	enable_tab_bar = false,
