@@ -57,6 +57,16 @@ in
     # c++
     gdb
     gcc
+    clang-tools
+    cmake
+    codespell
+    conan
+    cppcheck
+    doxygen
+    gtest
+    lcov
+    #vcpkg
+    vcpkg-tool
 
     # utils
     eza # A modern replacement for ‘ls’
