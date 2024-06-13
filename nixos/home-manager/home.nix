@@ -213,12 +213,10 @@ in
 
   programs.neovim = {
     enable = true;
-    defaultEditor = false;
+    defaultEditor = true;
   };
 
   programs.direnv.enable = true;
-  programs.zsh.enable = true;
-  programs.bash.enable = true;
 
   programs.nix-index.enable = true;
 
