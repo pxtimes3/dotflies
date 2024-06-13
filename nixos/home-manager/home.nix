@@ -54,6 +54,10 @@ in
     python3
     pipx
 
+    # c++
+    gdb
+    gcc
+
     # utils
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
@@ -113,9 +117,6 @@ in
     usbutils # lsusb
     keyd # key remapping
     duplicity
-
-    # compilers
-    gcc
 
     # terminal
     kitty       #
