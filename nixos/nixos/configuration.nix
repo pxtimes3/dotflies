@@ -215,8 +215,8 @@
     };
 
     systemd.user.timers.test_systemd_timers = {
-      wantedBy = [ "timers.target" ];
-      partOf = [ "test_systemd_timers.service" ];
+#      wantedBy = [ "timers.target" ];
+#      partOf = [ "test_systemd_timers.service" ];
       timerConfig = {
         OnCalendar = [ "*:00" ];
       };
