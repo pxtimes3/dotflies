@@ -218,7 +218,7 @@
       wantedBy = [ "timers.target" ];
       partOf = [ "test_systemd_timers.service" ];
       timerConfig = {
-        OnCalendar = [ "3hours" ];
+        OnCalendar = [ "*:00" ];
       };
     };
 
