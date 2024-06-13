@@ -144,7 +144,7 @@
   };
 
   # TODO: Set your hostname
-  networking.hostName = "pxnix";
+  networking.hostName = "pxbeard";
 
   users.users = {
     px = {
@@ -204,23 +204,6 @@
     };
     where = "/mnt/ds423/volume1";
   }];
-
-  systemd.user.services.test_systemd_timers = {
-    wantedBy = [ "multi-user.target"];
-      serviceConfig.Type = "oneshot";
-      path = [ pkgs.bash ];
-      script = ''
-        echo "I am monkey" >> wtf.log
-      '';
-    };
-
-    systemd.user.timers.test_systemd_timers = {
-#      wantedBy = [ "timers.target" ];
-#      partOf = [ "test_systemd_timers.service" ];
-      timerConfig = {
-        OnCalendar = [ "*:00" ];
-      };
-    };
 
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
