@@ -31,7 +31,6 @@ in {
       n = "nvim";
       t = "task";
       ta = "task add";
-      tap = "task add project:";
     };
 
     shellAliases = {

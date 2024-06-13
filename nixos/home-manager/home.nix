@@ -143,6 +143,8 @@ in
     fishPlugins.forgit
     fishPlugins.hydro
     fishPlugins.grc
+    fishPlugins.z
+#    fishPlugins.zellij
     grc
 
     # nosqlite?
