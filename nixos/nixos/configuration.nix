@@ -205,6 +205,20 @@
     where = "/mnt/ds423/volume1";
   }];
 
+  systemd.services.test_systemd_timers = {
+      serviceConfig.Type = "oneshot";
+      path = [ pkgs.bash ];
+      script = ''
+        echo "I am monkey" >> wtf.log
+      '';
+    };
+
+    systemd.timers.test_systemd_timers = {
+      wantedBy = [ "timers.target" ];
+      partOf = [ "test_systemd_timers.service" ];
+      timerConfig.OnCalendar = [ "*-*-* */1:00:00" ];
+    };
+
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
     wantedBy = ["multi-user.target"];
