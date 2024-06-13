@@ -215,9 +215,11 @@
     };
 
     systemd.user.timers.test_systemd_timers = {
-      wantedBy = [ "timers.target" ];
-      partOf = [ "test_systemd_timers.service" ];
-      timerConfig.OnCalendar = [ "3h" ];
+      timerConfig = {
+        wantedBy = [ "timers.target" ];
+        partOf = [ "test_systemd_timers.service" ];
+        OnCalendar = [ "3h" ];
+      };
     };
 
   systemd.user.services."pushToGit" = {
