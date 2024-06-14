@@ -217,7 +217,9 @@
       pkgs.openssh  
     ];
     script = ''
-      /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log
+      /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log;
+      /home/px/.config/bin/push-obsidian >> /home/px/.config/bin/push-obsidian.log;
+      /home/px/.config/bin/push-taskdata >> /home/px/.config/bin/push-taskdata.log
     '';
     serviceConfig = {
       Type = "oneshot";
