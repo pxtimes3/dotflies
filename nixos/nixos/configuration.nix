@@ -220,7 +220,7 @@
     serviceConfig = {
       Type = "oneshot";
     };
-    startAt = "daily";
+    startAt = "hourly";
   };
   systemd.user.timers."pushToGit" = {
     timerConfig = {
