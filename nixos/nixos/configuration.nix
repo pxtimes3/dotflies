@@ -174,6 +174,7 @@
     libsForQt5.kpmcore
     ventoy-full
     gparted
+    git
   ];
 
   programs.steam = {
@@ -213,6 +214,7 @@
     wantedBy = ["multi-user.target"];
     path = [
       pkgs.bash
+      pkgs.git
     ];
     script = ''
       /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log
