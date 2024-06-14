@@ -155,7 +155,6 @@ in
     fishPlugins.hydro
     fishPlugins.grc
     fishPlugins.z
-#    fishPlugins.zellij
     grc
 
     # nosqlite?
@@ -164,7 +163,6 @@ in
     # code
     sublime4
     sublime-merge
-    vscode
 
     # gamedev
     godot_4
