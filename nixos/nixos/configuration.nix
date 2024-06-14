@@ -222,7 +222,7 @@
   systemd.user.timers."pushToGit" = {
     timerConfig = {
       Persistent = true;
-      OnCalendar = [ "*-*-* */3:00:00" ];
+      OnCalendar = [ "*-*-* 16:15:00" ];
     };
   };
 
