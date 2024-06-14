@@ -144,7 +144,6 @@ in
     telegram-desktop
     vlc
     wine
-    steam
     plexamp
     komga
 

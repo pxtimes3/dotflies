@@ -176,6 +176,9 @@
     gparted
   ];
 
+  programs.steam = {
+      enable = true;
+    };
   services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
 
   services.openssh = {
