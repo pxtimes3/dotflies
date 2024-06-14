@@ -212,9 +212,9 @@
   systemd.user.services."pushToGit" = {
     description = "Push configs to git";
     wantedBy = ["multi-user.target"];
-    path = [
+    path = [   
       pkgs.bash
-      pkgs.git
+      pkgs.openssh  
     ];
     script = ''
       /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log
