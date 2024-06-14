@@ -215,7 +215,7 @@
       pkgs.bash
     ];
     script = ''
-      /home/px/config/bin/push-dotflies >> push-dotflies.log && /home/px/config/bin/push-obsidian >> push-obsidian.log && /home/px/config/bin/push-taskwarrior >> push-taskwarrior.log
+      /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log && /home/px/.config/bin/push-obsidian >> /home/px/.config/bin/push-obsidian.log && /home/px/.config/bin/push-taskwarrior >> /home/px/.config/bin/push-taskwarrior.log
     '';
     serviceConfig = {
       Type = "oneshot";
