@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-set -e
+set -xe
 
 COMMITMSG="Created by cron @ $(date --iso-8601=seconds)"
 
 cd /home/px/.config
 git commit -am "$COMMITMSG"
-git push 
+git push
 exit 0
+
