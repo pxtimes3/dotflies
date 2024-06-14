@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
-set -xe
+set -ex
 
 COMMITMSG="Created by cron @ $(date --iso-8601=seconds)"
 
-echo -e $(whoami)
-cd /home/px/.config
-/home/px/.nix-profile/bin/git commit -am "$COMMITMSG"
-/home/px/.nix-profile/bin/git push
+push() {
+	if [[ $(/home/px/.nix-profile/bin/git commit -am "$COMMITMSG") ]]; then
+		/home/px/.nix-profile/bin/git push
+	else
+		echo -e "nothing to push in ${cwd}"
+	fi
+}
+
+cd /home/px/.config/ && push
+cd /home/px/.config/taskdata && push
+cd /home/px/.config/obsidian && push
+
 exit 0
 
