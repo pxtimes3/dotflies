@@ -12,8 +12,8 @@ push() {
 }
 
 cd /home/px/.config/ && push
-cd /home/px/.config/taskdata && push
-cd /home/px/.config/obsidian && push
+cd /home/px/.config/taskdata/ && push
+cd /home/px/.config/obsidian/ && push
 
 exit 0
 
