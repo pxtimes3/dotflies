@@ -215,7 +215,6 @@
     path = [   
       pkgs.bash
       pkgs.openssh
-      "/run/current-system/sw/bin/ssh"
     ];
     script = ''
       /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log;

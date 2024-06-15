@@ -127,6 +127,7 @@ in
     usbutils # lsusb
     keyd # key remapping
     duplicity
+    watchexec
 
     # terminal
     kitty       #
