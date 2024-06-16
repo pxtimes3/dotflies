@@ -1,4 +1,11 @@
 local wezterm = require 'wezterm'
+local mux = wezterm.mux
+
+wezterm.on('mux-startup', function()
+  local tab, pane, window = mux.spawn_window {}
+  pane:split { direction = 'Right' }
+end)
+
 
 return {
 	color_scheme = "tokyonight",
