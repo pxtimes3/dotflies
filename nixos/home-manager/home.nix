@@ -14,7 +14,7 @@ in
     ../modules/alacritty.nix
     ../modules/kitty.nix
     ../modules/wezterm.nix
-
+    ../modules/terminals/foot.nix
     ../modules/fish.nix
 
     ../modules/taskwarrior.nix
@@ -133,6 +133,7 @@ in
     kitty       #
     alacritty   # BATTLE OF THE TERMINAL EMULATORS!!!
     wezterm     #
+    foot        #
     nnn
     neofetch
     fish

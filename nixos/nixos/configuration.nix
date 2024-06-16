@@ -175,6 +175,7 @@
     ventoy-full
     gparted
     git
+    wl-clipboard
   ];
 
   programs.steam = {
