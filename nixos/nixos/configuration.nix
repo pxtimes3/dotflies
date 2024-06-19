@@ -253,11 +253,7 @@
     };
   };
 
-  # environment.systemPackages = with pkgs; [ nfs-utils ];
-  boot.initrd = {
-    supportedFilesystems = [ "nfs" ];
-    # kernelModules = [ "nfs" ];
-  };
+  boot.supportedFilesystems = [ "nfs" ];
 #  fileSystems."/mnt/ds423/volume1/" = {
 #    device = "192.168.1.57:/volume1/ds423";
 #    fsType = "nfs";
