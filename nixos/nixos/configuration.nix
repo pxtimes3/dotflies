@@ -240,13 +240,15 @@
       User = "px";
       WorkingDirectory = "/home/px/";
     };
-    startAt = "hourly";
+    # startAt = "hourly";
   };
   systemd.timers."pushToGit" = {
     wantedBy = [ "timers.target" ];
     timerConfig = {
       Persistent = true;
-      OnCalendar = [ "*-*-* 16:15:00" ];
+      Unit = "pushToGit.service";
+      # OnCalendar = [ "*-*-* 16:15:00" ];
+      OnUnitActiveSec = "8h";
     };
   };
 
