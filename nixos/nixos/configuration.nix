@@ -210,24 +210,40 @@
     where = "/mnt/ds423/volume1";
   }];
 
-  systemd.user.services."pushToGit" = {
+  systemd.services."pushToGit" = {
     description = "Push configs to git";
-    wantedBy = ["multi-user.target"];
-    path = [   
+    wantedBy = [ "multi-user.target" ];
+    path = [
       pkgs.bash
       pkgs.openssh
+      pkgs.git
     ];
     script = ''
-      /home/px/.config/bin/push-dotflies >> /home/px/.config/bin/push-dotflies.log;
-      /home/px/.config/bin/push-obsidian >> /home/px/.config/bin/push-obsidian.log;
-      /home/px/.config/bin/push-taskdata >> /home/px/.config/bin/push-taskdata.log
+      # export PATH="$PATH:/run/current-system/sw/bin/ssh"
+
+      COMMITMSG="Created by cron @ $(date --iso-8601=seconds)"
+
+      push() {
+      	if [[ $(/home/px/.nix-profile/bin/git commit -am "$COMMITMSG") ]]; then
+      		/home/px/.nix-profile/bin/git push
+      	else
+      		echo -e "nothing to push in $(pwd)"
+      	fi
+      }
+
+      cd /home/px/.config/ && push
+      cd /home/px/.config/taskdata/ && push
+      cd /home/px/.config/obsidian/ && push
     '';
     serviceConfig = {
       Type = "oneshot";
+      User = "px";
+      WorkingDirectory = "/home/px/";
     };
     startAt = "hourly";
   };
-  systemd.user.timers."pushToGit" = {
+  systemd.timers."pushToGit" = {
+    wantedBy = [ "timers.target" ];
     timerConfig = {
       Persistent = true;
       OnCalendar = [ "*-*-* 16:15:00" ];
