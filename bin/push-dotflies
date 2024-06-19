@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+
 set -e
+
+export PATH="$PATH:/run/current-system/sw/bin/ssh"
 
 COMMITMSG="Created by cron @ $(date --iso-8601=seconds)"
 
@@ -10,8 +13,6 @@ push() {
 		echo -e "nothing to push in ${cwd}"
 	fi
 }
-
-echo -e $(which ssh)
 
 cd /home/px/.config/ && push
 cd /home/px/.config/taskdata/ && push
