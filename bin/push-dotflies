@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -xe
 
 export PATH="$PATH:/run/current-system/sw/bin/ssh"
 
