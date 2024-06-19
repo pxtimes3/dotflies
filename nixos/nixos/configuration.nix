@@ -62,7 +62,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/AMD_GPU
-  boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = ["amdgpu" "nfs"];
   services.xserver.videoDrivers = ["amdgpu"];
   services.xserver.enable = true;
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
@@ -174,6 +174,7 @@
     libsForQt5.kpmcore
     ventoy-full
     gparted
+    nfs-utils
     git
     wl-clipboard
   ];
@@ -251,6 +252,17 @@
       OnUnitActiveSec = "8h";
     };
   };
+
+  # environment.systemPackages = with pkgs; [ nfs-utils ];
+  boot.initrd = {
+    supportedFilesystems = [ "nfs" ];
+    # kernelModules = [ "nfs" ];
+  };
+#  fileSystems."/mnt/ds423/volume1/" = {
+#    device = "192.168.1.57:/volume1/ds423";
+#    fsType = "nfs";
+#  };
+
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
