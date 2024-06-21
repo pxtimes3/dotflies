@@ -130,10 +130,10 @@ in
     watchexec
 
     # terminal
-    kitty       #
-    alacritty   # BATTLE OF THE TERMINAL EMULATORS!!!
-    wezterm     #
-    foot        #
+    # kitty       #
+    # alacritty   # BATTLE OF THE TERMINAL EMULATORS!!!
+    # wezterm     #
+    foot          # FOOT WON!
     nnn
     neofetch
     fish
