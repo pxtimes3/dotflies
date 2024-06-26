@@ -141,6 +141,7 @@
     nssmdns = true;
     openFirewall = true;
   };
+  services.printing.drivers = [ pkgs.hplipWithPlugin ];
 
 
   # Enable sound with pipewire.

@@ -40,6 +40,8 @@ in
     "$HOME/.local/bin"
   ];
 
+  
+
   home.packages = with pkgs; [ 
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
@@ -130,7 +132,8 @@ in
     keyd # key remapping
     duplicity
     watchexec
-    hplip # HP Print drivers
+    hplip           # HP Print drivers
+    hplipWithPlugin # HP Print drivers
 
     # terminal
     foot
