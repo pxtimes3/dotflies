@@ -58,9 +58,19 @@
   };
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    timeout = 0;
 
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 10; # To not fill up boot with junk.
+      editor = false;          # sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2 if you want to keep stuff.
+    };
+    efi = {
+      canTouchEfiVariables = true;
+    };
+  };
+  
   # https://nixos.wiki/wiki/AMD_GPU
   boot.initrd.kernelModules = ["amdgpu" "nfs"];
   services.xserver.videoDrivers = ["amdgpu"];
@@ -126,6 +136,11 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   # Avahi to autodiscover
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    openFirewall = true;
+  };
 
 
   # Enable sound with pipewire.
