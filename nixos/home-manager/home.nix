@@ -130,18 +130,13 @@ in
     keyd # key remapping
     duplicity
     watchexec
+    hplip # HP Print drivers
 
     # terminal
-    # kitty       #
-    # alacritty   # BATTLE OF THE TERMINAL EMULATORS!!!
-    # wezterm     #
-    foot          # FOOT WON!
+    foot
     nnn
     neofetch
     fish
-
-    # -- hyprland
-    # wofi
 
     # procrastination
     discord
