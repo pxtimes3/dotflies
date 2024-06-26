@@ -68,7 +68,7 @@
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
   hardware.opengl = {
     enable = true;
-    driSupport = true;
+    #driSupport = true;
     #driSupport32Bit = true;
     extraPackages = with pkgs; [
       rocmPackages.clr.icd
@@ -126,11 +126,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   # Avahi to autodiscover
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    openFirewall = true;
-  };
+
 
   # Enable sound with pipewire.
   sound.enable = true;
