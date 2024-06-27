@@ -57,6 +57,7 @@ in
     python312Packages.virtualenv
     python312Packages.pipx
     python312Packages.pip
+    python312Packages.mkdocs
 
     # c++
     gdb
@@ -132,7 +133,7 @@ in
     keyd # key remapping
     duplicity
     watchexec
-    hplip           # HP Print drivers
+    #hplip           # HP Print drivers
     hplipWithPlugin # HP Print drivers
 
     # terminal
