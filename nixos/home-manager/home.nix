@@ -135,6 +135,7 @@ in
     watchexec
     #hplip           # HP Print drivers
     hplipWithPlugin # HP Print drivers
+    logiops
 
     # terminal
     foot
