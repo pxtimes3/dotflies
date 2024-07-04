@@ -194,7 +194,6 @@
     gparted
     nfs-utils
     git
-    samba
     logiops
     wl-clipboard
   ];
