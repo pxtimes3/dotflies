@@ -6,12 +6,7 @@
   nixpkgs,
   ...
 }:
-let
-  opencvWithGUI = pkgs.opencv.override {
-    enableGtk3 = true;
-    enableQt5 = true;
-  };
-in
+
 {
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):
@@ -207,13 +202,6 @@ in
     wl-clipboard
     libimobiledevice   # iphone mounting as per:https://nixos.wiki/wiki/IOS
     ifuse             # $ ifuse /tmp/iphone
-
-    ## opencvjunk
-    opencvWithGUI
-    gtk3
-    gdk-pixbuf
-    cairo
-    pango
   ];
 
   # iphone
