@@ -97,6 +97,9 @@
   services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  programs.kdeconnect.enable = true;
+
   # enable flatpak 
   services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

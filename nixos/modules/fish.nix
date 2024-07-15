@@ -44,6 +44,13 @@
     ## DIRENV
     set -g direnv_fish_mode disable_arrow
     direnv hook fish | source
+
+    ## OPENCV
+    set -x GDK_BACKEND wayland
+    set -x QT_QPA_PLATFORM wayland
+    set -x XDG_SESSION_TYPE wayland
+    set -x SDL_VIDEODRIVER wayland
+
   '';
 in {
   programs.fish = {
@@ -94,6 +101,21 @@ in {
             sed -E -e 's/^(\+|\*)//' |
             xargs basename |
             string trim)
+        '';
+      };
+
+      run_wayland = {
+        description="run as wayland";
+        body = ''
+          env GDK_BACKEND=wayland QT_QPA_PLATFORM=wayland $argv
+        '';
+      };
+
+
+      run_x11 = {
+        description="run as x11";
+        body = ''
+          env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb $argv
         '';
       };
 
