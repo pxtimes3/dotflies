@@ -200,7 +200,10 @@
     ifuse             # $ ifuse /tmp/iphone
   ];
 
-# dockerstuff
+  # iphone
+  services.usbmuxd.enable = true;
+
+  # dockerstuff
   virtualisation.docker.enable = true;
 
   programs.steam = {
