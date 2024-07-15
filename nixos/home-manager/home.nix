@@ -53,13 +53,13 @@ in
 
     # languages
     # python
-    python312
-    python312Packages.virtualenv
-    python312Packages.pipx
-    python312Packages.pip
-    python312Packages.numpy
-    python312Packages.opencv4
-    python312Packages.mkdocs
+    # python312
+    # python312Packages.virtualenv
+    # python312Packages.pipx
+    # python312Packages.pip
+    # python312Packages.numpy
+    # python312Packages.opencv4
+    # python312Packages.mkdocs
     
     # opencv
     # opencv
