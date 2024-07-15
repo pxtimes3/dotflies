@@ -119,6 +119,8 @@ in
     zellij
     obsidian
 
+    handbrake
+
     # system call monitoring
     strace # system call monitoring
     ltrace # library call monitoring
