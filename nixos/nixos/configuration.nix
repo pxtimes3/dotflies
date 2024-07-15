@@ -148,7 +148,6 @@
 
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -201,6 +200,10 @@
     wl-clipboard
     libimobiledevice   # iphone mounting as per:https://nixos.wiki/wiki/IOS
     ifuse             # $ ifuse /tmp/iphone
+    gtk3
+    gdk-pixbuf
+    cairo
+    pango
   ];
 
   # iphone
