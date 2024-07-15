@@ -58,6 +58,10 @@ in
     python312Packages.pipx
     python312Packages.pip
     python312Packages.mkdocs
+    
+    # opencv
+    opencv
+    # python312Packages.opencv4
 
     # c++
     gdb
@@ -119,6 +123,7 @@ in
     zellij
     obsidian
 
+    # video
     handbrake
     x264
     x265
