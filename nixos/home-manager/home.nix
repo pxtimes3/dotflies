@@ -120,6 +120,9 @@ in
     obsidian
 
     handbrake
+    x264
+    x265
+    ffmpeg
 
     # system call monitoring
     strace # system call monitoring
