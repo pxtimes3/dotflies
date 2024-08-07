@@ -27,12 +27,12 @@ usage() {
 
 dosys() {
 	echo "Rebuilding! > nixos-rebuild switch --flake .#$(hostname)"
-	sudo nixos-rebuild switch --flake .#$(hostname) &>>nixos-switch.log
+	sudo nixos-rebuild switch --flake ".#$(hostname)" &>>nixos-switch.log
 }
 
 dousr() {
 	echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
-	home-manager switch --flake .#$(whoami)@$(hostname) &>>nixos-switch.log
+	home-manager switch --flake ".#$(whoami)@$(hostname)" &>>nixos-switch.log
 }
 
 checkflake() {
@@ -127,5 +127,10 @@ fi
 
 popd &>/dev/null # return to previous path
 
-#echo "Rebuilding OK!" # send happy message to user
+echo "Rebuilding OK!" # send happy message to user
+echo 'Found the following when looking for "warning":'
+cat /home/px/.config/bin/nixos-switch.log | grep 'warning'
+
+echo 'Rebuild script finished.' >>/home/px/.config/nixos/nixos-switch.log
+
 exit 0

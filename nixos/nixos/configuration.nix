@@ -78,7 +78,7 @@
   services.xserver.videoDrivers = ["amdgpu"];
   services.xserver.enable = true;
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     #driSupport = true;
     #driSupport32Bit = true;
@@ -99,7 +99,7 @@
   services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   programs.kdeconnect.enable = true;
 
   # enable flatpak 
@@ -143,7 +143,7 @@
   # Avahi to autodiscover
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
