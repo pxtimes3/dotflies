@@ -157,6 +157,7 @@ in
 
     # procrastination
     discord
+    vesktop
     telegram-desktop
     vlc
     wine
