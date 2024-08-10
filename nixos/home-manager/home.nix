@@ -17,7 +17,7 @@ in
     ../modules/terminals/foot.nix
     ../modules/fish.nix
 
-    ../modules/taskwarrior.nix
+#    ../modules/taskwarrior.nix
 
     ../modules/sessionvariables.nix
   ];

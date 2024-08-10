@@ -6,7 +6,7 @@
 }:
 {
 	programs.taskwarrior = {
-    	enable = true;
+    	enable = false;
     	config.default = ''
     		## https://gist.github.com/djmitche/dd7c9f257306e6b8957759c4d5265cc9
     		## 
