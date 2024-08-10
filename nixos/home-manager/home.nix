@@ -119,7 +119,7 @@ in
     iotop # io monitoring
     iftop # network monitoring
     wcalc # CLI-calculator
-    taskwarrior # task manager
+    taskwarrior3 # task manager
     krita
     inkscape
     zellij
