@@ -16,7 +16,8 @@ in
     ../modules/wezterm.nix
     ../modules/terminals/foot.nix
     ../modules/fish.nix
-    ../modules/languages/nodejs.nix
+#    ../modules/languages/nodejs.nix
+    ../modules/vscode.nix
 
 #    ../modules/taskwarrior.nix
 
@@ -51,20 +52,6 @@ in
     unzip
     p7zip
     rar
-
-    # languages
-    # python
-    # python312
-    # python312Packages.virtualenv
-    # python312Packages.pipx
-    # python312Packages.pip
-    # python312Packages.numpy
-    # python312Packages.opencv4
-    # python312Packages.mkdocs
-    
-    # opencv
-    # opencv
-    # python312Packages.opencv4
 
     # c++
     gdb
@@ -205,22 +192,7 @@ in
     dina-font
     #proggyfonts
     nerdfonts
-
-    # lutris
-    lutris
-    # Video/Audio data composition framework tools like "gst-inspect", "gst-launch" ...
-    gst_all_1.gstreamer
-    # Common plugins like "filesrc" to combine within e.g. gst-launch
-    gst_all_1.gst-plugins-base
-    # Specialized plugins separated by quality
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
-    # Plugins to reuse ffmpeg to play almost every video format
-    gst_all_1.gst-libav
-    # Support the Video Audio (Hardware) Acceleration API
-    gst_all_1.gst-vaapi
-  ];
+];
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
