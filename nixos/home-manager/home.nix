@@ -20,9 +20,6 @@ let
 in
 {
   imports = [
-    ../modules/alacritty.nix
-    ../modules/kitty.nix
-    ../modules/wezterm.nix
     ../modules/terminals/foot.nix
     ../modules/fish.nix
 #    ../modules/languages/node/default.nix
