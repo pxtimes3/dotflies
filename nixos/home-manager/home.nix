@@ -9,8 +9,12 @@
 let
   nodePackages = import ../modules/languages/node/node-packages.nix {
     inherit pkgs system;
-    nodejs = pkgs.nodejs_14;  # or whichever version you're using
+    nodejs = pkgs.nodejs_22;  # or whichever version you're using
   };
+  findNodeModules = pkg: 
+    if pkg ? outPath
+    then "${pkg}/lib/node_modules"
+    else findNodeModules (builtins.head (builtins.attrValues pkg));
   filesIn = dir: (map (fname: dir + "/${fname}"))
                  (builtins.attrNames (builtins.readDir dir));
 in
@@ -48,7 +52,7 @@ in
   ];
 
   home.sessionVariables = {
-    NODE_PATH = "${nodePackages.lib}/lib/node_modules";
+    NODE_PATH = findNodeModules nodePackages;
   };
 
   home.packages = with pkgs; [ 
@@ -200,7 +204,7 @@ in
     #proggyfonts
     nerdfonts
 ] ++ (with nodePackages; [
-    jest
+    #jest
     #mocha
     #eslint
     #typescript

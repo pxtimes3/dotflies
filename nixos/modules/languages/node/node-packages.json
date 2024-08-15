@@ -1,6 +1,7 @@
 [
   "mocha",
   "@types/mocha",
+  "jest",
   "npm-check-updates",
   "eslint",
   "typescript-eslint",
