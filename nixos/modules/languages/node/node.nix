@@ -187,7 +187,8 @@ let
     "@typescript-eslint/type-utils-8.1.0" = {
       name = "_at_typescript-eslint_slash_type-utils";
       packageName = "@typescript-eslint/type-utils";
-      version = "8.1.0";
+      version = "8.1.0";*
+!.gitignore
       src = fetchurl {
         url = "https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.1.0.tgz";
         sha512 = "oLYvTxljVvsMnldfl6jIKxTaU7ok7km0KDrwOt1RHYu6nxlhN3TIx8k5Q52L6wR33nOwDgM7VwW1fT1qMNfFIA==";
@@ -249,7 +250,8 @@ let
     };
     "ajv-6.12.6" = {
       name = "ajv";
-      packageName = "ajv";
+      packageName = "ajv"*
+!.gitignore;
       version = "6.12.6";
       src = fetchurl {
         url = "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz";
@@ -269,7 +271,8 @@ let
       name = "ansi-regex";
       packageName = "ansi-regex";
       version = "5.0.1";
-      src = fetchurl {
+      src = fetchurl {*
+!.gitignore
         url = "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz";
         sha512 = "quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==";
       };
@@ -289,7 +292,8 @@ let
       version = "3.1.3";
       src = fetchurl {
         url = "https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz";
-        sha512 = "KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==";
+        sha512 = "KMReFUr*
+!.gitignore0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==";
       };
     };
     "argparse-2.0.1" = {
