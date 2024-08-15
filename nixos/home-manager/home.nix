@@ -12,10 +12,18 @@ let
     inherit (pkgs) system;
     nodejs = pkgs.nodejs_22;
   };
-  findNodeModules = pkg: 
-    if pkg ? outPath
-    then "${pkg}/lib/node_modules"
-    else findNodeModules (builtins.head (builtins.attrValues pkg));
+
+  # Helper function to safely get the bin directory of a package
+  safeGetBin = pkg:
+    if builtins.isAttrs pkg && pkg ? outPath
+    then "${pkg}/bin"
+    else if builtins.isAttrs pkg && pkg ? bin
+    then "${pkg.bin}"
+    else null;
+
+  # Get a list of bin directories for all node packages
+  nodeBinPaths = lib.filter (x: x != null) (map safeGetBin (builtins.attrValues nodePackages));
+
   filesIn = dir: (map (fname: dir + "/${fname}"))
                  (builtins.attrNames (builtins.readDir dir));
 in
@@ -46,10 +54,17 @@ in
   ];
 
   home.sessionVariables = {
-    NODE_PATH = lib.makeSearchPath "lib/node_modules" (builtins.attrValues nodePackages);
+    NODE_PATH = lib.makeSearchPath "lib/node_modules" nodeBinPaths;
+    PATH = lib.makeSearchPath "bin" (["$HOME/.local/bin"] ++ nodeBinPaths);
   };
 
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
+    (pkgs.writeScriptBin "debug-node-packages" ''
+    echo "nodePackages keys: $(nix-instantiate --eval -E 'with import <nixpkgs> {}; builtins.attrNames (callPackage ${../modules/languages/node/node-packages.nix} { inherit system; nodejs = nodejs_22; })')"
+    echo "nodeBinPaths: ''${nodeBinPaths[*]}"
+    echo "NODE_PATH: $NODE_PATH"
+    echo "PATH: $PATH"
+  '')
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
     zip
