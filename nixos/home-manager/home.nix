@@ -3,9 +3,14 @@
   lib,
   config,
   pkgs,
+  system,
   ...
 }: 
 let
+  nodePackages = import ../modules/languages/node/node-packages.nix {
+    inherit pkgs system;
+    nodejs = pkgs.nodejs_14;  # or whichever version you're using
+  };
   filesIn = dir: (map (fname: dir + "/${fname}"))
                  (builtins.attrNames (builtins.readDir dir));
 in
@@ -16,7 +21,7 @@ in
     ../modules/wezterm.nix
     ../modules/terminals/foot.nix
     ../modules/fish.nix
-    ../modules/languages/node/default.nix
+#    ../modules/languages/node/default.nix
     ../modules/vscode.nix
 
 #    ../modules/taskwarrior.nix
@@ -42,7 +47,9 @@ in
     "$HOME/.local/bin"
   ];
 
-  
+  home.sessionVariables = {
+    NODE_PATH = "${nodePackages.lib}/lib/node_modules";
+  };
 
   home.packages = with pkgs; [ 
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
@@ -192,7 +199,12 @@ in
     dina-font
     #proggyfonts
     nerdfonts
-];
+] ++ (with nodePackages; [
+    jest
+    #mocha
+    #eslint
+    #typescript
+]);
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [

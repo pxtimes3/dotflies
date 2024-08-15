@@ -6,4 +6,4 @@ xsettingsd/
 *
 !.gitignore
 !nixos
-!nixos/*
+!nixos/**
