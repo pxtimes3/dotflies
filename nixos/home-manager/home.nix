@@ -7,9 +7,10 @@
   ...
 }: 
 let
-  nodePackages = import ../modules/languages/node/node-packages.nix {
-    inherit system;
-    nodejs = pkgs.nodejs_22;  # or whichever version you're using
+  nodePackages = pkgs.callPackage ../modules/languages/node/node-packages.nix {
+    inherit pkgs;
+    inherit (pkgs) system;
+    nodejs = pkgs.nodejs_22;
   };
   findNodeModules = pkg: 
     if pkg ? outPath
@@ -196,6 +197,9 @@ in
     dina-font
     #proggyfonts
     nerdfonts
+
+    # NODEJS
+    nodejs_22
 ] ++ (with nodePackages; [
   mocha
   nodePackages."@types/mocha"
