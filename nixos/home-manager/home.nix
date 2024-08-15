@@ -8,7 +8,7 @@
 }: 
 let
   nodePackages = import ../modules/languages/node/node-packages.nix {
-    inherit pkgs system;
+    inherit system;
     nodejs = pkgs.nodejs_22;  # or whichever version you're using
   };
   findNodeModules = pkg: 
@@ -22,11 +22,7 @@ in
   imports = [
     ../modules/terminals/foot.nix
     ../modules/fish.nix
-#    ../modules/languages/node/default.nix
     ../modules/vscode.nix
-
-#    ../modules/taskwarrior.nix
-
     ../modules/sessionvariables.nix
   ];
 
@@ -49,7 +45,7 @@ in
   ];
 
   home.sessionVariables = {
-    NODE_PATH = findNodeModules nodePackages;
+    NODE_PATH = lib.makeSearchPath "lib/node_modules" (builtins.attrValues nodePackages);
   };
 
   home.packages = with pkgs; [ 
@@ -201,10 +197,17 @@ in
     #proggyfonts
     nerdfonts
 ] ++ (with nodePackages; [
-    #jest
-    #mocha
-    #eslint
-    #typescript
+  mocha
+  nodePackages."@types/mocha"
+  jest
+  npm-check-updates
+  eslint
+  typescript-eslint
+  typescript
+  chai
+  nodePackages."@types/chai"
+  sinon
+  nodePackages."@types/sinon"
 ]);
 
   # allow openssl-1.1.1w due to sublime4
