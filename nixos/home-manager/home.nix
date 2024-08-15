@@ -16,7 +16,7 @@ in
     ../modules/wezterm.nix
     ../modules/terminals/foot.nix
     ../modules/fish.nix
-#    ../modules/languages/nodejs.nix
+    ../modules/languages/node/default.nix
     ../modules/vscode.nix
 
 #    ../modules/taskwarrior.nix

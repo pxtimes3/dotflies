@@ -5,3 +5,4 @@ obsidian/
 xsettingsd/
 *
 !.gitignore
+!nixos/
