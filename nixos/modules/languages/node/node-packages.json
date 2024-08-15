@@ -1,0 +1,12 @@
+[
+  "mocha",
+  "@types/mocha",
+  "npm-check-updates",
+  "eslint",
+  "typescript-eslint",
+  "typescript",
+  "chai",
+  "@types/chai",
+  "sinon",
+  "@types/sinon"
+]
