@@ -173,13 +173,13 @@ in
     komga
 
     # fish
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fishPlugins.grc
-    fishPlugins.z
-    grc
+    #fishPlugins.done
+    #fishPlugins.fzf-fish
+    #fishPlugins.forgit
+    #fishPlugins.hydro
+    #fishPlugins.grc
+    #fishPlugins.z
+    #grc
 
     # nosqlite?
     sqlite

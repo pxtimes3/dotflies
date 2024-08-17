@@ -50,7 +50,6 @@
     set -x QT_QPA_PLATFORM wayland
     set -x XDG_SESSION_TYPE wayland
     set -x SDL_VIDEODRIVER wayland
-
   '';
 in {
   programs.fish = {
@@ -72,55 +71,9 @@ in {
     interactiveShellInit = fishConfig;
 
     functions = {
-      gi = {
-        description = "Pick commit for interactive rebase";
-        body = ''
-          set -l commit (git log --oneline --decorate | fzf --preview 'git show (echo {} | awk \'{ print $1 }\')' | awk '{ print $1 }')
-          if test -n "$commit"
-            git rebase $commit~1 --interactive --autosquash
-          end
-        '';
-      };
-
-      gf = {
-        description = "Fixup a commit then autosquash";
-        body = ''
-          set -l commit (git log --oneline --decorate | fzf --preview 'git show (echo {} | awk \'{ print $1 }\')' | awk '{ print $1 }')
-          if test -n "$commit"
-            git commit --fixup $commit
-            GIT_SEQUENCE_EDITOR=true git rebase $commit~1 --interactive --autosquash
-          end
-        '';
-      };
-
-      gc = {
-        description = "fzf git checkout";
-        body = ''
-          git checkout (git branch -a --sort=-committerdate |
-            fzf --preview 'git log (echo {} | sed -E -e \'s/^(\+|\*)//\' | string trim) -- ' |
-            sed -E -e 's/^(\+|\*)//' |
-            xargs basename |
-            string trim)
-        '';
-      };
-
-      run_wayland = {
-        description="run as wayland";
-        body = ''
-          env GDK_BACKEND=wayland QT_QPA_PLATFORM=wayland $argv
-        '';
-      };
-
-
-      run_x11 = {
-        description="run as x11";
-        body = ''
-          env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb $argv
-        '';
-      };
-
       fish_greeting = {
         body = ''
+        MARS NEEDS WOMEN!
         '';
       };
       __fish_command_not_found_handler = {
