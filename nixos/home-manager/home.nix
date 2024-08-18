@@ -228,6 +228,7 @@ in
   nodePackages."@types/chai"
   sinon
   nodePackages."@types/sinon"
+  hyperapp
 ]);
 
   # allow openssl-1.1.1w due to sublime4
