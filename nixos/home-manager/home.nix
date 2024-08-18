@@ -30,7 +30,7 @@ in
 {
   imports = [
     ../modules/terminals/foot.nix
-    ../modules/fish.nix
+    #../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
   ];
@@ -173,13 +173,14 @@ in
     komga
 
     # fish
-    #fishPlugins.done
-    #fishPlugins.fzf-fish
-    #fishPlugins.forgit
-    #fishPlugins.hydro
-    #fishPlugins.grc
-    #fishPlugins.z
-    #grc
+    fish
+    fishPlugins.done
+    fishPlugins.fzf-fish
+    fishPlugins.forgit
+    fishPlugins.hydro
+    fishPlugins.grc
+    fishPlugins.z
+    grc
 
     # nosqlite?
     sqlite
