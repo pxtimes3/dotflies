@@ -21,7 +21,7 @@ error:
 
        error: attribute '"@vavite/node-loader"' missing
 
-       at /nix/store/f7h704ihjdachvq1ya42bk6pjx1qiq4c-source/nixos/home-manager/home.nix:232:3:
+       at /nix/store/x4hh4lmg6a0yxfiidcgsxwah4pw997cj-source/nixos/home-manager/home.nix:232:3:
 
           231|   #hyperapp
           232|   nodePackages."@vavite/node-loader"
