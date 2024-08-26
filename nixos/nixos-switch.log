@@ -1,0 +1,29 @@
+
+warning: Git tree '/home/px/.config' is dirty
+error:
+       … while calling the 'derivationStrict' builtin
+
+         at /builtin/derivation.nix:9:12: (source not available)
+
+       … while evaluating derivation 'home-manager-generation'
+         whose name attribute is located at /nix/store/j8pbrsb3nybdap3hhg9kw0ffqd4rlbx6-source/pkgs/stdenv/generic/make-derivation.nix:336:7
+
+       … while evaluating attribute 'buildCommand' of derivation 'home-manager-generation'
+
+         at /nix/store/j8pbrsb3nybdap3hhg9kw0ffqd4rlbx6-source/pkgs/build-support/trivial-builders/default.nix:59:16:
+
+           58|         enableParallelBuilding = true;
+           59|         inherit buildCommand name;
+             |                ^
+           60|         passAsFile = [ "buildCommand" ]
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: attribute '"@vavite/node-loader"' missing
+
+       at /nix/store/f7h704ihjdachvq1ya42bk6pjx1qiq4c-source/nixos/home-manager/home.nix:232:3:
+
+          231|   #hyperapp
+          232|   nodePackages."@vavite/node-loader"
+             |   ^
+          233| ]);
