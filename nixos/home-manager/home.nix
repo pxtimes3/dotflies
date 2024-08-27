@@ -217,6 +217,7 @@ in
     # NODEJS
     nodejs_22
 ] ++ (with nodePackages; [
+  pnpm
   mocha
   nodePackages."@types/mocha"
   jest
@@ -229,7 +230,6 @@ in
   sinon
   nodePackages."@types/sinon"
   #hyperapp
-  nodePackages."@vavite/node-loader"
 ]);
 
   # allow openssl-1.1.1w due to sublime4
