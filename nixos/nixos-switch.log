@@ -1,24 +1,50 @@
 
 warning: Git tree '/home/px/.config' is dirty
-error:
-       … while evaluating a branch condition
+trace: evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
+these 3 derivations will be built:
+  /nix/store/xdlds8bzyaic48jdilf9zf2xj10lrppy-home-manager-path.drv
+  /nix/store/p85nz5n9nhdja297b2q79zywc99n7xq2-activation-script.drv
+  /nix/store/cmzfa2gj7fh9dw7v2na787pjmdaz402a-home-manager-generation.drv
+these 2 paths will be fetched (35.52 MiB download, 155.71 MiB unpacked):
+  /nix/store/26xcpir7wl7kllmkqh7qz0p9r0fs0zwp-libgit2-1.8.1-lib
+  /nix/store/bzyg6rzyzynf0x1pnf3dniyb0s3g9ijb-zed-0.149.5
+copying path '/nix/store/26xcpir7wl7kllmkqh7qz0p9r0fs0zwp-libgit2-1.8.1-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/bzyg6rzyzynf0x1pnf3dniyb0s3g9ijb-zed-0.149.5' from 'https://cache.nixos.org'...
+building '/nix/store/xdlds8bzyaic48jdilf9zf2xj10lrppy-home-manager-path.drv'...
+building '/nix/store/p85nz5n9nhdja297b2q79zywc99n7xq2-activation-script.drv'...
+building '/nix/store/cmzfa2gj7fh9dw7v2na787pjmdaz402a-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/s2djg3qf377dsf81h45if34zvrx9jhsz-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating profile generation 132
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+The user systemd session is degraded:
+  UNIT                                               LOAD   ACTIVE SUB    DESCRIPTION
+● app-firefox-0a2c2e974c264e7c85e306e73261f298.scope loaded failed failed Firefox - Web Browser
+● app-firefox-9ccb0c135df24b38bcbcf67f247348f3.scope loaded failed failed Firefox - Web Browser
+● app-firefox-b6cb3365f1a94172bb0d4ce374c04634.scope loaded failed failed Firefox - Web Browser
+● app-firefox-b6e5d8aadd844a07a9375dcbc783a1ff.scope loaded failed failed Firefox - Web Browser
+● app-firefox-f099e8bba0374d10ba4dc68b18fcee0d.scope loaded failed failed Firefox - Web Browser
+● app-firefox-f65958c6fcb94b748d636e6f2b034915.scope loaded failed failed Firefox - Web Browser
+● app-vesktop@autostart.service                      loaded failed failed Vesktop
 
-         at /nix/store/ia1zpg1s63v6b3vin3n7bxxjgcs51s2r-source/lib/lists.nix:125:9:
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
 
-          124|       fold' = n:
-          125|         if n == len
-             |         ^
-          126|         then nul
-
-       … while calling the 'length' builtin
-
-         at /nix/store/ia1zpg1s63v6b3vin3n7bxxjgcs51s2r-source/lib/lists.nix:123:13:
-
-          122|     let
-          123|       len = length list;
-             |             ^
-          124|       fold' = n:
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: getting status of '/nix/store/rh5yy74plr4fhbbfxrsm2m0v0hzfy391-source/nixos/modules/zed.nix': No such file or directory
+7 loaded units listed.
+Attempting to reload services anyway...
+The service manager is degraded.
+Failed services: app-firefox-f099e8bba0374d10ba4dc68b18fcee0d.scope, app-vesktop@autostart.service, app-firefox-9ccb0c135df24b38bcbcf67f247348f3.scope, app-firefox-b6cb3365f1a94172bb0d4ce374c04634.scope, app-firefox-0a2c2e974c264e7c85e306e73261f298.scope, app-firefox-b6e5d8aadd844a07a9375dcbc783a1ff.scope, app-firefox-f65958c6fcb94b748d636e6f2b034915.scope
+Attempting to continue anyway...
+warning: Git tree '/home/px/.config' is dirty
+Rebuild script finished.

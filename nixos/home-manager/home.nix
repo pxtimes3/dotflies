@@ -30,7 +30,7 @@ in
 {
   imports = [
     ../modules/terminals/foot.nix
-    ../modules/zed.nix
+    #../modules/zed.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
   ];
@@ -213,6 +213,8 @@ in
     dina-font
     #proggyfonts
     nerdfonts
+
+    zed-editor
 
     # NODEJS
     nodejs_22
