@@ -30,7 +30,7 @@ in
 {
   imports = [
     ../modules/terminals/foot.nix
-    #../modules/fish.nix
+    ../modules/zed.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
   ];
