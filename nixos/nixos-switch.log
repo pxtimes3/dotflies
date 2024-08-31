@@ -1,38 +1,28 @@
 
 warning: Git tree '/home/px/.config' is dirty
-building the system configuration...
-warning: Git tree '/home/px/.config' is dirty
-these 3 derivations will be built:
-  /nix/store/h7bcsda6v5flcfpzj4hfyjqfivhkl4im-etc-nix-registry.json.drv
-  /nix/store/rcf63rp09zqb0rmxgxf6hk779vygnnir-etc.drv
-  /nix/store/qrvdgvrbbbry2gsziisgqa2f18756qnm-nixos-system-pxbeard-24.11.20240828.71e91c4.drv
-building '/nix/store/h7bcsda6v5flcfpzj4hfyjqfivhkl4im-etc-nix-registry.json.drv'...
-building '/nix/store/rcf63rp09zqb0rmxgxf6hk779vygnnir-etc.drv'...
-building '/nix/store/qrvdgvrbbbry2gsziisgqa2f18756qnm-nixos-system-pxbeard-24.11.20240828.71e91c4.drv'...
-activating the configuration...
-setting up /etc...
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
-Delete the above directory or directories to prevent this.
-reloading user units for px...
-restarting sysinit-reactivation.target
-the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-warning: Git tree '/home/px/.config' is dirty
-trace: evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
-Starting Home Manager activation
-Activating checkFilesChanged
-Activating checkLinkTargets
-Activating writeBoundary
-Activating installPackages
-replacing old 'home-manager-path'
-installing 'home-manager-path'
-Activating linkGeneration
-Cleaning up orphan links from /home/px
-No change so reusing latest profile generation 134
-Creating home file links in /home/px
-Activating onFilesChange
-Activating reloadSystemd
-warning: Git tree '/home/px/.config' is dirty
-Rebuild script finished.
+error:
+       … while evaluating a branch condition
+
+         at /nix/store/887hpp8a2i99n9jjwcvz6qkhhhqsvzkg-source/lib/lists.nix:125:9:
+
+          124|       fold' = n:
+          125|         if n == len
+             |         ^
+          126|         then nul
+
+       … while calling the 'length' builtin
+
+         at /nix/store/887hpp8a2i99n9jjwcvz6qkhhhqsvzkg-source/lib/lists.nix:123:13:
+
+          122|     let
+          123|       len = length list;
+             |             ^
+          124|       fold' = n:
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: The option `packages' does not exist. Definition values:
+       - In `/nix/store/kvk0dc2kj5jds3whaa3nxcn1bbh2vl85-source/nixos/modules/languages/php/php.nix':
+           [
+             <function>
+           ]

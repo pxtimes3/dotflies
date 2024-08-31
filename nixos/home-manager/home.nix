@@ -5,7 +5,7 @@
   pkgs,
   system,
   ...
-}: 
+}:
 let
   nodePackages = pkgs.callPackage ../modules/languages/node/node-packages.nix {
     inherit pkgs;
@@ -33,6 +33,7 @@ in
     #../modules/zed.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
+    #../modules/languages/php/php.nix
   ];
 
   nixpkgs = {
