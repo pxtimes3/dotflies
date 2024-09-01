@@ -1,28 +1,20 @@
 
 warning: Git tree '/home/px/.config' is dirty
-error:
-       … while evaluating a branch condition
-
-         at /nix/store/887hpp8a2i99n9jjwcvz6qkhhhqsvzkg-source/lib/lists.nix:125:9:
-
-          124|       fold' = n:
-          125|         if n == len
-             |         ^
-          126|         then nul
-
-       … while calling the 'length' builtin
-
-         at /nix/store/887hpp8a2i99n9jjwcvz6qkhhhqsvzkg-source/lib/lists.nix:123:13:
-
-          122|     let
-          123|       len = length list;
-             |             ^
-          124|       fold' = n:
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: The option `packages' does not exist. Definition values:
-       - In `/nix/store/kvk0dc2kj5jds3whaa3nxcn1bbh2vl85-source/nixos/modules/languages/php/php.nix':
-           [
-             <function>
-           ]
+building the system configuration...
+warning: Git tree '/home/px/.config' is dirty
+these 3 derivations will be built:
+  /nix/store/bib1h1a22p5hj50y71if2x877qhg6sbb-etc-nix-registry.json.drv
+  /nix/store/kxyz3yy39nmkxl9cqjl09r77wmwnf7x2-etc.drv
+  /nix/store/r5b3i06fzcsakx91vmlxlbz7d2p0ak3l-nixos-system-pxbeard-24.11.20240828.71e91c4.drv
+building '/nix/store/bib1h1a22p5hj50y71if2x877qhg6sbb-etc-nix-registry.json.drv'...
+building '/nix/store/kxyz3yy39nmkxl9cqjl09r77wmwnf7x2-etc.drv'...
+building '/nix/store/r5b3i06fzcsakx91vmlxlbz7d2p0ak3l-nixos-system-pxbeard-24.11.20240828.71e91c4.drv'...
+activating the configuration...
+setting up /etc...
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
+Delete the above directory or directories to prevent this.
+reloading user units for px...
+restarting sysinit-reactivation.target
