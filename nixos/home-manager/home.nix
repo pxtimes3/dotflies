@@ -259,7 +259,7 @@ in
 
   programs.nix-index.enable = true;
 
-  programs.firefox.enable = false;
+  programs.firefox.enable = true;
   programs.chromium.enable = true;
 
   # Nicely reload system units when changing configs
