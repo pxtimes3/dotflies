@@ -18,3 +18,38 @@ Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channel
 Delete the above directory or directories to prevent this.
 reloading user units for px...
 restarting sysinit-reactivation.target
+[K[Ktrace: evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
+these 3 derivations will be built:
+  /nix/store/34r4fzjkp69f9l849x05h78n473vbw43-home-manager-path.drv
+  /nix/store/b47pfyhj8zgxdn6a4s2d366h2yy23ch8-activation-script.drv
+  /nix/store/w9ymci2lyvbkrkndd3l9pmwk76gxvkzs-home-manager-generation.drv
+these 5 paths will be fetched (76.17 MiB download, 304.92 MiB unpacked):
+  /nix/store/9mi39p4nkj66lv5y4qyy09kxdfpgrb1d-firefox-130.0
+  /nix/store/l4vijgydw73bjdik87p87kr9hwwk59nc-firefox-unwrapped-130.0
+  /nix/store/1bcs8zw0xggf5bl4m3r40kkclvicipkz-icu4c-73.2
+  /nix/store/gyy33qmxfxp1m90x285p01vipix7cn40-nss-3.104
+  /nix/store/y8frkyqlchcvzc4xdpzlv01h6sm2165h-sndio-1.10.0
+copying path '/nix/store/y8frkyqlchcvzc4xdpzlv01h6sm2165h-sndio-1.10.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/1bcs8zw0xggf5bl4m3r40kkclvicipkz-icu4c-73.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/gyy33qmxfxp1m90x285p01vipix7cn40-nss-3.104' from 'https://cache.nixos.org'...
+copying path '/nix/store/l4vijgydw73bjdik87p87kr9hwwk59nc-firefox-unwrapped-130.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/9mi39p4nkj66lv5y4qyy09kxdfpgrb1d-firefox-130.0' from 'https://cache.nixos.org'...
+building '/nix/store/34r4fzjkp69f9l849x05h78n473vbw43-home-manager-path.drv'...
+building '/nix/store/b47pfyhj8zgxdn6a4s2d366h2yy23ch8-activation-script.drv'...
+building '/nix/store/w9ymci2lyvbkrkndd3l9pmwk76gxvkzs-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/aa8nvin5c7pzkxy9xvidqhfjdp43mv59-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating profile generation 137
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+warning: Git tree '/home/px/.config' is dirty
+Rebuild script finished.
