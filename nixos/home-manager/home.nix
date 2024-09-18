@@ -216,6 +216,7 @@ in
     nerdfonts
 
     zed-editor
+    nushell
 
     # NODEJS
     nodejs_22
