@@ -545,3 +545,6 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service
 restarting the following units: nix-daemon.service, polkit.service, sshd.service
 starting the following units: accounts-daemon.service, cups-browsed.service, cups.socket, docker.socket, network-local-commands.service, network-setup.service, NetworkManager-wait-online.service, NetworkManager.service, nscd.service, power-profiles-daemon.service, rpc-statd-notify.service, rpc-statd.service, systemd-timesyncd.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, udisks2.service, upower.service, wpa_supplicant.service
+Failed to start systemd-udevd-kernel.socket
+the following new units were started: fstrim.timer, NetworkManager-dispatcher.service, run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-hostnamed.service, systemd-tmpfiles-resetup.service
+warning: error(s) occurred while switching to the new configuration
