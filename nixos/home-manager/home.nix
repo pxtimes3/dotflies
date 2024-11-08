@@ -60,12 +60,6 @@ in
   };
 
   home.packages = with pkgs; [
-    (pkgs.writeScriptBin "debug-node-packages" ''
-    echo "nodePackages keys: $(nix-instantiate --eval -E 'with import <nixpkgs> {}; builtins.attrNames (callPackage ${../modules/languages/node/node-packages.nix} { inherit system; nodejs = nodejs_22; })')"
-    echo "nodeBinPaths: ''${nodeBinPaths[*]}"
-    echo "NODE_PATH: $NODE_PATH"
-    echo "PATH: $PATH"
-  '')
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
     zip
@@ -101,7 +95,6 @@ in
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
     ipcalc  # it is a calculator for the IPv4/v6 addresses
-    mkcert # maek local certs n shit
 
     # misc
     file
@@ -192,12 +185,12 @@ in
     sublime-merge
 
     # gamedev
-    godot_4
-    unityhub
+    # godot_4
+    # unityhub
 
     # 3D
-    #blender
-    blender-hip
+    # blender
+    # blender-hip
     clinfo
     amdgpu_top
 
@@ -206,7 +199,7 @@ in
 
     # fonts
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
     fira-code
@@ -220,22 +213,9 @@ in
     nushell
 
     # NODEJS
-    nodejs_22
-] ++ (with nodePackages; [
-  pnpm
-  mocha
-  nodePackages."@types/mocha"
-  jest
-  npm-check-updates
-  eslint
-  typescript-eslint
-  typescript
-  chai
-  nodePackages."@types/chai"
-  sinon
-  nodePackages."@types/sinon"
-  #hyperapp
-]);
+    # nodejs_22
+    # use nix-shell instead
+];
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [
