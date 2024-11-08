@@ -1,41 +1,20 @@
 
 warning: Git tree '/home/px/.config' is dirty
-evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
-these 3 derivations will be built:
-  /nix/store/xby25iz9w2l3x0j75i10d3vl4gqn86ih-home-manager-path.drv
-  /nix/store/8nxv381m1qps24mqzykfqphi9jcndm1g-activation-script.drv
-  /nix/store/7kl473pk9r84mlcvv6my8yslqxf117w0-home-manager-generation.drv
-building '/nix/store/xby25iz9w2l3x0j75i10d3vl4gqn86ih-home-manager-path.drv'...
-building '/nix/store/8nxv381m1qps24mqzykfqphi9jcndm1g-activation-script.drv'...
-building '/nix/store/7kl473pk9r84mlcvv6my8yslqxf117w0-home-manager-generation.drv'...
-Starting Home Manager activation
-Activating checkFilesChanged
-Activating checkLinkTargets
-Activating writeBoundary
-Activating installPackages
-replacing old 'home-manager-path'
-installing 'home-manager-path'
-building '/nix/store/qfzhhc2p1gwiqhcmr6v02n75bfqfzgsk-user-environment.drv'...
-Activating linkGeneration
-Cleaning up orphan links from /home/px
-Creating profile generation 139
-Creating home file links in /home/px
-Activating onFilesChange
-Activating reloadSystemd
-The user systemd session is degraded:
-  UNIT                          LOAD   ACTIVE SUB    DESCRIPTION
-● app-vesktop@autostart.service loaded failed failed Vesktop
-
-Legend: LOAD   → Reflects whether the unit definition was properly loaded.
-        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
-        SUB    → The low-level unit activation state, values depend on unit type.
-
-1 loaded units listed.
-Attempting to reload services anyway...
-The service manager is degraded.
-Failed services: app-vesktop@autostart.service
-Attempting to continue anyway...
-Stopping units: numlockx.service
-Starting units: numlockx.service
+building the system configuration...
 warning: Git tree '/home/px/.config' is dirty
-Rebuild script finished.
+these 3 derivations will be built:
+  /nix/store/yspw3ln3d0pn4l1pcmbkz2hfa42w6pqb-etc-nix-registry.json.drv
+  /nix/store/arg4drxlnd165z0ix6b7g5ab9hgvkpq4-etc.drv
+  /nix/store/hldlvdzw1aw3y3qh75ccw3mywpq246fx-nixos-system-pxbeard-24.11.20241105.4aa3656.drv
+building '/nix/store/yspw3ln3d0pn4l1pcmbkz2hfa42w6pqb-etc-nix-registry.json.drv'...
+building '/nix/store/arg4drxlnd165z0ix6b7g5ab9hgvkpq4-etc.drv'...
+building '/nix/store/hldlvdzw1aw3y3qh75ccw3mywpq246fx-nixos-system-pxbeard-24.11.20241105.4aa3656.drv'...
+activating the configuration...
+setting up /etc...
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
+Delete the above directory or directories to prevent this.
+reloading user units for px...
+restarting sysinit-reactivation.target
