@@ -141,3 +141,77 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service, power-profiles-daemon.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, udisks2.service, upower.service
+the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+warning: Git tree '/home/px/.config' is dirty
+evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
+these 10 derivations will be built:
+  /nix/store/3g63h2nqblwmzkl4nb6kzybivicx4xvb-discord-0.0.73.tar.gz.drv
+  /nix/store/9c8sxmdhbl7chypnmw93g367zz1i0brn-discord-0.0.73.drv
+  /nix/store/nq6nhh69183645mjn3xhyr9l6rxap1w3-index-x86_64-linux.drv
+  /nix/store/pfc7sik900s7ldcc55j5kk1acy5n7nwk-nix-index-with-db-0.1.8.drv
+  /nix/store/dr943a3c9fzjsq1s3gxgw7sa8bh5qxba-obsidian-1.7.5.tar.gz.drv
+  /nix/store/prby3qrc2hk0nh4bah8hqwymqd33gl7d-obsidian-1.7.5.drv
+  /nix/store/y1v769a04r9wviwcr9llimq5752x6sf4-home-manager-path.drv
+  /nix/store/3bi0p5qzkmaf36caf6jkgzdn3jaaz1z7-activation-script.drv
+  /nix/store/5bgv3zfmfc1nfsrsi28gfxiplxrbq7ai-home-manager-files.drv
+  /nix/store/1m4033jfg34sn5sych9jk7hd6gy0k32b-home-manager-generation.drv
+these 10 paths will be fetched (230.81 MiB download, 1263.59 MiB unpacked):
+  /nix/store/2rjh5zh54mznxc2axg6kc08qqqln95l9-eza-0.20.7
+  /nix/store/lws2v4xyvnlcg6h2bbs09anssq6j9y9r-eza-0.20.7-man
+  /nix/store/rs1kaxx6i35fb124b1a6b7wg6jn8wr4l-kcoreaddons-6.8.0
+  /nix/store/857cwg5hg63bq9kqppl8182ag09kc2si-qtdeclarative-6.8.0
+  /nix/store/2gfb4lyhqnzh96dv9yw48i05dv4j2k1j-qtwayland-6.8.0
+  /nix/store/jclkdvlhmlaazibnrcrp1v9yixl8swrn-telegram-desktop-5.7.1
+  /nix/store/fya3nn0jaxq7y8klzzwpi0wwjmr7yk0y-vscode-1.95.2
+  /nix/store/nqcfkrrwhy7xfkiw38gr84hlrikg5nfq-wine-9.0
+  /nix/store/3kkiz8vv2z9prm2f4zngqhml716hkfx5-zed-editor-0.160.7
+  /nix/store/gsdzaqac33rqb3mcb8dyqhky80vjvsb0-zellij-0.41.1
+copying path '/nix/store/lws2v4xyvnlcg6h2bbs09anssq6j9y9r-eza-0.20.7-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/2rjh5zh54mznxc2axg6kc08qqqln95l9-eza-0.20.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/fya3nn0jaxq7y8klzzwpi0wwjmr7yk0y-vscode-1.95.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/nqcfkrrwhy7xfkiw38gr84hlrikg5nfq-wine-9.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/3kkiz8vv2z9prm2f4zngqhml716hkfx5-zed-editor-0.160.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/gsdzaqac33rqb3mcb8dyqhky80vjvsb0-zellij-0.41.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/857cwg5hg63bq9kqppl8182ag09kc2si-qtdeclarative-6.8.0' from 'https://cache.nixos.org'...
+building '/nix/store/nq6nhh69183645mjn3xhyr9l6rxap1w3-index-x86_64-linux.drv'...
+building '/nix/store/3g63h2nqblwmzkl4nb6kzybivicx4xvb-discord-0.0.73.tar.gz.drv'...
+building '/nix/store/dr943a3c9fzjsq1s3gxgw7sa8bh5qxba-obsidian-1.7.5.tar.gz.drv'...
+copying path '/nix/store/rs1kaxx6i35fb124b1a6b7wg6jn8wr4l-kcoreaddons-6.8.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/2gfb4lyhqnzh96dv9yw48i05dv4j2k1j-qtwayland-6.8.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/jclkdvlhmlaazibnrcrp1v9yixl8swrn-telegram-desktop-5.7.1' from 'https://cache.nixos.org'...
+building '/nix/store/5bgv3zfmfc1nfsrsi28gfxiplxrbq7ai-home-manager-files.drv'...
+building '/nix/store/pfc7sik900s7ldcc55j5kk1acy5n7nwk-nix-index-with-db-0.1.8.drv'...
+building '/nix/store/prby3qrc2hk0nh4bah8hqwymqd33gl7d-obsidian-1.7.5.drv'...
+building '/nix/store/9c8sxmdhbl7chypnmw93g367zz1i0brn-discord-0.0.73.drv'...
+building '/nix/store/y1v769a04r9wviwcr9llimq5752x6sf4-home-manager-path.drv'...
+building '/nix/store/3bi0p5qzkmaf36caf6jkgzdn3jaaz1z7-activation-script.drv'...
+building '/nix/store/1m4033jfg34sn5sych9jk7hd6gy0k32b-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/8apv57sv971k54qybwkcw415xxwjksgn-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating profile generation 141
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+The user systemd session is degraded:
+  UNIT                          LOAD   ACTIVE SUB    DESCRIPTION
+● app-vesktop@autostart.service loaded failed failed Vesktop
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+Attempting to reload services anyway...
+The service manager is degraded.
+Failed services: app-vesktop@autostart.service
+Attempting to continue anyway...
+warning: Git tree '/home/px/.config' is dirty
+Rebuild script finished.
