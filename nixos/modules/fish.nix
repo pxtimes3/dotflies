@@ -55,12 +55,15 @@ in {
 
     shellAliases = {
       "..." = "cd ../..";
-      "ls" = "eza -lam";
+      "ls" = "eza -lahm";
     };
 
     interactiveShellInit = fishConfig;
 
     functions = {
+      ls = ''
+        ls -lahm $argv
+      '';
       #fish_greeting = {
       #  body = ''
       #  echo MARS NEEDS WOMEN!
