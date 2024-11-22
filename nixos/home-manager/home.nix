@@ -38,6 +38,7 @@ in
 
   nixpkgs = {
     overlays = [
+
   (self: super: {
     docker-compose = super.docker-compose.overrideAttrs (oldAttrs: {
       version = "2.30.2";
@@ -48,6 +49,9 @@ in
         sha256 = "sha256-OMqbDhfWBM/1AhCKRGr6yBp+ubdj69Sq9bilKWe18Fk=";
       };
     });
+  })
+
+    ];
     config = {
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
