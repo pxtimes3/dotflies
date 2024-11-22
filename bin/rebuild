@@ -32,7 +32,11 @@ dosys() {
 
 dousr() {
 	echo "Rebuilding! > home-manager switch --flake .#$(whoami)@$(hostname)"
-	home-manager switch -b backup --flake ".#$(whoami)@$(hostname)" &>>nixos-switch.log
+	if ! home-manager switch -b backup --flake ".#$(whoami)@$(hostname)" &>>nixos-switch.log; then
+		echo "Error during home-manager switch:"
+		cat nixos-switch.log
+		return 1
+	fi
 }
 
 checkflake() {

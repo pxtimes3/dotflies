@@ -1,20 +1,37 @@
 
 warning: Git tree '/home/px/.config' is dirty
-building the system configuration...
-warning: Git tree '/home/px/.config' is dirty
-these 3 derivations will be built:
-  /nix/store/nqd9dld1dr02yvl28yp3sfgkjiihi9gy-etc-nix-registry.json.drv
-  /nix/store/s6jhrzphl8xgc5kbwsw2jvpc55jna46j-etc.drv
-  /nix/store/q3y4xlhws07dh2aiq2lphs3p5375y89d-nixos-system-pxbeard-25.05.20241119.23e89b7.drv
-building '/nix/store/nqd9dld1dr02yvl28yp3sfgkjiihi9gy-etc-nix-registry.json.drv'...
-building '/nix/store/s6jhrzphl8xgc5kbwsw2jvpc55jna46j-etc.drv'...
-building '/nix/store/q3y4xlhws07dh2aiq2lphs3p5375y89d-nixos-system-pxbeard-25.05.20241119.23e89b7.drv'...
-activating the configuration...
-setting up /etc...
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
-Delete the above directory or directories to prevent this.
-reloading user units for px...
-restarting sysinit-reactivation.target
+error:
+       … while calling the 'derivationStrict' builtin
+         at <nix/derivation-internal.nix>:34:12:
+           33|
+           34|   strict = derivationStrict drvAttrs;
+             |            ^
+           35|
+
+       … while evaluating derivation 'home-manager-generation'
+         whose name attribute is located at /nix/store/c9wv7i0af6mysmy65x6nvyfw5izzxv4g-source/pkgs/stdenv/generic/make-derivation.nix:336:7
+
+       … while evaluating attribute 'buildCommand' of derivation 'home-manager-generation'
+         at /nix/store/c9wv7i0af6mysmy65x6nvyfw5izzxv4g-source/pkgs/build-support/trivial-builders/default.nix:59:17:
+           58|         enableParallelBuilding = true;
+           59|         inherit buildCommand name;
+             |                 ^
+           60|         passAsFile = [ "buildCommand" ]
+
+       … while evaluating the option `home.activation.installPackages.data':
+
+       … while evaluating definitions from `/nix/store/p4bi97xr4cmbi1ggylqx490ysnv8r1zi-source/modules/home-environment.nix':
+
+       … while evaluating the option `home.packages':
+
+       … while evaluating definitions from `/nix/store/xhm25lwldmg4fxbqq3bgg0bl5zradfw9-source/nixos/home-manager/home.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: attribute 'grc' missing
+       at /nix/store/xhm25lwldmg4fxbqq3bgg0bl5zradfw9-source/nixos/home-manager/home.nix:172:5:
+          171|     fish
+          172|     fish.grc
+             |     ^
+          173|
+       Did you mean one of src or doc?

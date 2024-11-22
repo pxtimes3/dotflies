@@ -30,27 +30,12 @@ in
 {
   imports = [
     ../modules/terminals/foot.nix
-    #../modules/zed.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
-    #../modules/languages/php/php.nix
   ];
 
   nixpkgs = {
     overlays = [
-
-  (self: super: {
-    docker-compose = super.docker-compose.overrideAttrs (oldAttrs: {
-      version = "2.30.2";
-      src = super.fetchFromGitHub {
-        owner = "docker";
-        repo = "compose";
-        rev = "v2.30.2";
-        sha256 = "sha256-OMqbDhfWBM/1AhCKRGr6yBp+ubdj69Sq9bilKWe18Fk=";
-      };
-      vendorHash = "sha256-F8DIg5U3k+8b87w11Fi0haWbbQn+Pc53GHMM5mCobXQ=";
-    });
-  })
 
     ];
     config = {
@@ -75,7 +60,6 @@ in
   };
 
   home.packages = with pkgs; [
-    docker-compose  # temp för att fixa idioting i 2.30
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
     zip
@@ -172,7 +156,7 @@ in
     foot
     nnn
     neofetch
-    fish
+    grc
 
     # procrastination
     discord
@@ -185,13 +169,7 @@ in
 
     # fish
     fish
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    # fishPlugins.grc  # fucks with ls
-    fishPlugins.z
-    # grc
+    fish.grc
 
     # nosqlite?
     sqlite
