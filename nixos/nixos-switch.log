@@ -1,20 +1,17 @@
 
 warning: Git tree '/home/px/.config' is dirty
-building the system configuration...
-warning: Git tree '/home/px/.config' is dirty
-these 3 derivations will be built:
-  /nix/store/z9had1107h0jjwwh5r30dbl1snplbavi-etc-nix-registry.json.drv
-  /nix/store/kh6bvs161dspsl9vzfdgh3ci4wr3aqs0-etc.drv
-  /nix/store/y9vxnx7k5057a570z8iaysiha05jl08j-nixos-system-pxbeard-25.05.20241119.23e89b7.drv
-building '/nix/store/z9had1107h0jjwwh5r30dbl1snplbavi-etc-nix-registry.json.drv'...
-building '/nix/store/kh6bvs161dspsl9vzfdgh3ci4wr3aqs0-etc.drv'...
-building '/nix/store/y9vxnx7k5057a570z8iaysiha05jl08j-nixos-system-pxbeard-25.05.20241119.23e89b7.drv'...
-activating the configuration...
-setting up /etc...
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
-[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
-Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
-Delete the above directory or directories to prevent this.
-reloading user units for px...
-restarting sysinit-reactivation.target
+evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
+these 6 derivations will be built:
+  /nix/store/rb0hqm6fbarpzxwsym6l1lrd6b5zibi4-source.drv
+  /nix/store/cfbbi7y9xfzw8s90pb4dcrpzl6nxncwr-docker-compose-2.30.2-go-modules.drv
+  /nix/store/i91sm5cv9s8ny08mm0bwvidr7yaa155a-docker-compose-2.30.2.drv
+  /nix/store/8yqvvm6by8jqzwjs3wac341nbg2a092k-home-manager-path.drv
+  /nix/store/kylmv17hbwpz321rhqc7gq3bqfn7166x-activation-script.drv
+  /nix/store/llppr6rqw7xwrhffa9nim9ljj86mpw8a-home-manager-generation.drv
+building '/nix/store/rb0hqm6fbarpzxwsym6l1lrd6b5zibi4-source.drv'...
+error: hash mismatch in fixed-output derivation '/nix/store/rb0hqm6fbarpzxwsym6l1lrd6b5zibi4-source.drv':
+         specified: sha256-F8DIg5U3k+8b87w11Fi0haWbbQn+Pc53GHMM5mCobXQ=
+            got:    sha256-OMqbDhfWBM/1AhCKRGr6yBp+ubdj69Sq9bilKWe18Fk=
+error: 1 dependencies of derivation '/nix/store/i91sm5cv9s8ny08mm0bwvidr7yaa155a-docker-compose-2.30.2.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/8yqvvm6by8jqzwjs3wac341nbg2a092k-home-manager-path.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/llppr6rqw7xwrhffa9nim9ljj86mpw8a-home-manager-generation.drv' failed to build

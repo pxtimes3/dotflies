@@ -37,7 +37,21 @@ in
   ];
 
   nixpkgs = {
-    overlays = [];
+    overlays = [
+      nixpkgs.overlays = [
+  (self: super: {
+    docker-compose = super.docker-compose.overrideAttrs (oldAttrs: {
+      version = "2.30.2";
+      src = super.fetchFromGitHub {
+        owner = "docker";
+        repo = "compose";
+        rev = "v2.30.2";
+        sha256 = "sha256-OMqbDhfWBM/1AhCKRGr6yBp+ubdj69Sq9bilKWe18Fk=";
+      };
+    });
+  })
+];
+    ];
     config = {
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
@@ -60,6 +74,7 @@ in
   };
 
   home.packages = with pkgs; [
+    docker-compose  # temp för att fixa idioting i 2.30
     # https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
     # archives
     zip
@@ -175,7 +190,7 @@ in
     fishPlugins.hydro
     # fishPlugins.grc  # fucks with ls
     fishPlugins.z
-    grc
+    # grc
 
     # nosqlite?
     sqlite

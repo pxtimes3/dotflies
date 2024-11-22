@@ -62,7 +62,7 @@ in {
 
     functions = {
       ls = ''
-        ls -lahm $argv
+        eza -lahm $argv
       '';
       #fish_greeting = {
       #  body = ''
