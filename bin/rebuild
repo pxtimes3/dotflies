@@ -127,9 +127,9 @@ fi
 
 popd &>/dev/null # return to previous path
 
-echo "Rebuilding OK!" # send happy message to user
-echo 'Found the following when looking for "warning":'
-cat /home/px/.config/nixos//nixos-switch.log | grep 'warning'
+# echo "Rebuilding OK!" # send happy message to user
+# echo 'Found the following when looking for "warning":'
+# cat /home/px/.config/nixos//nixos-switch.log | grep 'warning'
 
 echo 'Rebuild script finished.' >>/home/px/.config/nixos/nixos-switch.log
 
