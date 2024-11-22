@@ -173,7 +173,7 @@ in
     fishPlugins.fzf-fish
     fishPlugins.forgit
     fishPlugins.hydro
-    fishPlugins.grc
+    # fishPlugins.grc  # fucks with ls
     fishPlugins.z
     grc
 
