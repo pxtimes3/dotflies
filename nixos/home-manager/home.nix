@@ -48,6 +48,7 @@ in
         rev = "v2.30.2";
         sha256 = "sha256-OMqbDhfWBM/1AhCKRGr6yBp+ubdj69Sq9bilKWe18Fk=";
       };
+      vendorHash = "sha256-F8DIg5U3k+8b87w11Fi0haWbbQn+Pc53GHMM5mCobXQ=";
     });
   })
 
