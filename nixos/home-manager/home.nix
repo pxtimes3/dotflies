@@ -154,6 +154,7 @@ in
 
     # terminal
     foot
+    kitty
     nnn
     neofetch
     grc
@@ -169,7 +170,7 @@ in
 
     # fish
     fish
-    fish.grc
+    #  fish.grc  # y u no work?
 
     # nosqlite?
     sqlite

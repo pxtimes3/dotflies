@@ -1,37 +1,33 @@
 
 warning: Git tree '/home/px/.config' is dirty
-error:
-       … while calling the 'derivationStrict' builtin
-         at <nix/derivation-internal.nix>:34:12:
-           33|
-           34|   strict = derivationStrict drvAttrs;
-             |            ^
-           35|
-
-       … while evaluating derivation 'home-manager-generation'
-         whose name attribute is located at /nix/store/c9wv7i0af6mysmy65x6nvyfw5izzxv4g-source/pkgs/stdenv/generic/make-derivation.nix:336:7
-
-       … while evaluating attribute 'buildCommand' of derivation 'home-manager-generation'
-         at /nix/store/c9wv7i0af6mysmy65x6nvyfw5izzxv4g-source/pkgs/build-support/trivial-builders/default.nix:59:17:
-           58|         enableParallelBuilding = true;
-           59|         inherit buildCommand name;
-             |                 ^
-           60|         passAsFile = [ "buildCommand" ]
-
-       … while evaluating the option `home.activation.installPackages.data':
-
-       … while evaluating definitions from `/nix/store/p4bi97xr4cmbi1ggylqx490ysnv8r1zi-source/modules/home-environment.nix':
-
-       … while evaluating the option `home.packages':
-
-       … while evaluating definitions from `/nix/store/xhm25lwldmg4fxbqq3bgg0bl5zradfw9-source/nixos/home-manager/home.nix':
-
-       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
-
-       error: attribute 'grc' missing
-       at /nix/store/xhm25lwldmg4fxbqq3bgg0bl5zradfw9-source/nixos/home-manager/home.nix:172:5:
-          171|     fish
-          172|     fish.grc
-             |     ^
-          173|
-       Did you mean one of src or doc?
+evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
+these 3 derivations will be built:
+  /nix/store/fz51799v8gi1cnfxsf1ngzb45qfh2r6j-home-manager-path.drv
+  /nix/store/pn0mbiw9hpm03w5lmp0ilv4yb0rxc1wi-activation-script.drv
+  /nix/store/5k9n7hzffw0f4vr3663f3qyq7zbr7ykb-home-manager-generation.drv
+these 3 paths will be fetched (12.91 MiB download, 46.61 MiB unpacked):
+  /nix/store/rsl5pj2xkhbrpfw60w8asz6ln27lv5fc-kitty-0.37.0
+  /nix/store/rxqhg9z76v3psnqsqs3kjvd77ifq85ip-kitty-0.37.0-terminfo
+  /nix/store/hhjwi301hp5b4xa3v4zx0wzds62af4kn-libstartup-notification-0.12
+copying path '/nix/store/rxqhg9z76v3psnqsqs3kjvd77ifq85ip-kitty-0.37.0-terminfo' from 'https://cache.nixos.org'...
+copying path '/nix/store/hhjwi301hp5b4xa3v4zx0wzds62af4kn-libstartup-notification-0.12' from 'https://cache.nixos.org'...
+copying path '/nix/store/rsl5pj2xkhbrpfw60w8asz6ln27lv5fc-kitty-0.37.0' from 'https://cache.nixos.org'...
+building '/nix/store/fz51799v8gi1cnfxsf1ngzb45qfh2r6j-home-manager-path.drv'...
+building '/nix/store/pn0mbiw9hpm03w5lmp0ilv4yb0rxc1wi-activation-script.drv'...
+building '/nix/store/5k9n7hzffw0f4vr3663f3qyq7zbr7ykb-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/yhvnv4286hmyxch377lihq3zjam1k9wf-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating profile generation 154
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+warning: Git tree '/home/px/.config' is dirty
+Rebuild script finished.
