@@ -1,33 +1,20 @@
 
 warning: Git tree '/home/px/.config' is dirty
-evaluation warning: lib.mdDoc will be removed from nixpkgs in 24.11. Option descriptions are now in Markdown by default; you can remove any remaining uses of lib.mdDoc.
-these 3 derivations will be built:
-  /nix/store/fz51799v8gi1cnfxsf1ngzb45qfh2r6j-home-manager-path.drv
-  /nix/store/pn0mbiw9hpm03w5lmp0ilv4yb0rxc1wi-activation-script.drv
-  /nix/store/5k9n7hzffw0f4vr3663f3qyq7zbr7ykb-home-manager-generation.drv
-these 3 paths will be fetched (12.91 MiB download, 46.61 MiB unpacked):
-  /nix/store/rsl5pj2xkhbrpfw60w8asz6ln27lv5fc-kitty-0.37.0
-  /nix/store/rxqhg9z76v3psnqsqs3kjvd77ifq85ip-kitty-0.37.0-terminfo
-  /nix/store/hhjwi301hp5b4xa3v4zx0wzds62af4kn-libstartup-notification-0.12
-copying path '/nix/store/rxqhg9z76v3psnqsqs3kjvd77ifq85ip-kitty-0.37.0-terminfo' from 'https://cache.nixos.org'...
-copying path '/nix/store/hhjwi301hp5b4xa3v4zx0wzds62af4kn-libstartup-notification-0.12' from 'https://cache.nixos.org'...
-copying path '/nix/store/rsl5pj2xkhbrpfw60w8asz6ln27lv5fc-kitty-0.37.0' from 'https://cache.nixos.org'...
-building '/nix/store/fz51799v8gi1cnfxsf1ngzb45qfh2r6j-home-manager-path.drv'...
-building '/nix/store/pn0mbiw9hpm03w5lmp0ilv4yb0rxc1wi-activation-script.drv'...
-building '/nix/store/5k9n7hzffw0f4vr3663f3qyq7zbr7ykb-home-manager-generation.drv'...
-Starting Home Manager activation
-Activating checkFilesChanged
-Activating checkLinkTargets
-Activating writeBoundary
-Activating installPackages
-replacing old 'home-manager-path'
-installing 'home-manager-path'
-building '/nix/store/yhvnv4286hmyxch377lihq3zjam1k9wf-user-environment.drv'...
-Activating linkGeneration
-Cleaning up orphan links from /home/px
-Creating profile generation 154
-Creating home file links in /home/px
-Activating onFilesChange
-Activating reloadSystemd
+building the system configuration...
 warning: Git tree '/home/px/.config' is dirty
-Rebuild script finished.
+these 3 derivations will be built:
+  /nix/store/n1x6ssl0w3ml8xd5jxsf0zcpphxj75j6-etc-nix-registry.json.drv
+  /nix/store/h6gc72ahmnpags6f7mryr84w6afgxpbq-etc.drv
+  /nix/store/rij5gfscm3l6q6rry52vfljr1s9npamn-nixos-system-pxbeard-25.05.20241119.23e89b7.drv
+building '/nix/store/n1x6ssl0w3ml8xd5jxsf0zcpphxj75j6-etc-nix-registry.json.drv'...
+building '/nix/store/h6gc72ahmnpags6f7mryr84w6afgxpbq-etc.drv'...
+building '/nix/store/rij5gfscm3l6q6rry52vfljr1s9npamn-nixos-system-pxbeard-25.05.20241119.23e89b7.drv'...
+activating the configuration...
+setting up /etc...
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /nix/var/nix/profiles/per-user/root/channels exists, but channels have been disabled.
+[1;35mwarning:[0m /root/.nix-defexpr/channels exists, but channels have been disabled.
+Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channels when NIX_PATH is unset.
+Delete the above directory or directories to prevent this.
+reloading user units for px...
+restarting sysinit-reactivation.target
