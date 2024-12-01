@@ -307,3 +307,6 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service
 restarting the following units: nix-daemon.service, polkit.service
 starting the following units: accounts-daemon.service, cups.socket, docker.socket, power-profiles-daemon.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, upower.service
+Failed to start systemd-udevd-kernel.socket
+the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+warning: error(s) occurred while switching to the new configuration
