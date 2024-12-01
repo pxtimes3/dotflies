@@ -179,7 +179,18 @@ in
     sublime4
     sublime-merge
 
-    # gamedev
+    # dev
+    
+      # lua
+      lua
+      lua54Packages.luacheck
+      selene
+      stylua
+
+    gcc
+    gnumake
+
+# gamedev
     # godot_4
     # unityhub
 
@@ -202,7 +213,11 @@ in
     mplus-outline-fonts.githubRelease
     dina-font
     #proggyfonts
-    nerdfonts
+    nerd-fonts.sauce-code-pro
+    nerd-fonts.roboto-mono
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+    nerd-fonts.iosevka-term-slab
 
     zed-editor
     nushell
