@@ -2097,3 +2097,28 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service, firewall.service, reload-systemd-vconsole-setup.service
 restarting the following units: nix-daemon.service, polkit.service, sshd.service, systemd-journald.service
 starting the following units: accounts-daemon.service, audit.service, avahi-daemon.socket, cups-browsed.service, cups.socket, docker.socket, kmod-static-nodes.service, logrotate-checkconf.service, ModemManager.service, mount-pstore.service, network-local-commands.service, network-setup.service, NetworkManager-wait-online.service, NetworkManager.service, nscd.service, power-profiles-daemon.service, resolvconf.service, rpc-statd-notify.service, rpcbind.socket, rtkit-daemon.service, systemd-modules-load.service, systemd-oomd.socket, systemd-sysctl.service, systemd-timesyncd.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-vconsole-setup.service, udisks2.service, upower.service, usbmuxd.service, wpa_supplicant.service
+the following new units were started: NetworkManager-dispatcher.service, run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-hostnamed.service, systemd-tmpfiles-resetup.service
+warning: Git tree '/home/px/.config' is dirty
+these 4 derivations will be built:
+  /nix/store/784cx9094irg55gbg019ysg9brkn17ki-zed-editor-0.163.3.drv
+  /nix/store/jd6l8bhs7q6skfb190dqza71pawjm1jw-home-manager-path.drv
+  /nix/store/d8qc653hyjh3vdvclgilk5d7mds12rw4-activation-script.drv
+  /nix/store/013sp50bk9pgk4mqf74v94hmd3cm7lsl-home-manager-generation.drv
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/40sq6ylkxvcxvxkrlh8fkdiqxrg1s4sy-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating profile generation 174
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+Stopping units: numlockx.service
+Starting units: numlockx.service
+Activating updateFontCache
+/tmp/home-manager-build.KbexmJuHN9/generation/activate: line 385: fc-cache: command not found

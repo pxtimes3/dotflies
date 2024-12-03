@@ -222,13 +222,6 @@ in
     nerd-fonts.iosevka
     nerd-fonts.iosevka-term
     nerd-fonts.iosevka-term-slab
-
-    zed-editor
-    nushell
-
-    # NODEJS
-    # nodejs_22
-    # use nix-shell instead
   ];
 
   # rebuild font-cache after switch
