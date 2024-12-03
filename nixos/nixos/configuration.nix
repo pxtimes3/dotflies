@@ -199,6 +199,11 @@
     nfs-utils
     git
     logiops
+    coreutils
+    gnugrep
+    gnused
+    findutils
+    #fish
     wl-clipboard
     libimobiledevice   # iphone mounting as per:https://nixos.wiki/wiki/IOS
     ifuse             # $ ifuse /tmp/iphone
