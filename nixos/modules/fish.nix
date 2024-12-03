@@ -5,6 +5,10 @@
     package = pkgs.fish;
     plugins = [];
 
+    shellInit = ''
+      set -gx PATH /run/current-system/sw/bin $PATH
+    '';
+
     # shellAbbrs = {
     #  g = "git";
     #  dc = "docker compose";
