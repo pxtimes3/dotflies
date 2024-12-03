@@ -203,7 +203,7 @@
     gnugrep
     gnused
     findutils
-    #fish
+    fish
     wl-clipboard
     libimobiledevice   # iphone mounting as per:https://nixos.wiki/wiki/IOS
     ifuse             # $ ifuse /tmp/iphone
