@@ -29,7 +29,7 @@ let
 in
 {
   imports = [
-    ../modules/terminals/foot.nix
+    ../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
   ];
@@ -57,6 +57,8 @@ in
   home.sessionVariables = {
     NODE_PATH = lib.makeSearchPath "lib/node_modules" nodeBinPaths;
     PATH = lib.makeSearchPath "bin" (["$HOME/.local/bin"] ++ nodeBinPaths);
+    LUA_PATH = "?.lua;?/init.lua;${pkgs.lua54Packages.lrexlib-pcre}/share/lua/5.4/?.lua;${pkgs.lua54Packages.lrexlib-pcre}/share/lua/5.4/?/init.lua;;";
+    LUA_CPATH = "${pkgs.lua54Packages.lrexlib-pcre}/lib/lua/5.4/?.so;;";
   };
 
   home.packages = with pkgs; [
@@ -180,10 +182,13 @@ in
     sublime-merge
 
     # dev
-    
+
       # lua
-      lua
+      lua5_4
       lua54Packages.luacheck
+      lua54Packages.luarocks
+      lua54Packages.lrexlib-pcre
+      pcre2
       selene
       stylua
 
@@ -225,7 +230,14 @@ in
     # NODEJS
     # nodejs_22
     # use nix-shell instead
-];
+  ];
+
+  # rebuild font-cache after switch
+  home.activation = {
+    updateFontCache = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      $DRY_RUN_CMD fc-cache -f -v
+    '';
+  };
 
   # allow openssl-1.1.1w due to sublime4
   nixpkgs.config.permittedInsecurePackages = [

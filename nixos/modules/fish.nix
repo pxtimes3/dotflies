@@ -2,32 +2,44 @@
   programs.fish = {
     enable = true;
 
-    shellAbbrs = {
-      g = "git";
-      dc = "docker compose";
-      n = "nvim";
-      t = "task";
-      ta = "task add";
-    };
+    package = pkgs.fish;
+    plugins = [];
 
-    shellAliases = {
-      "..." = "cd ../..";
-      "ls" = "eza -lahm";
-    };
+    #shellAbbrs = {
+    #  g = "git";
+    #  dc = "docker compose";
+    #  n = "nvim";
+    #  t = "task";
+    #  ta = "task add";
+    #};
+
+    #shellAliases = {
+    #  "..." = "cd ../..";
+    #  "ls" = "eza -lahm";
+    #};
 
     interactiveShellInit = ''
       # Environment variables
       set -x BAT_THEME 'GitHub'
       set -x MANPAGER 'nvim +Man!'
+      set -x LUA_PATH "?.lua;?/init.lua;${pkgs.lua54Packages.lrexlib-pcre}/share/lua/5.4/?.lua;${pkgs.lua54Packages.lrexlib-pcre}/share/lua/5.4/?/init.lua;;"
+      set -x LUA_CPATH "${pkgs.lua54Packages.lrexlib-pcre}/lib/lua/5.4/?.so;;"
 
       # Path modifications
-      fish_add_path -p ~/bin /usr/local/bin/ ~/.config/bin
+      # fish_add_path -p ~/bin /usr/local/bin/ ~/.config/bin
     '';
 
-    functions = {
-      ls = ''
-        eza -lahm $argv
-      '';
-    };
+    #functions = {
+    #  ls = ''
+    #    eza -lahm $argv
+    #  '';
+    #};
   };
+  
+  home.packages = with pkgs; [
+    coreutils
+    gnugrep
+    gnused
+    # Add other basic utilities you need
+  ];
 }

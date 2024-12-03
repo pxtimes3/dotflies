@@ -300,23 +300,10 @@
     curl
     glibc
     icu
-
-    wayland
-    libGL
-    libxkbcommon
-    xorg.libX11
-    xorg.libXrandr
-    xorg.libXi
-    xorg.libXcursor
-    xorg.libXinerama
-    xorg.libXdmcp
-    fontconfig
-    freetype
-    dbus
-    harfbuzz
-    xorg.libXft
-    xorg.libXrender
-    xorg.libxcb
+    gnugrep
+    gnused
+    findutils
+    coreutils
   ];
 
 
