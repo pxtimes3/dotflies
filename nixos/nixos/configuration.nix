@@ -72,7 +72,7 @@
       canTouchEfiVariables = true;
     };
   };
-  
+
   # https://nixos.wiki/wiki/AMD_GPU
   boot.initrd.kernelModules = ["amdgpu" "nfs"];
   services.xserver.videoDrivers = ["amdgpu"];
@@ -93,7 +93,7 @@
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
-  
+
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
   services.displayManager.sddm.enable = true;
@@ -102,7 +102,7 @@
   services.displayManager.sddm.wayland.enable = true;
   programs.kdeconnect.enable = true;
 
-  # enable flatpak 
+  # enable flatpak
   services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   xdg.portal.config.common.default = "gtk";
@@ -177,9 +177,9 @@
         # see home-manager/home.nix
       ];
       openssh.authorizedKeys.keys = [
-      	"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoerzXnm+mdtHQaqG3dNThCRCzciv5ZEDQIN/rDj4Zu9lHgbW5PL1ZVQEZjNMLOFCBqwm3H0J6b2a7K8sC9Drypf1IlQ1hOpSIvFuYFUuYJIXxIqTTp6Rz9BVRx6HFKH1S4C7Aw9YLLfYp9AALEv8lp7R4a1boFmhOJsSZ4ZoHViBXQVnqNdSw+7OCIqg7h+L/LntOFl1RKcxOENJtDhVpyAb1TdFUYQg04tjeaBuJNI8ERf+vhXNQJ65d8/yUvtPK0uyVYBSKFj/rP+t7336SxGdbp6mYkZSV3aLsgyRhe/k/C20cAR/s+DB4Ri+FVhwiSMCpjV69oHQfGkYrUOkZn/OAcduUK7lIdY/SSHgeDccunjK5nR8qIl/L9FcRJcGN90t8y4vXpdZPSD9oSNfJN+LMbKABqzGAo2g9HIy3bvmUKokAGEg41uyYs8zXS4WXvVmqKAs/0oWGxOVqdGA5hLpMO1D4Pw5ydTfQzQUF81HxqjY8q453Hs1MJIiTl2Tp9+NJtYWFBCRBIT/r/Xsvl0QjMlvJ1cIWyv1Y30IZluVzETTX5ZqvMsMKpzUpfrME1fmQRJo71Kw/RhyUPKR8xajvSUxnBFQdEEbFMrvlruqYdtbwqDOrEt5aUrAiS7uW/T8l535fy9EqFViZRzxyMABhaH0nzWjwzH0Uy3u7QQ== m@mactop.lan" 
-	      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDDf+RSelkuoVyfqf3sagpdCFMDNkFV0ABzxrZNdRYQr px@pxnix" 
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJm9tjiaAURpQx3HR/Y+rKHAq4p2Gc0GHb7LWoI61g4c px@pxLinux" 
+      	"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoerzXnm+mdtHQaqG3dNThCRCzciv5ZEDQIN/rDj4Zu9lHgbW5PL1ZVQEZjNMLOFCBqwm3H0J6b2a7K8sC9Drypf1IlQ1hOpSIvFuYFUuYJIXxIqTTp6Rz9BVRx6HFKH1S4C7Aw9YLLfYp9AALEv8lp7R4a1boFmhOJsSZ4ZoHViBXQVnqNdSw+7OCIqg7h+L/LntOFl1RKcxOENJtDhVpyAb1TdFUYQg04tjeaBuJNI8ERf+vhXNQJ65d8/yUvtPK0uyVYBSKFj/rP+t7336SxGdbp6mYkZSV3aLsgyRhe/k/C20cAR/s+DB4Ri+FVhwiSMCpjV69oHQfGkYrUOkZn/OAcduUK7lIdY/SSHgeDccunjK5nR8qIl/L9FcRJcGN90t8y4vXpdZPSD9oSNfJN+LMbKABqzGAo2g9HIy3bvmUKokAGEg41uyYs8zXS4WXvVmqKAs/0oWGxOVqdGA5hLpMO1D4Pw5ydTfQzQUF81HxqjY8q453Hs1MJIiTl2Tp9+NJtYWFBCRBIT/r/Xsvl0QjMlvJ1cIWyv1Y30IZluVzETTX5ZqvMsMKpzUpfrME1fmQRJo71Kw/RhyUPKR8xajvSUxnBFQdEEbFMrvlruqYdtbwqDOrEt5aUrAiS7uW/T8l535fy9EqFViZRzxyMABhaH0nzWjwzH0Uy3u7QQ== m@mactop.lan"
+	      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDDf+RSelkuoVyfqf3sagpdCFMDNkFV0ABzxrZNdRYQr px@pxnix"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJm9tjiaAURpQx3HR/Y+rKHAq4p2Gc0GHb7LWoI61g4c px@pxLinux"
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxb69wvAM7+umL6ERXfhxtiTG3+W400q3sf+2K10MPdEQrbVU81OabjpErgAE8q2nVYnCddvlVGyrgA7PB83wypg+pnaDFhZP+lIN1T3jxgi6+aJIPbiV5OK1gnFWh9NBOfgVVWA787dxa8Bhb0YAf9rZEd1qpR/u3YWfwi/ftAwg6BtIdxwgFyoEaRt4cxUt5Xpw4UEgCY3J+zl2pHn2c41JAmX4J7KUMLK3Rs5fBcWZwpmwe3CHWReImUClUNIScSfOH8cvMV8tk2r1qRbOmfXXkVM1/p5aRRNS9+C57Ag2HN1QmdYNKKZnDTAW7yiIvDyzL+hid51KNW6yF29/1 px@Magnuss-iMac.lan"
       ];
       extraGroups = ["networkmanager" "wheel" "qemu-libvirtd" "docker"];
@@ -300,6 +300,23 @@
     curl
     glibc
     icu
+
+    wayland
+    libGL
+    libxkbcommon
+    xorg.libX11
+    xorg.libXrandr
+    xorg.libXi
+    xorg.libXcursor
+    xorg.libXinerama
+    xorg.libXdmcp
+    fontconfig
+    freetype
+    dbus
+    harfbuzz
+    xorg.libXft
+    xorg.libXrender
+    xorg.libxcb
   ];
 
 
