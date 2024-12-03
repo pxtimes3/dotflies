@@ -5,18 +5,18 @@
     package = pkgs.fish;
     plugins = [];
 
-    #shellAbbrs = {
+    # shellAbbrs = {
     #  g = "git";
     #  dc = "docker compose";
     #  n = "nvim";
     #  t = "task";
     #  ta = "task add";
-    #};
+    # };
 
-    #shellAliases = {
+    # shellAliases = {
     #  "..." = "cd ../..";
     #  "ls" = "eza -lahm";
-    #};
+    # };
 
     interactiveShellInit = ''
       # Environment variables
@@ -26,20 +26,14 @@
       set -x LUA_CPATH "${pkgs.lua54Packages.lrexlib-pcre}/lib/lua/5.4/?.so;;"
 
       # Path modifications
-      # fish_add_path -p ~/bin /usr/local/bin/ ~/.config/bin
+
+      fish_add_path -p /run/current-system/sw/bin ~/.nix-profile/bin ~/bin /usr/local/bin/ ~/.config/bin
     '';
 
-    #functions = {
-    #  ls = ''
-    #    eza -lahm $argv
-    #  '';
-    #};
+    # functions = {
+    #   ls = ''
+    #     eza -lahm $argv
+    #   '';
+    # };
   };
-  
-  home.packages = with pkgs; [
-    coreutils
-    gnugrep
-    gnused
-    # Add other basic utilities you need
-  ];
 }

@@ -209,6 +209,8 @@
     ifuse             # $ ifuse /tmp/iphone
   ];
 
+  environment.pathsToLink = [ "/bin" "/share/man" ];
+
   # iphone
   services.usbmuxd.enable = true;
 
