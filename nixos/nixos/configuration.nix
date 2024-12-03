@@ -165,7 +165,6 @@
     #media-session.enable = true;
   };
 
-  # TODO: Set your hostname
   networking.hostName = "pxbeard";
 
   users.users = {
@@ -203,7 +202,6 @@
     gnugrep
     gnused
     findutils
-    fish
     wl-clipboard
     libimobiledevice   # iphone mounting as per:https://nixos.wiki/wiki/IOS
     ifuse             # $ ifuse /tmp/iphone
@@ -291,26 +289,13 @@
     };
   };
 
-  boot.supportedFilesystems = [ "nfs" ];
-#  fileSystems."/mnt/ds423/volume1/" = {
-#    device = "192.168.1.57:/volume1/ds423";
-#    fsType = "nfs";
-#  };
+  boot.supportedFilesystems = [ "nfs" "smb" ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
     zlib
     glib
-    # Common libraries that might be needed
-    openssl
-    curl
-    glibc
-    icu
-    gnugrep
-    gnused
-    findutils
-    coreutils
   ];
 
 

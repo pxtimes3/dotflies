@@ -29,7 +29,7 @@ let
 in
 {
   imports = [
-    ../modules/fish.nix
+    #../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
   ];
@@ -155,7 +155,6 @@ in
     logiops
 
     # terminal
-    foot
     kitty
     nnn
     neofetch
