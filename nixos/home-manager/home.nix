@@ -71,18 +71,18 @@ in
     rar
 
     # c++
-    gdb
-    gcc
-    clang-tools
-    cmake
-    codespell
-    conan
-    cppcheck
-    doxygen
-    gtest
-    lcov
+    #gdb
+    #gcc
+    #clang-tools
+    #cmake
+    #codespell
+    #conan
+    #cppcheck
+    #doxygen
+    #gtest
+    #lcov
     #vcpkg
-    vcpkg-tool
+    #vcpkg-tool
 
     # utils
     eza # A modern replacement for ‘ls’
@@ -199,8 +199,8 @@ in
     # unityhub
 
     # 3D
-    # blender
-    # blender-hip
+    blender
+    blender-hip
     clinfo
     amdgpu_top
 

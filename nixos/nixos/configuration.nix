@@ -80,13 +80,14 @@
   # hardware.opengl.driSupport32Bit = true; # For 32 bit applications
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     #driSupport = true;
     #driSupport32Bit = true;
     extraPackages = with pkgs; [
-      rocmPackages.clr.icd
-      rocmPackages.clr
-      rocmPackages.rocminfo
-      rocmPackages.rocm-runtime
+      # rocmPackages.clr.icd
+      # rocmPackages.clr
+      # rocmPackages.rocminfo
+      # rocmPackages.rocm-runtime
       amdvlk
     ];
   };

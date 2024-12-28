@@ -1,27 +1,82 @@
 
 warning: Git tree '/home/px/.config' is dirty
-these 4 derivations will be built:
-  /nix/store/wwf9h2k1rlyiawdqn2pxm20vi3vcv88q-code-wrapped.drv
-  /nix/store/m0ifcj5wvj05ylmw661bqlyjjnhfl8xb-home-manager-path.drv
-  /nix/store/yis2b24x1p1mpgf17jxj08jv01gmd589-activation-script.drv
-  /nix/store/8cqljz98q34izwf5r03dw35izza2xsdf-home-manager-generation.drv
-building '/nix/store/wwf9h2k1rlyiawdqn2pxm20vi3vcv88q-code-wrapped.drv'...
-building '/nix/store/m0ifcj5wvj05ylmw661bqlyjjnhfl8xb-home-manager-path.drv'...
-building '/nix/store/yis2b24x1p1mpgf17jxj08jv01gmd589-activation-script.drv'...
-building '/nix/store/8cqljz98q34izwf5r03dw35izza2xsdf-home-manager-generation.drv'...
-Starting Home Manager activation
-Activating checkFilesChanged
-Activating checkLinkTargets
-Activating writeBoundary
-Activating installPackages
-replacing old 'home-manager-path'
-installing 'home-manager-path'
-building '/nix/store/pw61iqdjb0sfyx04ly3ag7nwfdx4ndf8-user-environment.drv'...
-Activating linkGeneration
-Cleaning up orphan links from /home/px
-Creating profile generation 178
-Creating home file links in /home/px
-Activating onFilesChange
-Activating reloadSystemd
-Activating updateFontCache
-/tmp/home-manager-build.d8iSYxTKqj/generation/activate: line 385: fc-cache: command not found
+building the system configuration...
+warning: Git tree '/home/px/.config' is dirty
+these 36 derivations will be built:
+  /nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv
+  /nix/store/dbzz1qs1gfn4c9c2xpv3mhf7wjvdg3lf-cups-progs.drv
+  /nix/store/03k59r3a1yyr0nhdxax9wggcl06k6nh3-cups-files.conf.drv
+  /nix/store/a8mgiknxj6grnngw4bp2q028sk1k0al7-rocm-llvm-compiler-rt-6.0.2.drv
+  /nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv
+  /nix/store/ddiyix1frmjm7xsrxjy5fprzy2mvn5yz-rocm-llvm-clang-6.0.2.drv
+  /nix/store/3c83kgmacpw1sghcgwjq4gi1k0i5nrdi-rocm-llvm-clang-wrapper-6.0.2.drv
+  /nix/store/vgl7bd3vpgm39ypph4l4h302ha1mdvsb-stdenv-linux.drv
+  /nix/store/iwahwcfa8ijr63vl55y8fc28wgz4vvja-rocm-cmake-6.0.2.drv
+  /nix/store/bj6y5sdg77kq60d04gmdxl3q81hrcczh-rocm-device-libs-6.0.2.drv
+  /nix/store/ivzgarmh4qlfm3l554y5b7s1j4dqpcl6-rocm-thunk-6.0.2.drv
+  /nix/store/vyckcy09xfw20qhh52nc95jnlm8rz56l-rocm-runtime-6.0.2.drv
+  /nix/store/k3d94y6hvqm3p74k408alp7vmjj5rhpz-rocminfo-6.0.2.drv
+  /nix/store/pyivhdbl794zygvs0951fbn176m6g7rm-hipcc-6.0.2.drv
+  /nix/store/rj9drhfza23zjcw31cms4vq01bb0kxji-rocm-comgr-6.0.2.drv
+  /nix/store/x0v9v1qh97pix8bipcr9ybissyxqrfbs-hip-common-6.0.2.drv
+  /nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv
+  /nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv
+  /nix/store/n8jnp6cqssi0xyz3q9gnmcndvpr4pra0-tmpfiles.d.drv
+  /nix/store/a5ypvimlmzxgi7d3hg2inhax82ssxkhm-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
+  /nix/store/6nhhx6z1h7pvbgsazhi11yhpwcqn7xsc-unit-systemd-tmpfiles-resetup.service.drv
+  /nix/store/rhwavnbrm4gand0c68w5m8m6n3mrnxxz-udev-rules.drv
+  /nix/store/4zpdxvb5z6g7pfn75z696anaaph10ilp-X-Restart-Triggers-systemd-udevd.drv
+  /nix/store/awypyw6nlnngj07pwzdawzil1vnhggdg-unit-systemd-udevd.service.drv
+  /nix/store/84b9j0afssrrizgs2z5b5x5qbfd2nll9-cups-progs.drv
+  /nix/store/jpxn9kgcgp0z7gzd85fiazrh5g3547w4-unit-script-cups-pre-start.drv
+  /nix/store/ca3yg3i5q2kcd1gfkv7vhmbg613gn5aj-unit-cups.service.drv
+  /nix/store/1a02hd2wa7af2jv82cl3q2s3pc02vm8h-system-units.drv
+  /nix/store/2x3y6w45zxcrxbrkhifr59xj1jqkzn5w-etc-nix-registry.json.drv
+  /nix/store/53jvcf2zbsk72wikzgdmrxslrbdscld9-hwdb.bin.drv
+  /nix/store/mn20vqxkadxym8g9n67f3cif7hdh6kac-set-environment.drv
+  /nix/store/b2lyif14xhfkcpg5w250sph62zz4j5ph-etc-profile.drv
+  /nix/store/lrw5hcm1a88ckq1gn4gb1j1660m6ybd9-user-units.drv
+  /nix/store/s89jzdxkb255n06prpj695j8das1fl8v-etc-pam-environment.drv
+  /nix/store/6fx37b3k1ribr80ys2qs7fnnp5jnd30n-etc.drv
+  /nix/store/lrrhn32gzbjw643knnywxjfnszgbp9r8-nixos-system-pxbeard-25.05.20241227.634fd46.drv
+building '/nix/store/2x3y6w45zxcrxbrkhifr59xj1jqkzn5w-etc-nix-registry.json.drv'...
+building '/nix/store/lrw5hcm1a88ckq1gn4gb1j1660m6ybd9-user-units.drv'...
+building '/nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv'...
+building '/nix/store/a8mgiknxj6grnngw4bp2q028sk1k0al7-rocm-llvm-compiler-rt-6.0.2.drv'...
+building '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'...
+error: builder for '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv' failed with exit code 1;
+       last 25 log lines:
+       > [19/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.ispunct.dir/ispunct.cpp.o
+       > [20/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toascii.dir/toascii.cpp.o
+       > [21/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.tolower.dir/tolower.cpp.o
+       > [22/322] Building CXX object libc/utils/testutils/CMakeFiles/libc_test_utils.dir/RoundingModeUtils.cpp.o
+       > /build/source/libc/utils/testutils/RoundingModeUtils.cpp:30:3: warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+       >   default:
+       >   ^
+       > 1 warning generated.
+       > [23/322] Building CXX object libc/src/__support/CPP/CMakeFiles/libc.src.__support.CPP.new.dir/new.cpp.o
+       > [24/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isspace.dir/isspace.cpp.o
+       > [25/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toupper.dir/toupper.cpp.o
+       > [26/322] Building CXX object libc/src/inttypes/CMakeFiles/libc.src.inttypes.imaxdiv.dir/imaxdiv.cpp.o
+       > [27/322] Building CXX object libc/src/math/generic/CMakeFiles/libc.src.math.generic.math_utils.dir/math_utils.cpp.o
+       > [28/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.signal_to_string.dir/signal_to_string.cpp.o
+       > [29/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.error_to_string.dir/error_to_string.cpp.o
+       > [30/322] Building CXX object libc/src/__support/File/CMakeFiles/libc.src.__support.File.file.dir/file.cpp.o
+       > [31/322] Building CXX object libc/test/UnitTest/CMakeFiles/LibcUnitTest.dir/LibcTest.cpp.o
+       > FAILED: libc/test/UnitTest/CMakeFiles/LibcUnitTest.dir/LibcTest.cpp.o
+       > /nix/store/7sqn5142gh5asri8aqxvsvib9ii37fyq-rocm-llvm-clang-unwrapped-wrapper-6.0.2/bin/clang++ -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/build/source/libc -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -ffunction-sections -fdata-sections -O3 -DNDEBUG -std=gnu++17 -MD -MT libc/test/UnitTest/CMakeFiles/LibcUnitTest.dir/LibcTest.cpp.o -MF libc/test/UnitTest/CMakeFiles/LibcUnitTest.dir/LibcTest.cpp.o.d -o libc/test/UnitTest/CMakeFiles/LibcUnitTest.dir/LibcTest.cpp.o -c /build/source/libc/test/UnitTest/LibcTest.cpp
+       > /build/source/libc/test/UnitTest/LibcTest.cpp:16:10: fatal error: 'cassert' file not found
+       > #include <cassert>
+       >          ^~~~~~~~~
+       > 1 error generated.
+       > [32/322] Building CXX object libc/test/UnitTest/CMakeFiles/TestLogger.dir/TestLogger.cpp.o
+       > ninja: build stopped: subcommand failed.
+       For full logs, run 'nix log /nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'.
+error (ignored): error: cannot unlink '"/tmp/nix-build-rocm-llvm-compiler-rt-6.0.2.drv-2/build/source"': Directory not empty
+error: 1 dependencies of derivation '/nix/store/3c83kgmacpw1sghcgwjq4gi1k0i5nrdi-rocm-llvm-clang-wrapper-6.0.2.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/n8jnp6cqssi0xyz3q9gnmcndvpr4pra0-tmpfiles.d.drv' failed to build
+error (ignored): error: cannot unlink '"/tmp/nix-build-hplip-3.24.4.drv-1/build/hplip-3.24.4"': Directory not empty
+error: 1 dependencies of derivation '/nix/store/6fx37b3k1ribr80ys2qs7fnnp5jnd30n-etc.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/lrrhn32gzbjw643knnywxjfnszgbp9r8-nixos-system-pxbeard-25.05.20241227.634fd46.drv' failed to build
