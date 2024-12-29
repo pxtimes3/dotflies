@@ -199,8 +199,8 @@ in
     # unityhub
 
     # 3D
-    blender
-    blender-hip
+    # blender
+    # blender-hip
     clinfo
     amdgpu_top
 

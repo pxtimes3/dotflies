@@ -88,7 +88,7 @@
       # rocmPackages.clr
       # rocmPackages.rocminfo
       # rocmPackages.rocm-runtime
-      amdvlk
+      # amdvlk
     ];
   };
   systemd.tmpfiles.rules = [
