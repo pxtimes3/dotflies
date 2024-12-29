@@ -2,7 +2,7 @@
 warning: Git tree '/home/px/.config' is dirty
 building the system configuration...
 warning: Git tree '/home/px/.config' is dirty
-these 52 derivations will be built:
+these 44 derivations will be built:
   /nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv
   /nix/store/dbzz1qs1gfn4c9c2xpv3mhf7wjvdg3lf-cups-progs.drv
   /nix/store/03k59r3a1yyr0nhdxax9wggcl06k6nh3-cups-files.conf.drv
@@ -21,17 +21,9 @@ these 52 derivations will be built:
   /nix/store/x0v9v1qh97pix8bipcr9ybissyxqrfbs-hip-common-6.0.2.drv
   /nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv
   /nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv
-  /nix/store/1q6r8qs4wj51s0i495mxy435147rfac8-graphics-drivers.drv
-  /nix/store/irkic8r122rq9rch7xkfwzs0ry996132-graphics-driver.conf.drv
   /nix/store/0r0ifhllb959x6ad0qc9qlq818kwpzgz-tmpfiles.d.drv
   /nix/store/m718sjdx95xl7cnnpnyyi7d2jcg1zbsm-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
   /nix/store/1sn0ynkshnd77ysl7rkpgqcmanqbgwzg-unit-systemd-tmpfiles-resetup.service.drv
-  /nix/store/qchi1zzf4grsk322gqnxdir6kzahx446-steam-fhsenv-rootfs.drv
-  /nix/store/k2ppaw1y6c5wr1gg92b12xs6xcnvpddk-steam-bwrap.drv
-  /nix/store/7vx7hy7lmf02y3mjgp460gyqwnsv8vn3-steam.drv
-  /nix/store/y81j43bp2gfc22hychjlny0i6spi044h-steam-run-fhsenv-rootfs.drv
-  /nix/store/6c7rgr0rl6bvyrjmiai6apf6wwxylvya-steam-run-bwrap.drv
-  /nix/store/grymiinvhyg4a48j4zzxp9s9dlgi6yjr-steam-run.drv
   /nix/store/89k6asgcr1jjakz09g233hhmirkrgf9c-system-path.drv
   /nix/store/1y2pzqwrqy2dpb97lf9zazxdrvfwvm58-X-Restart-Triggers-polkit.drv
   /nix/store/rlfazqxp7z0fz9cjcywnzp6r9dxmw5zr-dbus-1.drv
@@ -41,8 +33,8 @@ these 52 derivations will be built:
   /nix/store/rhwavnbrm4gand0c68w5m8m6n3mrnxxz-udev-rules.drv
   /nix/store/4zpdxvb5z6g7pfn75z696anaaph10ilp-X-Restart-Triggers-systemd-udevd.drv
   /nix/store/53jvcf2zbsk72wikzgdmrxslrbdscld9-hwdb.bin.drv
+  /nix/store/6p9qlrl5dzvlvp80s2iafmhajvhmzm2v-etc-nix-registry.json.drv
   /nix/store/84b9j0afssrrizgs2z5b5x5qbfd2nll9-cups-progs.drv
-  /nix/store/92dkx9y5rsm9ggvpvx5075bvkza2mmvv-etc-nix-registry.json.drv
   /nix/store/awypyw6nlnngj07pwzdawzil1vnhggdg-unit-systemd-udevd.service.drv
   /nix/store/mn20vqxkadxym8g9n67f3cif7hdh6kac-set-environment.drv
   /nix/store/b2lyif14xhfkcpg5w250sph62zz4j5ph-etc-profile.drv
@@ -53,35 +45,35 @@ these 52 derivations will be built:
   /nix/store/z6zxmxlr5xk3gpdym7815czii10bkxbk-unit-polkit.service.drv
   /nix/store/lky09488b1xfl7cqvaxaq6n0v53ds6lw-system-units.drv
   /nix/store/s89jzdxkb255n06prpj695j8das1fl8v-etc-pam-environment.drv
-  /nix/store/m0q6cgwxjfylz8qjg7nh4msjjb7m5znc-etc.drv
-  /nix/store/r2al3pxi2armkrikc4xbjyzcf4k7rs8a-nixos-system-pxbeard-25.05.20241227.634fd46.drv
-building '/nix/store/92dkx9y5rsm9ggvpvx5075bvkza2mmvv-etc-nix-registry.json.drv'...
-building '/nix/store/1q6r8qs4wj51s0i495mxy435147rfac8-graphics-drivers.drv'...
+  /nix/store/lwmr90g9nj81wmfqaywnf04j4grgh3b9-etc.drv
+  /nix/store/h8qi16g12j03fc23k3aj74mcdj3d1l43-nixos-system-pxbeard-25.05.20241227.634fd46.drv
+building '/nix/store/89k6asgcr1jjakz09g233hhmirkrgf9c-system-path.drv'...
+building '/nix/store/6p9qlrl5dzvlvp80s2iafmhajvhmzm2v-etc-nix-registry.json.drv'...
 building '/nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv'...
-building '/nix/store/qchi1zzf4grsk322gqnxdir6kzahx446-steam-fhsenv-rootfs.drv'...
-building '/nix/store/y81j43bp2gfc22hychjlny0i6spi044h-steam-run-fhsenv-rootfs.drv'...
 building '/nix/store/a8mgiknxj6grnngw4bp2q028sk1k0al7-rocm-llvm-compiler-rt-6.0.2.drv'...
 building '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'...
-building '/nix/store/irkic8r122rq9rch7xkfwzs0ry996132-graphics-driver.conf.drv'...
-building '/nix/store/6c7rgr0rl6bvyrjmiai6apf6wwxylvya-steam-run-bwrap.drv'...
-building '/nix/store/k2ppaw1y6c5wr1gg92b12xs6xcnvpddk-steam-bwrap.drv'...
-building '/nix/store/grymiinvhyg4a48j4zzxp9s9dlgi6yjr-steam-run.drv'...
-building '/nix/store/7vx7hy7lmf02y3mjgp460gyqwnsv8vn3-steam.drv'...
-building '/nix/store/89k6asgcr1jjakz09g233hhmirkrgf9c-system-path.drv'...
+building '/nix/store/1y2pzqwrqy2dpb97lf9zazxdrvfwvm58-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/rlfazqxp7z0fz9cjcywnzp6r9dxmw5zr-dbus-1.drv'...
+building '/nix/store/n8jh4ic6d8hgz1fq29g1px5jm2ahc14c-unit-accounts-daemon.service.drv'...
+building '/nix/store/qp6jkzyxnqzvmy3w20lpx168gjyh145r-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/z6zxmxlr5xk3gpdym7815czii10bkxbk-unit-polkit.service.drv'...
+building '/nix/store/33ihsi2pv0wixkz0bylf18kh0pwwlfkv-unit-dbus.service.drv'...
+building '/nix/store/c7mmkmga9cqrk2cs99wy3q7cxmkb9dv7-unit-dbus.service.drv'...
+building '/nix/store/23pknacpfzfdfbl3xby9jari29i4m6nf-user-units.drv'...
 error: builder for '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv' failed with exit code 1;
        last 25 log lines:
-       > [21/322] Building CXX object libc/utils/testutils/CMakeFiles/libc_test_utils.dir/ExecuteFunctionUnix.cpp.o
-       > FAILED: libc/utils/testutils/CMakeFiles/libc_test_utils.dir/ExecuteFunctionUnix.cpp.o
-       > /nix/store/7sqn5142gh5asri8aqxvsvib9ii37fyq-rocm-llvm-clang-unwrapped-wrapper-6.0.2/bin/clang++ -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -ffunction-sections -fdata-sections -O3 -DNDEBUG -std=gnu++17 -MD -MT libc/utils/testutils/CMakeFiles/libc_test_utils.dir/ExecuteFunctionUnix.cpp.o -MF libc/utils/testutils/CMakeFiles/libc_test_utils.dir/ExecuteFunctionUnix.cpp.o.d -o libc/utils/testutils/CMakeFiles/libc_test_utils.dir/ExecuteFunctionUnix.cpp.o -c /build/source/libc/utils/testutils/ExecuteFunctionUnix.cpp
-       > /build/source/libc/utils/testutils/ExecuteFunctionUnix.cpp:10:10: fatal error: 'cassert' file not found
-       > #include <cassert>
        >          ^~~~~~~~~
        > 1 error generated.
-       > [22/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toascii.dir/toascii.cpp.o
-       > [23/322] Building CXX object libc/src/inttypes/CMakeFiles/libc.src.inttypes.imaxdiv.dir/imaxdiv.cpp.o
-       > [24/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toupper.dir/toupper.cpp.o
-       > [25/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isxdigit.dir/isxdigit.cpp.o
-       > [26/322] Building CXX object libc/src/__support/CPP/CMakeFiles/libc.src.__support.CPP.new.dir/new.cpp.o
+       > [17/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isxdigit.dir/isxdigit.cpp.o
+       > [18/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isprint.dir/isprint.cpp.o
+       > [19/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isspace.dir/isspace.cpp.o
+       > [20/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isascii.dir/isascii.cpp.o
+       > [21/322] Building CXX object libc/src/stdio/printf_core/CMakeFiles/libc.src.stdio.printf_core.writer.dir/writer.cpp.o
+       > [22/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toupper.dir/toupper.cpp.o
+       > [23/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.islower.dir/islower.cpp.o
+       > [24/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isblank.dir/isblank.cpp.o
+       > [25/322] Building CXX object libc/src/__support/CPP/CMakeFiles/libc.src.__support.CPP.new.dir/new.cpp.o
+       > [26/322] Building CXX object libc/src/inttypes/CMakeFiles/libc.src.inttypes.imaxdiv.dir/imaxdiv.cpp.o
        > [27/322] Building CXX object libc/src/math/generic/CMakeFiles/libc.src.math.generic.math_utils.dir/math_utils.cpp.o
        > [28/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.signal_to_string.dir/signal_to_string.cpp.o
        > [29/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.error_to_string.dir/error_to_string.cpp.o
@@ -96,11 +88,11 @@ error: builder for '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6
        > [32/322] Building CXX object libc/test/UnitTest/CMakeFiles/TestLogger.dir/TestLogger.cpp.o
        > ninja: build stopped: subcommand failed.
        For full logs, run 'nix log /nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'.
-error (ignored): error: cannot unlink '"/tmp/nix-build-rocm-llvm-compiler-rt-6.0.2.drv-5/build/source"': Directory not empty
+error (ignored): error: cannot unlink '"/tmp/nix-build-rocm-llvm-compiler-rt-6.0.2.drv-6/build/source"': Directory not empty
 error: 1 dependencies of derivation '/nix/store/3c83kgmacpw1sghcgwjq4gi1k0i5nrdi-rocm-llvm-clang-wrapper-6.0.2.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/0r0ifhllb959x6ad0qc9qlq818kwpzgz-tmpfiles.d.drv' failed to build
-error (ignored): error: cannot unlink '"/tmp/nix-build-hplip-3.24.4.drv-3/build/hplip-3.24.4/ppd/hpcups"': Directory not empty
-error: 1 dependencies of derivation '/nix/store/m0q6cgwxjfylz8qjg7nh4msjjb7m5znc-etc.drv' failed to build
-error: 1 dependencies of derivation '/nix/store/r2al3pxi2armkrikc4xbjyzcf4k7rs8a-nixos-system-pxbeard-25.05.20241227.634fd46.drv' failed to build
+error (ignored): error: cannot unlink '"/tmp/nix-build-hplip-3.24.4.drv-4/build/hplip-3.24.4/ppd/hpijs"': Directory not empty
+error: 1 dependencies of derivation '/nix/store/lwmr90g9nj81wmfqaywnf04j4grgh3b9-etc.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/h8qi16g12j03fc23k3aj74mcdj3d1l43-nixos-system-pxbeard-25.05.20241227.634fd46.drv' failed to build
