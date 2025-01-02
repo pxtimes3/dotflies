@@ -2,10 +2,7 @@
 warning: Git tree '/home/px/.config' is dirty
 building the system configuration...
 warning: Git tree '/home/px/.config' is dirty
-these 35 derivations will be built:
-  /nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv
-  /nix/store/dbzz1qs1gfn4c9c2xpv3mhf7wjvdg3lf-cups-progs.drv
-  /nix/store/03k59r3a1yyr0nhdxax9wggcl06k6nh3-cups-files.conf.drv
+these 57 derivations will be built:
   /nix/store/a8mgiknxj6grnngw4bp2q028sk1k0al7-rocm-llvm-compiler-rt-6.0.2.drv
   /nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv
   /nix/store/ddiyix1frmjm7xsrxjy5fprzy2mvn5yz-rocm-llvm-clang-6.0.2.drv
@@ -22,40 +19,94 @@ these 35 derivations will be built:
   /nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv
   /nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv
   /nix/store/0r0ifhllb959x6ad0qc9qlq818kwpzgz-tmpfiles.d.drv
-  /nix/store/53jvcf2zbsk72wikzgdmrxslrbdscld9-hwdb.bin.drv
-  /nix/store/6bjc9b0fsy6zvhqykzkc30pis3iz94l3-etc-nix-registry.json.drv
-  /nix/store/mn20vqxkadxym8g9n67f3cif7hdh6kac-set-environment.drv
-  /nix/store/b2lyif14xhfkcpg5w250sph62zz4j5ph-etc-profile.drv
+  /nix/store/ljmnfdhs2m1zg3yg1lini0wawsqz1gx3-hplip-3.24.4.drv
+  /nix/store/bwdfyk22f9sry35fqlksbhilfyv6d2mj-cups-progs.drv
+  /nix/store/6c6xkf8yavp4s4snk62hwgffwm8i9x2m-cups-files.conf.drv
+  /nix/store/pp58rhvwa6hv7xw4231jlak1w7jcaxkz-cups-progs.drv
+  /nix/store/xxfca8lxznpzw8rzqn1c60zygfyvadsl-unit-script-cups-pre-start.drv
+  /nix/store/0sfigyd4vapiqfn926pqd4bggdxz9jv8-unit-cups.service.drv
+  /nix/store/1m57jxkan7dp8cs80slh5r59l9rk6wz7-issue.drv
   /nix/store/m718sjdx95xl7cnnpnyyi7d2jcg1zbsm-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
   /nix/store/1sn0ynkshnd77ysl7rkpgqcmanqbgwzg-unit-systemd-tmpfiles-resetup.service.drv
-  /nix/store/rhwavnbrm4gand0c68w5m8m6n3mrnxxz-udev-rules.drv
-  /nix/store/4zpdxvb5z6g7pfn75z696anaaph10ilp-X-Restart-Triggers-systemd-udevd.drv
-  /nix/store/awypyw6nlnngj07pwzdawzil1vnhggdg-unit-systemd-udevd.service.drv
-  /nix/store/84b9j0afssrrizgs2z5b5x5qbfd2nll9-cups-progs.drv
-  /nix/store/jpxn9kgcgp0z7gzd85fiazrh5g3547w4-unit-script-cups-pre-start.drv
-  /nix/store/ca3yg3i5q2kcd1gfkv7vhmbg613gn5aj-unit-cups.service.drv
-  /nix/store/lky09488b1xfl7cqvaxaq6n0v53ds6lw-system-units.drv
-  /nix/store/s89jzdxkb255n06prpj695j8das1fl8v-etc-pam-environment.drv
-  /nix/store/xy6xqnm3l4bzv138gha1vrdm9bzzxfy3-etc.drv
-  /nix/store/1aj7ys2aqv05zg8nj6h2cj92x6k3r5bj-nixos-system-pxbeard-25.05.20241227.634fd46.drv
-building '/nix/store/6bjc9b0fsy6zvhqykzkc30pis3iz94l3-etc-nix-registry.json.drv'...
-building '/nix/store/sdiij13yhi4k59w4vmkqynn25y9p38vb-hplip-3.24.4.drv'...
+  /nix/store/iw8lrj3w4pzyanm3s1p3syxd4fr19hdp-udev-rules.drv
+  /nix/store/2z3qv51bk93v8v5z67zckwazih1s1yj8-X-Restart-Triggers-systemd-udevd.drv
+  /nix/store/7xsgwqwbvkv2kqmym5lp9jq2dgkgbd4h-nixos-version.drv
+  /nix/store/9n3mkzdm1shcb5rdmx4f2g7lfxlb14m1-nixos-help.drv
+  /nix/store/snsl3k1mqx0x2zk1maawm32hncnw2xzw-nixos-help.drv
+  /nix/store/zc3jbkm33505nsr1vhs0xkff3fhv9zqg-system-path.drv
+  /nix/store/a1mvyvisv8k30fqdjz39m7bz97jxwafg-dbus-1.drv
+  /nix/store/alwz4984jzdmncqdv4q6wx52zsn3y8g4-X-Restart-Triggers-dbus.drv
+  /nix/store/bkiz0b6qdlcmdb5jb4mggqhzqwgdlhzm-unit-dbus.service.drv
+  /nix/store/3xr6bv6qx6xk4gs9x87af0qvaxib0yan-user-units.drv
+  /nix/store/3zswviirmwz0n4758sjmyj3a60val6a0-unit-NetworkManager.service.drv
+  /nix/store/h6q4qz6pmrgpk9in1z33y772hmv4n2g8-set-environment.drv
+  /nix/store/6pv4fr5bcfbw14dv5rx03vy5msbslw0q-etc-profile.drv
+  /nix/store/679472qzxz5c7azg62biizvd0a4lnj1r-unit-systemd-udevd.service.drv
+  /nix/store/xmc1ysxdayingmahpck431sc799r379x-X-Restart-Triggers-polkit.drv
+  /nix/store/g4d7jrkmnxldjdrv7x2cs49dxpl87wvy-unit-polkit.service.drv
+  /nix/store/bzp5f8ndaymc3rn7baw82a39wf3ifazi-etc-os-release.drv
+  /nix/store/kkz2fvh67xrdrbc0zr46di35v4sny4b0-shutdown-ramfs-contents.json.drv
+  /nix/store/qnnadc9wslbhwj40ng42hj4a41095b8b-unit-generate-shutdown-ramfs.service.drv
+  /nix/store/x63m0r27sqrp2ydhklli2xb7chfyhl8b-unit-accounts-daemon.service.drv
+  /nix/store/y1sc16bdd1hbf528yf8vxmm6cmz8mkl1-unit-NetworkManager-dispatcher.service.drv
+  /nix/store/z8jfxhrd2s08yg8hb5g25nrimm2qvd2m-unit-dbus.service.drv
+  /nix/store/bcry49s10lhajyqnz34985im5m0g35xy-system-units.drv
+  /nix/store/g6baalzn3wwdvl6k5vw5290j2wm88wzx-etc-pam-environment.drv
+  /nix/store/imwy24pdizy0ppq90m4a7qr2lnn4dya2-hwdb.bin.drv
+  /nix/store/w11lzy7hjsb8xwrv21309fm5jimzypcr-etc-nix-registry.json.drv
+  /nix/store/bixschmvkqsr219cjhwvan5hxragwgbl-etc.drv
+  /nix/store/jxmqrgcsrgq8i3pk35ijijggzkjzknj4-linux-6.6.68-modules.drv
+  /nix/store/zymcg0s6yvvznisg97ajv6x434vmna84-linux-6.6.68-modules-shrunk.drv
+  /nix/store/yzsv3cg4k95b68g52da6vh78nifhci12-initrd-linux-6.6.68.drv
+  /nix/store/d4vfn08lj547a8c0m6ffz4d9d15dg3qr-boot.json.drv
+  /nix/store/4mzl7r5dda2s5dc08dfmrg382lca9haw-nixos-system-pxbeard-25.05.20241229.88195a9.drv
+these 3 paths will be fetched (120.13 MiB download, 160.17 MiB unpacked):
+  /nix/store/v4mlp8fjhxhw544wvn3jhp6az9i0pv6b-linux-6.6.68
+  /nix/store/yp9s23blriqxw8b4zqgxd9vr1pzbwlhd-nixos-configuration-reference-manpage
+  /nix/store/56qmqz6h44pky4iqkj56cvvx9v4wy0p4-nixos-manual-html
+copying path '/nix/store/v4mlp8fjhxhw544wvn3jhp6az9i0pv6b-linux-6.6.68' from 'https://cache.nixos.org'...
+copying path '/nix/store/yp9s23blriqxw8b4zqgxd9vr1pzbwlhd-nixos-configuration-reference-manpage' from 'https://cache.nixos.org'...
+copying path '/nix/store/56qmqz6h44pky4iqkj56cvvx9v4wy0p4-nixos-manual-html' from 'https://cache.nixos.org'...
+building '/nix/store/w11lzy7hjsb8xwrv21309fm5jimzypcr-etc-nix-registry.json.drv'...
+building '/nix/store/bzp5f8ndaymc3rn7baw82a39wf3ifazi-etc-os-release.drv'...
+building '/nix/store/1m57jxkan7dp8cs80slh5r59l9rk6wz7-issue.drv'...
+building '/nix/store/7xsgwqwbvkv2kqmym5lp9jq2dgkgbd4h-nixos-version.drv'...
+building '/nix/store/y1sc16bdd1hbf528yf8vxmm6cmz8mkl1-unit-NetworkManager-dispatcher.service.drv'...
+building '/nix/store/3zswviirmwz0n4758sjmyj3a60val6a0-unit-NetworkManager.service.drv'...
+building '/nix/store/ljmnfdhs2m1zg3yg1lini0wawsqz1gx3-hplip-3.24.4.drv'...
 building '/nix/store/a8mgiknxj6grnngw4bp2q028sk1k0al7-rocm-llvm-compiler-rt-6.0.2.drv'...
 building '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'...
+building '/nix/store/kkz2fvh67xrdrbc0zr46di35v4sny4b0-shutdown-ramfs-contents.json.drv'...
+building '/nix/store/9n3mkzdm1shcb5rdmx4f2g7lfxlb14m1-nixos-help.drv'...
+building '/nix/store/qnnadc9wslbhwj40ng42hj4a41095b8b-unit-generate-shutdown-ramfs.service.drv'...
+building '/nix/store/snsl3k1mqx0x2zk1maawm32hncnw2xzw-nixos-help.drv'...
+building '/nix/store/jxmqrgcsrgq8i3pk35ijijggzkjzknj4-linux-6.6.68-modules.drv'...
+building '/nix/store/zc3jbkm33505nsr1vhs0xkff3fhv9zqg-system-path.drv'...
+building '/nix/store/zymcg0s6yvvznisg97ajv6x434vmna84-linux-6.6.68-modules-shrunk.drv'...
+building '/nix/store/xmc1ysxdayingmahpck431sc799r379x-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/a1mvyvisv8k30fqdjz39m7bz97jxwafg-dbus-1.drv'...
+building '/nix/store/x63m0r27sqrp2ydhklli2xb7chfyhl8b-unit-accounts-daemon.service.drv'...
+building '/nix/store/alwz4984jzdmncqdv4q6wx52zsn3y8g4-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/g4d7jrkmnxldjdrv7x2cs49dxpl87wvy-unit-polkit.service.drv'...
+building '/nix/store/bkiz0b6qdlcmdb5jb4mggqhzqwgdlhzm-unit-dbus.service.drv'...
+building '/nix/store/z8jfxhrd2s08yg8hb5g25nrimm2qvd2m-unit-dbus.service.drv'...
+building '/nix/store/3xr6bv6qx6xk4gs9x87af0qvaxib0yan-user-units.drv'...
+building '/nix/store/yzsv3cg4k95b68g52da6vh78nifhci12-initrd-linux-6.6.68.drv'...
+building '/nix/store/d4vfn08lj547a8c0m6ffz4d9d15dg3qr-boot.json.drv'...
 error: builder for '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv' failed with exit code 1;
        last 25 log lines:
-       > #include <cassert>
-       >          ^~~~~~~~~
-       > 1 error generated.
+       >   default:
+       >   ^
+       > 1 warning generated.
        > [18/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.tolower.dir/tolower.cpp.o
-       > [19/322] Building CXX object libc/src/stdio/printf_core/CMakeFiles/libc.src.stdio.printf_core.writer.dir/writer.cpp.o
-       > [20/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.ispunct.dir/ispunct.cpp.o
-       > [21/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isxdigit.dir/isxdigit.cpp.o
-       > [22/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.iscntrl.dir/iscntrl.cpp.o
-       > [23/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isdigit.dir/isdigit.cpp.o
-       > [24/322] Building CXX object libc/src/inttypes/CMakeFiles/libc.src.inttypes.imaxdiv.dir/imaxdiv.cpp.o
-       > [25/322] Building CXX object libc/src/__support/CPP/CMakeFiles/libc.src.__support.CPP.new.dir/new.cpp.o
-       > [26/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toupper.dir/toupper.cpp.o
+       > [19/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toascii.dir/toascii.cpp.o
+       > [20/322] Building CXX object libc/src/stdio/printf_core/CMakeFiles/libc.src.stdio.printf_core.writer.dir/writer.cpp.o
+       > [21/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.iscntrl.dir/iscntrl.cpp.o
+       > [22/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isupper.dir/isupper.cpp.o
+       > [23/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.isxdigit.dir/isxdigit.cpp.o
+       > [24/322] Building CXX object libc/src/ctype/CMakeFiles/libc.src.ctype.toupper.dir/toupper.cpp.o
+       > [25/322] Building CXX object libc/src/inttypes/CMakeFiles/libc.src.inttypes.imaxdiv.dir/imaxdiv.cpp.o
+       > [26/322] Building CXX object libc/src/__support/CPP/CMakeFiles/libc.src.__support.CPP.new.dir/new.cpp.o
        > [27/322] Building CXX object libc/src/math/generic/CMakeFiles/libc.src.math.generic.math_utils.dir/math_utils.cpp.o
        > [28/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.signal_to_string.dir/signal_to_string.cpp.o
        > [29/322] Building CXX object libc/src/__support/StringUtil/CMakeFiles/libc.src.__support.StringUtil.error_to_string.dir/error_to_string.cpp.o
@@ -70,11 +121,11 @@ error: builder for '/nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6
        > [32/322] Building CXX object libc/test/UnitTest/CMakeFiles/TestLogger.dir/TestLogger.cpp.o
        > ninja: build stopped: subcommand failed.
        For full logs, run 'nix log /nix/store/axshsp2rv451cn9cqhn0djrcjdkr9l0b-rocm-llvm-libc-6.0.2.drv'.
-error (ignored): error: cannot unlink '"/tmp/nix-build-rocm-llvm-compiler-rt-6.0.2.drv-7/build/source"': Directory not empty
+error (ignored): error: cannot unlink '"/tmp/nix-build-rocm-llvm-compiler-rt-6.0.2.drv-8/build/source"': Directory not empty
 error: 1 dependencies of derivation '/nix/store/3c83kgmacpw1sghcgwjq4gi1k0i5nrdi-rocm-llvm-clang-wrapper-6.0.2.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/39kmlhjz5nh425ks9q8dgm2vpfimfypy-clr-6.0.2.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/arqx2c6a9v87dm6sss5fpxgjlyl9wzrl-nixos-tmpfiles.d.drv' failed to build
 error: 1 dependencies of derivation '/nix/store/0r0ifhllb959x6ad0qc9qlq818kwpzgz-tmpfiles.d.drv' failed to build
-error (ignored): error: cannot unlink '"/tmp/nix-build-hplip-3.24.4.drv-5/build/hplip-3.24.4"': Directory not empty
-error: 1 dependencies of derivation '/nix/store/xy6xqnm3l4bzv138gha1vrdm9bzzxfy3-etc.drv' failed to build
-error: 1 dependencies of derivation '/nix/store/1aj7ys2aqv05zg8nj6h2cj92x6k3r5bj-nixos-system-pxbeard-25.05.20241227.634fd46.drv' failed to build
+error (ignored): error: cannot unlink '"/tmp/nix-build-hplip-3.24.4.drv-6/build/hplip-3.24.4/ppd/hpijs"': Directory not empty
+error: 1 dependencies of derivation '/nix/store/bixschmvkqsr219cjhwvan5hxragwgbl-etc.drv' failed to build
+error: 1 dependencies of derivation '/nix/store/4mzl7r5dda2s5dc08dfmrg382lca9haw-nixos-system-pxbeard-25.05.20241229.88195a9.drv' failed to build
