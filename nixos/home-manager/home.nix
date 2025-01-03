@@ -159,15 +159,16 @@ in
     nnn
     neofetch
     grc
+    ghostty
 
     # procrastination
     discord
     vesktop
     telegram-desktop
     vlc
-    wine
+    # wine
     plexamp
-    komga
+    # komga
 
     # fish
     fish
@@ -201,8 +202,8 @@ in
     # 3D
     # blender
     # blender-hip
-    clinfo
-    amdgpu_top
+    # clinfo
+    # amdgpu_top
 
     # reverse engineering
     objconv
