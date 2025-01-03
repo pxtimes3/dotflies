@@ -148,7 +148,7 @@ in
     pciutils # lspci
     usbutils # lsusb
     keyd # key remapping
-    duplicity
+    # duplicity
     watchexec
     #hplip           # HP Print drivers
     hplipWithPlugin # HP Print drivers
