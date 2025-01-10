@@ -201,7 +201,7 @@ in
 
     # 3D
     # blender
-    # blender-hip
+    blender-hip
     # clinfo
     # amdgpu_top
 
