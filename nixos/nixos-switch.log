@@ -264,3 +264,20 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service, cups.socket, docker.socket, systemd-tmpfiles-resetup.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-udevd.service
+the following new units were started: NetworkManager-dispatcher.service
+warning: Git tree '/home/px/.config' is dirty
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Creating new profile generation
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+Activating updateFontCache
+/tmp/home-manager-build.QKtdQBYSRi/generation/activate: line 350: fc-cache: command not found
