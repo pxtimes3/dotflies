@@ -187,6 +187,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    flatpak
+    gnome-software
     wget
     git
     alejandra
