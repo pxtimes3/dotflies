@@ -166,7 +166,8 @@ in
     vesktop
     telegram-desktop
     vlc
-    # wine
+    wine
+    lutris
     plexamp
     # komga
 
