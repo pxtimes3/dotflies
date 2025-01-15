@@ -61,7 +61,7 @@
 
   # Bootloader.
   boot.loader = {
-    timeout = 0;
+    timeout = 15;
 
     systemd-boot = {
       enable = true;

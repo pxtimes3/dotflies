@@ -153,6 +153,8 @@ in
     #hplip           # HP Print drivers
     hplipWithPlugin # HP Print drivers
     logiops
+    gearlever # appimages
+    appimage-run
 
     # terminal
     kitty
