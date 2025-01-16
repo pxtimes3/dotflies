@@ -224,3 +224,43 @@ restarting sysinit-reactivation.target
 reloading the following units: dbus.service
 restarting the following units: polkit.service, systemd-udevd.service
 starting the following units: accounts-daemon.service, cups-browsed.service, docker.socket, power-profiles-daemon.service, upower.service
+the following new units were started: NetworkManager-dispatcher.service, run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+warning: Git tree '/home/px/.config' is dirty
+these 9 derivations will be built:
+  /nix/store/sivfzdlilk75nqrki5yqcvnlk80kdlxm-firefox-134.0.1.drv
+  /nix/store/r3r86mw8ppnx01h7qzd03fmidbyjjjvw-ff_native-messaging-hosts.drv
+  /nix/store/2j8b5p3hid4hnyli3ggq679mqbcpiwyk-home-manager-files.drv
+  /nix/store/58y5qdm5ys64cjkbr3m8y527y53q34hl-options.json.drv
+  /nix/store/dp3yf2kskrqyf51jh5232lw0vvc3wcvy-home-configuration-reference-manpage.drv
+  /nix/store/wfk11df9va16wyr3d8a7gqvvhrh31ify-home-manager.drv
+  /nix/store/x7c3x29ha155jd3s4aldclg3pp043rms-home-manager-path.drv
+  /nix/store/x1rn1h0gkfs5hc04q7cha7fvbw1vfglg-activation-script.drv
+  /nix/store/30dq48v1bj2c70211my5pa580hdyv1pq-home-manager-generation.drv
+this path will be fetched (68.77 MiB download, 274.96 MiB unpacked):
+  /nix/store/4z3apq5h0klmmqa22zk64yzbn85xbhjj-firefox-unwrapped-134.0.1
+building '/nix/store/wfk11df9va16wyr3d8a7gqvvhrh31ify-home-manager.drv'...
+copying path '/nix/store/4z3apq5h0klmmqa22zk64yzbn85xbhjj-firefox-unwrapped-134.0.1' from 'https://cache.nixos.org'...
+building '/nix/store/58y5qdm5ys64cjkbr3m8y527y53q34hl-options.json.drv'...
+building '/nix/store/dp3yf2kskrqyf51jh5232lw0vvc3wcvy-home-configuration-reference-manpage.drv'...
+building '/nix/store/sivfzdlilk75nqrki5yqcvnlk80kdlxm-firefox-134.0.1.drv'...
+building '/nix/store/r3r86mw8ppnx01h7qzd03fmidbyjjjvw-ff_native-messaging-hosts.drv'...
+building '/nix/store/x7c3x29ha155jd3s4aldclg3pp043rms-home-manager-path.drv'...
+building '/nix/store/2j8b5p3hid4hnyli3ggq679mqbcpiwyk-home-manager-files.drv'...
+building '/nix/store/x1rn1h0gkfs5hc04q7cha7fvbw1vfglg-activation-script.drv'...
+building '/nix/store/30dq48v1bj2c70211my5pa580hdyv1pq-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Creating new profile generation
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/xkwk7hvn85r411mb84xlkf0mhkdm9g38-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+Activating updateFontCache
+/tmp/home-manager-build.pJ4tyUkZiH/generation/activate: line 350: fc-cache: command not found
