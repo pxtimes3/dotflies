@@ -205,8 +205,8 @@ in
     # 3D
     # blender
     blender-hip
-    # clinfo
-    # amdgpu_top
+    clinfo
+    amdgpu_top
 
     # reverse engineering
     objconv
