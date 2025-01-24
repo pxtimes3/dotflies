@@ -207,6 +207,8 @@ in
     blender-hip
     clinfo
     amdgpu_top
+    nvtop
+
 
     # reverse engineering
     objconv
