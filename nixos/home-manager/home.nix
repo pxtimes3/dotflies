@@ -131,6 +131,7 @@ in
     obsidian
 
     # video
+    davinci-resolve
     handbrake
     x264
     x265
