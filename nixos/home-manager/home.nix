@@ -229,7 +229,17 @@ in
     nerd-fonts.iosevka
     nerd-fonts.iosevka-term
     nerd-fonts.iosevka-term-slab
+
+    # hyprland
+    dunst
+    rofi-wayland
+    swappy
+    hyprkeys
   ];
+
+  # hyprland
+  wayland.windowManager.hyprland.enable = true;
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # rebuild font-cache after switch
   home.activation = {
