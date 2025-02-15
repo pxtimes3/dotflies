@@ -20,3 +20,49 @@ Due to https://github.com/NixOS/nix/issues/9574, Nix may still use these channel
 Delete the above directory or directories to prevent this.
 reloading user units for px...
 restarting sysinit-reactivation.target
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/1d0lw7q6imjx0xdpakfa3a0mb5ys287z-nixos-system-pxbeard-25.05.20250213.2ff53fe
+warning: Git tree '/home/px/.config' is dirty
+evaluation warning: nvtop has been renamed to nvtopPackages.full
+these 4 derivations will be built:
+  /nix/store/m879v4w3l5zlz8k8aap8y7wjif0k7fn4-hyprland-0.47.0+date=2025-02-15_94a3088.drv
+  /nix/store/pj84rzwhc18vh0yjzhcyf8sma8wi4xww-home-manager-path.drv
+  /nix/store/q869rr1lz3c0m76vr4jmlx1pl4pf8497-activation-script.drv
+  /nix/store/hpn2a3apljnrscx5dr0fvmlib8wic95g-home-manager-generation.drv
+these 7 paths will be fetched (0.19 MiB download, 1.26 MiB unpacked):
+  /nix/store/zfn6iwxk9ic0zanskdwq6lh47czn89bs-bash-5.2p37-dev
+  /nix/store/9wrydzf6l4dbgyaqm72vzfpry5b2izbw-dmenu-5.3
+  /nix/store/pcn41k2apxz9f34v3kas45gyvx81amj2-libnotify-0.8.3-dev
+  /nix/store/3dcf11zp7xyy1zakvydsvl1dqv57gvjc-python3-3.12.8-env
+  /nix/store/ahqxdlhccghh3a0yl5jr3n4h9jsamq47-python3.12-pydbus-0.6.0
+  /nix/store/qdal4kgrnkpx23hz26bh0h3ln6izp60z-uwsm-0.20.5
+  /nix/store/z843lbqlsl0zvh8dhg0wljw6p3i26nxr-uwsm-0.20.5-man
+copying path '/nix/store/z843lbqlsl0zvh8dhg0wljw6p3i26nxr-uwsm-0.20.5-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/zfn6iwxk9ic0zanskdwq6lh47czn89bs-bash-5.2p37-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/9wrydzf6l4dbgyaqm72vzfpry5b2izbw-dmenu-5.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/pcn41k2apxz9f34v3kas45gyvx81amj2-libnotify-0.8.3-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/ahqxdlhccghh3a0yl5jr3n4h9jsamq47-python3.12-pydbus-0.6.0' from 'https://cache.nixos.org'...
+building '/nix/store/m879v4w3l5zlz8k8aap8y7wjif0k7fn4-hyprland-0.47.0+date=2025-02-15_94a3088.drv'...
+copying path '/nix/store/3dcf11zp7xyy1zakvydsvl1dqv57gvjc-python3-3.12.8-env' from 'https://cache.nixos.org'...
+copying path '/nix/store/qdal4kgrnkpx23hz26bh0h3ln6izp60z-uwsm-0.20.5' from 'https://cache.nixos.org'...
+building '/nix/store/pj84rzwhc18vh0yjzhcyf8sma8wi4xww-home-manager-path.drv'...
+building '/nix/store/q869rr1lz3c0m76vr4jmlx1pl4pf8497-activation-script.drv'...
+building '/nix/store/hpn2a3apljnrscx5dr0fvmlib8wic95g-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Creating new profile generation
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/05h6p1w89vdifp9di4x9aiqfgjvic12d-user-environment.drv'...
+Activating linkGeneration
+Cleaning up orphan links from /home/px
+Creating home file links in /home/px
+Activating onFilesChange
+Activating reloadSystemd
+Stopping units: numlockx.service
+Starting units: numlockx.service
+Activating updateFontCache
+/tmp/home-manager-build.bqLmoWQdZj/generation/activate: line 371: fc-cache: command not found
