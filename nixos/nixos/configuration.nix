@@ -187,6 +187,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    firefox
     flatpak
     gnome-software
     wget
