@@ -32,6 +32,7 @@ in
     #../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
+    ../modules/hyprland.nix
   ];
 
   nixpkgs = {
