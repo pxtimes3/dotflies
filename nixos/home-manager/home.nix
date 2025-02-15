@@ -32,7 +32,7 @@ in
     #../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
-    #../modules/hyprland.nix
+    ../modules/hyprland.nix
     inputs.hyprland-nix.homeManagerModules.default
   ];
 
@@ -233,6 +233,7 @@ in
     nerd-fonts.iosevka-term-slab
 
     # hyprland
+    uwsm
     dunst
     rofi-wayland
     swappy

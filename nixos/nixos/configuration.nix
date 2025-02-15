@@ -61,7 +61,7 @@
 
   # Bootloader.
   boot.loader = {
-    timeout = 15;
+    timeout = 5;
 
     systemd-boot = {
       enable = true;
@@ -98,9 +98,9 @@
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.defaultSession = "plasma";
   programs.kdeconnect.enable = true;
 
   # enable flatpak
@@ -140,7 +140,7 @@
   console.keyMap = "sv-latin1";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing.enable = false;
   # Avahi to autodiscover
   services.avahi = {
     enable = true;
