@@ -32,7 +32,8 @@ in
     #../modules/fish.nix
     ../modules/vscode.nix
     ../modules/sessionvariables.nix
-    ../modules/hyprland.nix
+    #../modules/hyprland.nix
+    inputs.hyprland-nix.homeManagerModules.default
   ];
 
   nixpkgs = {
@@ -239,7 +240,11 @@ in
   ];
 
   # hyprland
-  wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    reloadConfig = true;
+    systemdIntegration = true;
+  };
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # rebuild font-cache after switch

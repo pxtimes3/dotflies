@@ -12,6 +12,20 @@
     # https://github.com/nix-community/nix-index-database
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
+    # This input for Hyprland explicitly tracks the `master` branch.
+    # Feel free to change this as you need.
+    hyprland-git.url = "github:hyprwm/hyprland";
+    hyprland-xdph-git.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    hyprland-protocols-git.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    # This overrides each input for `hyprland-nix` to use the ones
+    # specified above, which are locked by you.
+    hyprland-nix.url = "github:spikespaz/hyprland-nix";
+    hyprland-nix.inputs = {
+        hyprland.follows = "hyprland-git";
+        hyprland-xdph.follows = "hyprland-xdph-git";
+        hyprland-protocols.follows = "hyprland-protocols-git";
+    };
   };
 
   outputs = {
