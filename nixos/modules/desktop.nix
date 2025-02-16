@@ -10,8 +10,8 @@
   hardware = {
     graphics = {
       enable = true;
-      # Remove driSupport line as it's no longer needed
-      enable32bit = true;
+      # Note the capital 'B' here
+      enable32Bit = true;
       extraPackages = with pkgs; [
         amdvlk
         rocm-opencl-icd
@@ -48,6 +48,5 @@
   # Explicitly disable KDE/SDDM
   services.xserver.enable = false;
   services.displayManager.sddm.enable = false;
-  services.xserver.desktopManager.plasma5.enable = false;
   services.desktopManager.plasma6.enable = false;
 }
