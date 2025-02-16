@@ -45,4 +45,10 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # Hardware optimizations
+  hardware.enableRedistributableFirmware = true;
+  
+  # CPU governor settings
+  powerManagement.cpuFreqGovernor = "performance";
 }

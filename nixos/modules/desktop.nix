@@ -13,29 +13,38 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         amdvlk
-        rocmPackages.clr.icd
-        rocmPackages.clr
       ];
     };
     cpu.amd.updateMicrocode = true;
   };
 
-  # Updated XDG portal configuration
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
-    # Configure portal
-    config.common.default = "*";
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
-    ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
+
+  environment.systemPackages = with pkgs; [
+    # Add these Wayland utilities
+    wayland
+    wayland-utils
+    wlr-randr
+    libinput
+    xwayland
+  ];
+
+  security.pam.services.swaylock = {};
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     XCURSOR_SIZE = "24";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    GDK_BACKEND = "wayland";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    _JAVA_AWT_WM_NONREPARENTING = "1";
   };
 
   fonts = {
