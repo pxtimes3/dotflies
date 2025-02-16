@@ -1,13 +1,6 @@
-{ config, pkgs, ... }: let
-  hyprlandConf = builtins.readFile (./. + "/hyprland.conf");
-in {
-  environment.systemPackages = [
-    (pkgs.writeTextFile {
-      name = "hyprland-config";
-      destination = "/etc/hypr/hyprland.conf";
-      text = hyprlandConf;
-    })
-  ];
+# /etc/nixos/modules/hyprland/default.nix
+{ config, pkgs, ... }: {
+  environment.etc."hypr/hyprland.conf".source = ./hyprland.conf;
 
   system.activationScripts.hyprland-config = ''
     mkdir -p /home/px/.config/hypr

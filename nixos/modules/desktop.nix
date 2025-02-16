@@ -10,22 +10,25 @@
   hardware = {
     graphics = {
       enable = true;
-      # Note the capital 'B' here
       enable32Bit = true;
       extraPackages = with pkgs; [
         amdvlk
-        rocm-opencl-icd
-        rocm-opencl-runtime
+        rocmPackages.clr.icd
+        rocmPackages.clr
       ];
     };
     cpu.amd.updateMicrocode = true;
   };
 
+  # Updated XDG portal configuration
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
+    wlr.enable = true;
+    # Configure portal
+    config.common.default = "*";
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 
@@ -39,9 +42,10 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.fira-code
     ];
   };
 
