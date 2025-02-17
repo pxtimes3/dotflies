@@ -4,12 +4,7 @@
     # Terminal
     kitty
     ghostty
-
-    # Development
-    git
-    neovim
-    gcc
-    gnumake
+    zellij
 
     # System monitoring
     btop
@@ -55,12 +50,20 @@
     sublime4
     sublime-merge
     # vscode is in modules/vscode/
+    git
+    neovim
+    gcc
+    gnumake
 
     # procrastination
     telegram-desktop
     discord
     plexamp
     steam
+    vlc
+
+    # 3D
+    blender-hip
   ];
 
   programs = {
