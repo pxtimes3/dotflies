@@ -24,6 +24,7 @@
     # Wayland utilities
     waybar
     wofi
+    jq
     hyprpaper
     wl-clipboard
     grim
@@ -57,6 +58,14 @@
     # code
     sublime4
     sublime-merge
+    # vscode is in modules/vscode/
+
+
+    # procrastination
+    telegram-desktop
+    discord
+    plexamp
+    steam
   ];
 
   programs = {
