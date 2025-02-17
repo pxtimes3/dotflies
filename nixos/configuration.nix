@@ -1,5 +1,9 @@
 # /home/px/.config/nixos/configuration.nix
 { config, pkgs, inputs, ... }: {
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   imports = [
