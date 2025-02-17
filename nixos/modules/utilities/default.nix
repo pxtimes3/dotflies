@@ -4,6 +4,10 @@
   wofiEmoji = pkgs.writeScriptBin "wofi-emoji" (builtins.readFile ./scripts/wofi-emoji);
   hyprFixSpecial = pkgs.writeScriptBin "hypr-fix-special" (builtins.readFile ./scripts/hypr-fix-special);
   rebuild = pkgs.writeScriptBin "rebuild" (builtins.readFile ./scripts/rebuild);
+  footTmux = pkgs.writeScriptBin "foot-tmux" ''
+    #!/usr/bin/env bash
+    exec ${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux
+  '';
 in {
   environment.systemPackages = with pkgs; [
     # Audio control
@@ -25,11 +29,18 @@ in {
     ranger
     xfce.thunar
 
+    # Terminal
+    foot
+    tmux
+
     # Our custom scripts
     volumectl
     lightctl
     wofiEmoji
     hyprFixSpecial
     rebuild
+    footTmux
   ];
+
+  system.activationScripts.utilities = null;
 }

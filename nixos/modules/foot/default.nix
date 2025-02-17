@@ -1,20 +1,53 @@
-# /etc/nixos/modules/foot/default.nix
-{ config, pkgs, ... }: {
+# ~/.config/nixos/modules/foot/default.nix
+{ config, pkgs, ... }: let
+  footTmux = pkgs.writeScriptBin "foot-tmux" ''
+    #!/usr/bin/env bash
+    exec ${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux
+  '';
+in {
   environment.systemPackages = with pkgs; [
     foot
-    tmux  # Since we're using foot-tmux
+    tmux
+    footTmux
   ];
 
-  # Create a foot-tmux wrapper script
-  environment.etc."foot/foot-tmux".source = ./foot-tmux;
-  environment.etc."foot/foot.ini".source = ./foot.ini;
+  xdg.configFile."foot/foot.ini".text = ''
+    # Font configuration
+    font=JetBrainsMono Nerd Font:size=12
+    pad=10x10
 
-  system.activationScripts.foot-config = ''
-    mkdir -p /home/px/.config/foot
-    ln -sf /etc/foot/foot.ini /home/px/.config/foot/foot.ini
-    ln -sf /etc/foot/foot-tmux /home/px/.local/bin/foot-tmux
-    chmod +x /home/px/.local/bin/foot-tmux
-    chown -R px:users /home/px/.config/foot
-    chown -R px:users /home/px/.local/bin/foot-tmux
+    # Catppuccin Frappe Theme
+    [colors]
+    alpha=0.95
+    foreground=c6d0f5
+    background=303446
+    selection_background=F2D5CF
+    selection_foreground=303446
+    cursor=F2D5CF
+    cursor_text_color=303446
+
+    # normal
+    color0=51576D
+    color1=E78284
+    color2=A6D189
+    color3=E5C890
+    color4=8CAAEE
+    color5=F4B8E4
+    color6=81C8BE
+    color7=B5BFE2
+
+    # bright
+    color8=626880
+    color9=E78284
+    color10=A6D189
+    color11=E5C890
+    color12=8CAAEE
+    color13=F4B8E4
+    color14=81C8BE
+    color15=A5ADCE
+
+    # extended colors
+    color16=EF9F76
+    color17=F2D5CF
   '';
 }
