@@ -34,7 +34,7 @@ cd "$NIXOS_CONFIG_DIR" || {
 
 # Print current generation
 echo -e "${BLUE}Current generation:${NC}"
-run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system
+run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'
 
 # Rebuild
 echo -e "${BLUE}Rebuilding NixOS...${NC}"
@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
     
     # Print new generation
     echo -e "${BLUE}New generation:${NC}"
-    run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system
+    run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'
 else
     echo -e "${RED}Rebuild failed!${NC}"
     exit 1
