@@ -1,13 +1,6 @@
+# /home/px/.config/nixos/modules/utilities/default.nix
 { config, pkgs, inputs, ... }: let
-  volumectl = pkgs.writeScriptBin "volumectl" (builtins.readFile ./scripts/volumectl);
-  lightctl = pkgs.writeScriptBin "lightctl" (builtins.readFile ./scripts/lightctl);
-  wofiEmoji = pkgs.writeScriptBin "wofi-emoji" (builtins.readFile ./scripts/wofi-emoji);
-  hyprFixSpecial = pkgs.writeScriptBin "hypr-fix-special" (builtins.readFile ./scripts/hypr-fix-special);
   rebuild = pkgs.writeScriptBin "rebuild" (builtins.readFile ./scripts/rebuild);
-  footTmux = pkgs.writeScriptBin "foot-tmux" ''
-    #!/usr/bin/env bash
-    exec ${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux
-  '';
 in {
   environment.systemPackages = with pkgs; [
     # Audio control
@@ -15,30 +8,31 @@ in {
     playerctl
 
     # Brightness
-    light
+    # light
 
     # System utilities
-    wofi
+    # wofi
     wl-clipboard
-    grim
-    slurp
+    # grim
+    # slurp
     wev       # wayland event viewer
-    socat
+    # socat
+    # mako
 
     # File management
-    ranger
-    xfce.thunar
+    # ranger
+    # xfce.thunar
 
     # Terminal
-    foot
-    tmux
+    # foot
+    # tmux
 
     # Custom scripts
-    volumectl
-    lightctl
-    wofiEmoji
-    hyprFixSpecial
+    #volumectl
+    #lightctl
+    #wofiEmoji
+    #hyprFixSpecial
     rebuild
-    footTmux
+    #footTmux
   ];
 }

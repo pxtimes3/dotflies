@@ -1,4 +1,4 @@
-# /etc/nixos/modules/users.nix
+# /home/px/.config/nixos/modules/users.nix
 { config, pkgs, ... }:
 
 {
@@ -19,11 +19,4 @@
   programs.fish = {
     enable = true;
   };
-
-  # Auto-start Hyprland for user px on TTY1
-  environment.loginShellInit = ''
-    if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-      exec Hyprland
-    fi
-  '';
 }

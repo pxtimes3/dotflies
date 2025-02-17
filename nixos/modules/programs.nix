@@ -1,4 +1,4 @@
-# /etc/nixos/modules/programs.nix
+# /home/px/.config/nixos/modules/programs.nix
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # Terminal
@@ -22,10 +22,6 @@
     x265
 
     # Wayland utilities
-    waybar
-    wofi
-    jq
-    hyprpaper
     wl-clipboard
     grim
     slurp

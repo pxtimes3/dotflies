@@ -1,4 +1,4 @@
-# /etc/nixos/configuration.nix
+# /home/px/.config/nixos/configuration.nix
 { config, pkgs, inputs, ... }: {
   nixpkgs.config.allowUnfree = true;
 
@@ -8,10 +8,6 @@
     ./modules/desktop.nix
     ./modules/programs.nix
     ./modules/users.nix
-    ./modules/hyprland/default.nix
-    ./modules/waybar/default.nix
-    # ./modules/kitty/default.nix
-    ./modules/foot/default.nix
     ./modules/vscode/default.nix
 
     # utils, scripts etc...
