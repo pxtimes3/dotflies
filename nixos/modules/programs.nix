@@ -60,7 +60,6 @@
     sublime-merge
     # vscode is in modules/vscode/
 
-
     # procrastination
     telegram-desktop
     discord

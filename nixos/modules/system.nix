@@ -27,7 +27,7 @@
       "quiet"
       "usbcore.autosuspend=-1"  # Disable USB autosuspend
       "usbhid.mousepoll=4"      # Reduce USB mouse polling rate
-      "port_1-11_disable=1"     # Blocks the problematic port
+      "xhci_hcd.quirks=0x40"    # USB3.0?g
     ];
     
     kernelModules = [ "usbhid" "usbcore" ];

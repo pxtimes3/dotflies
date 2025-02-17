@@ -23,7 +23,6 @@
           nixpkgs.overlays = [
             (final: prev: {
               unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
-              hyprswitch = final.callPackage ./pkgs/hyprswitch {};
             })
           ];
         }

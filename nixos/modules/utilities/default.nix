@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: let
+{ config, pkgs, inputs, ... }: let
   volumectl = pkgs.writeScriptBin "volumectl" (builtins.readFile ./scripts/volumectl);
   lightctl = pkgs.writeScriptBin "lightctl" (builtins.readFile ./scripts/lightctl);
   wofiEmoji = pkgs.writeScriptBin "wofi-emoji" (builtins.readFile ./scripts/wofi-emoji);
@@ -22,7 +22,6 @@ in {
     wl-clipboard
     grim
     slurp
-    hyprswitch
     wev       # wayland event viewer
     socat
 
