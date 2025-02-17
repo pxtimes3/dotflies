@@ -1,0 +1,6 @@
+#!/bin/bash
+# /home/px/.config/nixos/modules/utilities/scripts/autostart-kitty.sh
+
+kitty &
+sleep 0.5
+kitty &

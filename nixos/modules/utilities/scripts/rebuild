@@ -1,10 +1,11 @@
-# /etc/nixos/modules/utilities/scripts/rebuild
 #!/usr/bin/env bash
+# /home/px/.config/nixos/modules/utilities/scripts/rebuild
 
 # Colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Config directory
@@ -13,6 +14,8 @@ NIXOS_CONFIG_DIR="$HOME/.config/nixos"
 # Check if we're root, if not, use sudo
 if [ "$EUID" -ne 0 ]; then
     USE_SUDO=true
+    # Ask for sudo password upfront
+    sudo -v
 else
     USE_SUDO=false
 fi
@@ -32,9 +35,16 @@ cd "$NIXOS_CONFIG_DIR" || {
     exit 1
 }
 
-# Print current generation
-echo -e "${BLUE}Current generation:${NC}"
-run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'
+# Git handling
+if [ -n "$(git status --porcelain)" ]; then
+    echo -e "${YELLOW}Uncommitted changes found, committing...${NC}"
+    git add .
+    git commit -m "Auto-commit: $(date)"
+fi
+
+# Print current generation (now in one line)
+CURRENT_GEN=$(run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+echo -e "${BLUE}Current generation:${NC} $CURRENT_GEN"
 
 # Rebuild
 echo -e "${BLUE}Rebuilding NixOS...${NC}"
@@ -42,10 +52,10 @@ run_cmd nixos-rebuild switch --flake .#pxbeard
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Rebuild successful!${NC}"
-    
-    # Print new generation
-    echo -e "${BLUE}New generation:${NC}"
-    run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'
+
+    # Print new generation (now in one line)
+    NEW_GEN=$(run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+    echo -e "${BLUE}New generation:${NC} $NEW_GEN"
 else
     echo -e "${RED}Rebuild failed!${NC}"
     exit 1
