@@ -1,0 +1,33 @@
+# /etc/nixos/modules/hyprland/hyprland.conf
+# Basic config for testing
+monitor=,preferred,auto,1
+
+input {
+    kb_layout = se
+    follow_mouse = 1
+}
+
+general {
+    gaps_in = 5
+    gaps_out = 20
+    border_size = 2
+    layout = dwindle
+}
+
+decoration {
+    rounding = 10
+}
+
+animations {
+    enabled = true
+}
+
+dwindle {
+    pseudotile = true
+    preserve_split = true
+}
+
+# Basic keybinds
+bind = SUPER, Return, exec, ghostty
+bind = SUPER, Q, killactive,
+bind = SUPER SHIFT, Q, exit,
