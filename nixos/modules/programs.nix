@@ -44,13 +44,19 @@
 
     # Audio
     pavucontrol
+    plexamp
 
     # Theming
     gtk3
     gtk4
+    nwg-look
 
     # Browser
     firefox
+
+    # code
+    sublime4
+    sublime-merge
   ];
 
   programs = {

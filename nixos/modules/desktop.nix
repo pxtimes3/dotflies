@@ -1,5 +1,5 @@
 # /etc/nixos/modules/desktop.nix
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   programs = {
     hyprland = {
       enable = true;
@@ -30,6 +30,8 @@
     wlr-randr
     libinput
     xwayland
+    bibata-cursors
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 
   security.pam.services.swaylock = {};
@@ -38,6 +40,7 @@
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     XCURSOR_SIZE = "24";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "Hyprland";

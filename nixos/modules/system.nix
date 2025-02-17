@@ -6,7 +6,7 @@
     };
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";  # Your EFI is mounted at /boot
+      efiSysMountPoint = "/boot";
     };
   };
 
@@ -27,11 +27,11 @@
       "quiet"
       "usbcore.autosuspend=-1"  # Disable USB autosuspend
       "usbhid.mousepoll=4"      # Reduce USB mouse polling rate
+      "port_1-11_disable=1"     # Blocks the problematic port
     ];
     
     kernelModules = [ "usbhid" "usbcore" ];
     
-    # Optional: disable problematic port if needed
     extraModprobeConfig = ''
       options usbcore autosuspend=-1
     '';
@@ -51,7 +51,7 @@
   # Systemd optimizations
   systemd = {
     services.systemd-udevd.serviceConfig = {
-      TimeoutSec = "60";
+      TimeoutSec = "30";
       Nice = "-10";  # Give udev higher priority
     };
     

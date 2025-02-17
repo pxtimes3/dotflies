@@ -38,7 +38,7 @@ general {
 
 decoration {
     rounding = 10
-    
+
     blur {
         enabled = true
         size = 3
@@ -130,7 +130,7 @@ bindm = SUPER, mouse:272, movewindow
 bindm = SUPER, mouse:273, resizewindow
 
 # Startup
-exec-once = waybar
+exec-once = bar
 exec-once = hyprpaper
 exec-once = wl-clipboard-history -t
 exec-once = ~/.config/hypr/xdg-portal-hyprland
