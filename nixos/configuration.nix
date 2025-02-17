@@ -1,6 +1,7 @@
 # /etc/nixos/configuration.nix
 { config, pkgs, inputs, ... }: {
   nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./hardware-configuration.nix
     ./modules/system.nix

@@ -8,22 +8,6 @@
     #!/usr/bin/env bash
     exec ${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux
   '';
-  windowSwitcher = pkgs.writeScriptBin "window-switcher" ''
-    #!/usr/bin/env bash
-    hyprctl clients -j | \
-      jq -r '[.[] | select(.mapped == true) | {class: .class, title: .title, address: .address}]' | \
-      jq -r '.[] | .class + ": " + .title + "\u0000icon\u001f" + .class + "\u000info\u001f" + .address' | \
-      wofi --show dmenu \
-           --insensitive \
-           --allow-images \
-           --width 600 \
-           --height 400 \
-           --prompt "Switch to:" \
-           --cache-file /dev/null \
-           --define "hide_scroll=true" \
-           --define "matching=fuzzy" | \
-      sed 's/.*\x0info\x1f//' | xargs hyprctl dispatch focuswindow
-  '';
 in {
   environment.systemPackages = with pkgs; [
     # Audio control
@@ -38,7 +22,8 @@ in {
     wl-clipboard
     grim
     slurp
-    jq
+    hyprswitch
+    wev       # wayland event viewer
     socat
 
     # File management
@@ -49,7 +34,7 @@ in {
     foot
     tmux
 
-    # Our custom scripts
+    # Custom scripts
     volumectl
     lightctl
     wofiEmoji
