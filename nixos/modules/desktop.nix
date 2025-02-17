@@ -30,7 +30,7 @@
     wlr-randr
     libinput
     xwayland
-    bibata-cursors
+    thunar
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 

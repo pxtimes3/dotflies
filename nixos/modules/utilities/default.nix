@@ -6,16 +6,15 @@
     playerctl      # Media player control
     
     # Brightness
-    brightness     # For lightctl
     light          # Alternative brightness control
     
     # System utilities
     wofi           # Application launcher
     wl-clipboard   # Clipboard management
-    grim          # Screenshot utility
-    slurp         # Area selection
-    jq            # JSON processor
-    socat         # Socket utility
+    grim           # Screenshot utility
+    slurp          # Area selection
+    jq             # JSON processor
+    socat          # Socket utility
     
     # File management
     ranger        # TUI file manager
