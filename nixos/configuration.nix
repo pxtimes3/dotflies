@@ -9,6 +9,7 @@
     ./modules/users.nix
     ./modules/hyprland/default.nix
     ./modules/waybar/default.nix
+    # ./modules/kitty/default.nix
     ./modules/foot/default.nix
 
     # utils, scripts etc...

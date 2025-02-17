@@ -30,7 +30,7 @@
     wlr-randr
     libinput
     xwayland
-    thunar
+    kitty
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 

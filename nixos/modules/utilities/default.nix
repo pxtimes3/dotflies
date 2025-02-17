@@ -18,10 +18,9 @@
     
     # File management
     ranger        # TUI file manager
-    thunar        # GUI file manager
+    xfce.thunar        # GUI file manager
   ];
 
-  # Create the utility scripts
   environment.etc = {
     "utilities/volumectl".source = ./scripts/volumectl;
     "utilities/lightctl".source = ./scripts/lightctl;
@@ -30,11 +29,14 @@
     "utilities/rebuild".source = ./scripts/rebuild;
   };
 
-  # Link scripts to PATH
-  system.activationScripts.utilities = ''
+  # Modified activation script
+  system.activationScripts.utilities.text = ''
     mkdir -p /home/px/.local/bin
-    ln -sf /etc/utilities/* /home/px/.local/bin/
-    chmod +x /home/px/.local/bin/*
+    for util in /etc/utilities/*; do
+      name=$(basename "$util")
+      cp -f "$util" "/home/px/.local/bin/$name"
+      chmod +x "/home/px/.local/bin/$name"
+    done
     chown -R px:users /home/px/.local/bin
   '';
 }
