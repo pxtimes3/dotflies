@@ -41,6 +41,4 @@ in {
     rebuild
     footTmux
   ];
-
-  system.activationScripts.utilities = null;
 }

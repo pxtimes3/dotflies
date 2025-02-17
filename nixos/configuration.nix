@@ -11,6 +11,7 @@
     ./modules/waybar/default.nix
     # ./modules/kitty/default.nix
     ./modules/foot/default.nix
+    ./modules/vscode/default.nix
 
     # utils, scripts etc...
     ./modules/utilities/default.nix

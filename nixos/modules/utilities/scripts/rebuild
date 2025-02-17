@@ -23,7 +23,7 @@ run_cmd() {
         sudo "$@"
     else
         "$@"
-    end
+    fi
 }
 
 # Go to nixos config directory
