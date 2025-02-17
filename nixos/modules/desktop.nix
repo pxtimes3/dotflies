@@ -1,9 +1,8 @@
 # /etc/nixos/modules/desktop.nix
 { config, pkgs, inputs, ... }: {
-  services.xserver = {
-    enable = true;
-    displayManager.sddm.enable = true;
+  services = {
     desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
   };
 
   hardware = {
