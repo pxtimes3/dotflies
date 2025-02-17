@@ -1,0 +1,52 @@
+# /etc/nixos/modules/utilities/scripts/rebuild
+#!/usr/bin/env bash
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Config directory
+NIXOS_CONFIG_DIR="$HOME/.config/nixos"
+
+# Check if we're root, if not, use sudo
+if [ "$EUID" -ne 0 ]; then
+    USE_SUDO=true
+else
+    USE_SUDO=false
+fi
+
+# Function to run commands with or without sudo
+run_cmd() {
+    if [ "$USE_SUDO" = true ]; then
+        sudo "$@"
+    else
+        "$@"
+    end
+}
+
+# Go to nixos config directory
+cd "$NIXOS_CONFIG_DIR" || {
+    echo -e "${RED}Error: Could not change to $NIXOS_CONFIG_DIR${NC}"
+    exit 1
+}
+
+# Print current generation
+echo -e "${BLUE}Current generation:${NC}"
+run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system
+
+# Rebuild
+echo -e "${BLUE}Rebuilding NixOS...${NC}"
+run_cmd nixos-rebuild switch --flake .#pxbeard
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Rebuild successful!${NC}"
+    
+    # Print new generation
+    echo -e "${BLUE}New generation:${NC}"
+    run_cmd nix-env --list-generations --profile /nix/var/nix/profiles/system
+else
+    echo -e "${RED}Rebuild failed!${NC}"
+    exit 1
+fi

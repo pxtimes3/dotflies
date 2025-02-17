@@ -1,0 +1,6 @@
+# /etc/nixos/modules/utilities/scripts/wofi-emoji
+#!/usr/bin/env bash
+# Simple emoji picker using wofi
+
+emoji=$(cat /etc/nixos/modules/utilities/data/emoji.txt | wofi --dmenu -p "Select emoji" | cut -d ' ' -f 1)
+echo -n "$emoji" | wl-copy

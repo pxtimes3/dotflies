@@ -1,17 +1,17 @@
-{ kitty, symlinkJoin, makeWrapper, stdenv }:
+# /etc/nixos/modules/kitty/default.nix
+{ config, pkgs, ... }: {
+  # Make sure kitty is installed
+  environment.systemPackages = with pkgs; [
+    kitty
+  ];
 
-let
-  conf = ./kitty.conf;
-in
+  # Create config directory and file
+  environment.etc."kitty/kitty.conf".source = ./kitty.conf;
 
-symlinkJoin {
-  name = "kitty";
-  buildInputs = [ makeWrapper ];
-  paths = [ kitty ];
-  postBuild = ''
-    ${if stdenv.isDarwin then ''
-        wrapProgram "$out/Applications/kitty.app/Contents/MacOS/kitty" --add-flags "--config ${conf}"
-      '' else ""}
-    wrapProgram "$out/bin/kitty" --add-flags "--config ${conf}"
+  # Setup activation script
+  system.activationScripts.kitty-config = ''
+    mkdir -p /home/px/.config/kitty
+    ln -sf /etc/kitty/kitty.conf /home/px/.config/kitty/kitty.conf
+    chown -R px:users /home/px/.config/kitty
   '';
 }

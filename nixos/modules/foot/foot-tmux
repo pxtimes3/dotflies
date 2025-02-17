@@ -1,0 +1,3 @@
+# /etc/nixos/modules/foot/foot-tmux
+#!/bin/sh
+exec foot tmux

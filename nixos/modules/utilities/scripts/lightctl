@@ -1,0 +1,18 @@
+# /etc/nixos/modules/utilities/scripts/lightctl
+#!/usr/bin/env bash
+# Usage: lightctl [up|down]
+
+step=5
+
+case "$1" in
+  "up")
+    light -A ${step}
+    ;;
+  "down")
+    light -U ${step}
+    ;;
+esac
+
+# Optional: Add notification
+# brightness=$(light -G)
+# notify-send "Brightness: ${brightness}%"

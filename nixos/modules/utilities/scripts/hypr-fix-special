@@ -1,0 +1,6 @@
+# /etc/nixos/modules/utilities/scripts/hypr-fix-special
+#!/usr/bin/env bash
+# Fix special workspace issues in Hyprland
+
+hyprctl dispatch movetoworkspace special
+hyprctl dispatch togglespecialworkspace

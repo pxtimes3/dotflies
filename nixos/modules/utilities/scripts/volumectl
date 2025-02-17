@@ -1,0 +1,39 @@
+# /etc/nixos/modules/utilities/scripts/volumectl
+#!/usr/bin/env bash
+# Usage: volumectl [-u|-m] [up|down|toggle-mute]
+# -u: Unmuted volume
+# -m: Microphone
+
+set -e
+
+step=5
+max_vol=100
+
+case "$1" in
+  "-u")
+    case "$2" in
+      "up")
+        pamixer -u
+        pamixer -i ${step}
+        ;;
+      "down")
+        pamixer -u
+        pamixer -d ${step}
+        ;;
+    esac
+    ;;
+  "-m")
+    case "$2" in
+      "toggle-mute")
+        pamixer --default-source -t
+        ;;
+    esac
+    ;;
+  "toggle-mute")
+    pamixer -t
+    ;;
+esac
+
+# Optional: Add notification
+# volume=$(pamixer --get-volume)
+# notify-send "Volume: ${volume}%"
