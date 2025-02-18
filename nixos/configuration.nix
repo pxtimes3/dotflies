@@ -20,6 +20,7 @@
 
   # Docker
   virtualisation.docker.enable = true;
+  users.extraGroups.docker.members = [ "px" ];
 
   # Add ~/.local/bin to PATH
   environment.sessionVariables = {
