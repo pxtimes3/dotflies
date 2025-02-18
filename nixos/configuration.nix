@@ -18,6 +18,9 @@
     ./modules/utilities/default.nix
   ];
 
+  # Docker
+  virtualisation.docker.enable = true;
+
   # Add ~/.local/bin to PATH
   environment.sessionVariables = {
     PATH = [
