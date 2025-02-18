@@ -22,8 +22,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    libsForQt5.qt5.qtwayland
-    qt6.qtwayland
+    libsForQt5.qt5.qtwayland # ?
+    qt6.qtwayland            # ?
+    ifuse                    # mounting of iphone etc.
   ];
 
   security.pam.services.swaylock = {};
