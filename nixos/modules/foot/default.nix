@@ -5,12 +5,12 @@
   ];
 
   # Create config directory and file
-  environment.etc."foot/foot.ini".source = ./foot.ini;
+  # environment.etc."foot/foot.ini".source = ./foot.ini;
 
   # Setup activation script
   system.activationScripts.foot-config = ''
     mkdir -p /home/px/.config/foot
-    ln -sf /etc/foot/foot.ini /home/px/.config/foot/foot.ini
+    ln -sf ./foot.ini /home/px/.config/foot/foot.ini
     chown -R px:users /home/px/.config/foot
   '';
 }
