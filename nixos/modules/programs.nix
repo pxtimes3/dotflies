@@ -2,8 +2,8 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # Terminal
-    kitty
-    ghostty
+    # kitty
+    # ghostty
     zellij
 
     # System monitoring
