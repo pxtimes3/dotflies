@@ -8,15 +8,7 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./modules/system.nix
-    ./modules/desktop.nix
-    ./modules/programs.nix
-    ./modules/users.nix
-    ./modules/vscode/default.nix
-    ./modules/foot/default.nix
-
-    # utils, scripts etc...
-    ./modules/utilities/default.nix
+    ./modules
   ];
 
   # Docker
