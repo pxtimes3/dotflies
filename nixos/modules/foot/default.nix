@@ -10,7 +10,7 @@
   # Setup activation script
   system.activationScripts.foot-config = ''
     mkdir -p /home/px/.config/foot
-    ln -sf ./foot.ini /home/px/.config/foot/foot.ini
+    ln -sf /etc/foot/foot.ini /home/px/.config/foot/foot.ini
     chown -R px:users /home/px/.config/foot
   '';
 }
