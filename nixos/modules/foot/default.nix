@@ -5,7 +5,7 @@
   ];
 
   # Create config directory and file
-  # environment.etc."foot/foot.ini".source = ./foot.ini;
+  environment.etc."foot/foot.ini".source = ./foot.ini;
 
   # Setup activation script
   system.activationScripts.foot-config = ''
