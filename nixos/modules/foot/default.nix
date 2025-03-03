@@ -1,17 +1,19 @@
-# /etc/nixos/modules/foot/default.nix
+# modules/foot/default.nix
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     foot
   ];
 
-  # Create config directory and file
   environment.etc."foot/foot.ini".source = ./foot.ini;
 
-  # Setup activation script
   system.activationScripts.foot-config = ''
-    mkdir -p /home/px/.config/foot
-    mkdir -p /home/px/.config/foot/conf.d
-    ln -sf /etc/foot/foot.ini /home/px/.config/foot/foot.ini
-    chown -R px:users /home/px/.config/foot
+    if id "px" &>/dev/null; then
+      mkdir -p /home/px/.config/foot/conf.d
+      touch /home/px/.config/foot/conf.d/00-default.ini
+      ln -sf /etc/foot/foot.ini /home/px/.config/foot/foot.ini
+      chown -R px:users /home/px/.config/foot
+    else
+      echo "User 'px' does not exist, skipping foot config setup"
+    fi
   '';
 }
