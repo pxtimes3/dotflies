@@ -64,6 +64,10 @@
 
     # 3D
     blender-hip
+
+    # Printers
+    gutenprint
+    hplip
   ];
 
   programs = {
