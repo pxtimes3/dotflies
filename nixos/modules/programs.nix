@@ -33,6 +33,7 @@
     unzip
     zip
     jq
+    cargo
 
     # Audio
     pavucontrol
