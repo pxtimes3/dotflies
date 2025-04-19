@@ -7,6 +7,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
+    ./shares.nix
     ./hardware-configuration.nix
     ./modules
   ];
