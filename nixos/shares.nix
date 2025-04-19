@@ -31,4 +31,4 @@
         openFirewall = true;
       };
     };
-};
+}
