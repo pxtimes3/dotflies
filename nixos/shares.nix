@@ -9,16 +9,16 @@
         enable = true;
         openFirewall = true;
         shares.testshare = {
-          path = "/path/to/share";
+          path = "/home/px/Documents";
           writable = "true";
           comment = "Hello World!";
         };
-        extraConfig = ''
+      };
+      settings = ''
           server smb encrypt = required
           # ^^ Note: Breaks `smbclient -L <ip/host> -U%` by default, might require the client to set `client min protocol`?
           server min protocol = SMB3_00
         '';
-      };
       avahi = {
         publish.enable = true;
         publish.userServices = true;
