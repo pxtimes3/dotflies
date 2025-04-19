@@ -13,6 +13,7 @@
 	    path = "/home/px/Documents";
 	    writable = "true";
 	    comment = "Hello, World!";
+	  };
 	};
       };
       avahi = {
