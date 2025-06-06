@@ -69,6 +69,9 @@
     # Printers
     gutenprint
     hplip
+
+    # Audio
+    audacity
   ];
 
   programs = {
