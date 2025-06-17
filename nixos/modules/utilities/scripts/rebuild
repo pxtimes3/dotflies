@@ -28,7 +28,7 @@ run_cmd() {
         "$@"
     fi
 }
-
+B
 # Go to nixos config directory
 cd "$NIXOS_CONFIG_DIR" || {
     echo -e "${RED}Error: Could not change to $NIXOS_CONFIG_DIR${NC}"
@@ -47,6 +47,8 @@ CURRENT_GEN=$(run_cmd nix-env --list-generations --profile /nix/var/nix/profiles
 echo -e "${BLUE}Current generation:${NC} $CURRENT_GEN"
 
 # Rebuild
+echo -e "${BLUE}Updating flake...${NC}"
+run_cmd nix flake update --flake /home/px/.config/nixos/
 echo -e "${BLUE}Rebuilding NixOS...${NC}"
 run_cmd nixos-rebuild switch --flake .#pxbeard
 
