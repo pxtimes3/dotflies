@@ -55,6 +55,7 @@
     neovim
     gcc
     gnumake
+    love
 
     # procrastination
     telegram-desktop
