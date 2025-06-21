@@ -28,7 +28,7 @@ run_cmd() {
         "$@"
     fi
 }
-B
+
 # Go to nixos config directory
 cd "$NIXOS_CONFIG_DIR" || {
     echo -e "${RED}Error: Could not change to $NIXOS_CONFIG_DIR${NC}"
