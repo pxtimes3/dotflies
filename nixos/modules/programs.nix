@@ -53,6 +53,7 @@
     # vscode is in modules/vscode/
     git
     neovim
+    mongodb-compass
     # gcc
     # gnumake
     # love
