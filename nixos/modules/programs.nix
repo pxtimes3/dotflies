@@ -53,9 +53,9 @@
     # vscode is in modules/vscode/
     git
     neovim
-    gcc
-    gnumake
-    love
+    # gcc
+    # gnumake
+    # love
 
     # procrastination
     telegram-desktop
