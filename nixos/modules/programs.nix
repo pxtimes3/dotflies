@@ -65,7 +65,7 @@
     vlc
 
     # 3D
-    blender-hip
+    # blender-hip
 
     # Printers
     gutenprint
