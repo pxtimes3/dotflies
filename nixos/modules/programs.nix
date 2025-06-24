@@ -54,6 +54,7 @@
     git
     neovim
     mongodb-compass
+    gpsbabel-gui # Garmin FIT-files
     # gcc
     # gnumake
     # love
