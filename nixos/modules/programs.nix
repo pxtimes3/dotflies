@@ -79,6 +79,8 @@
     # Wine/Lutris
     lutris
     wine
+    winetricks
+    wine-devel
   ];
 
   programs = {
