@@ -80,7 +80,6 @@
     lutris
     wine
     winetricks
-    wine-devel
   ];
 
   programs = {
