@@ -78,6 +78,7 @@
 
     # Wine/Lutris
     lutris
+    wine
   ];
 
   programs = {
