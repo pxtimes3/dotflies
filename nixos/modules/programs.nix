@@ -11,6 +11,9 @@
     htop
     neofetch
 
+    # IOS
+    libimobiledevice
+
     # Media
     ffmpeg
     x264

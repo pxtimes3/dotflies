@@ -55,6 +55,9 @@
     '';
   };
 
+  # IOS
+  services.usbmuxd.enable = true;
+
   # Optimize udev rules
   services.udev = {
     extraRules = ''
