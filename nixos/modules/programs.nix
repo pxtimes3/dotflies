@@ -75,6 +75,9 @@
 
     # Audio
     audacity
+
+    # Wine/Lutris
+    lutris
   ];
 
   programs = {
